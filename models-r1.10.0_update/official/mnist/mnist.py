@@ -117,15 +117,15 @@ def model_fn(features, labels, mode, params):
             'classify': tf.estimator.export.PredictOutput(predictions)
         })
   if mode == tf.estimator.ModeKeys.TRAIN:
-    optimizer = tf.train.AdamOptimizer(learning_rate=LEARNING_RATE)
+    optimizer = tf.compat.v1.train.AdamOptimizer(learning_rate=LEARNING_RATE)
 
     # If we are running multi-GPU, we need to wrap the optimizer.
     if params.get('multi_gpu'):
       optimizer = tf.contrib.estimator.TowerOptimizer(optimizer)
 
     logits = model(image, training=True)
-    loss = tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
-    accuracy = tf.metrics.accuracy(
+    loss = tf.compat.v1.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
+    accuracy = tf.compat.v1.metrics.accuracy(
         labels=labels, predictions=tf.argmax(logits, axis=1))
 
     # Name tensors to be logged with LoggingTensorHook.
@@ -139,16 +139,16 @@ def model_fn(features, labels, mode, params):
     return tf.estimator.EstimatorSpec(
         mode=tf.estimator.ModeKeys.TRAIN,
         loss=loss,
-        train_op=optimizer.minimize(loss, tf.train.get_or_create_global_step()))
+        train_op=optimizer.minimize(loss, tf.compat.v1.train.get_or_create_global_step()))
   if mode == tf.estimator.ModeKeys.EVAL:
     logits = model(image, training=False)
-    loss = tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
+    loss = tf.compat.v1.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
     return tf.estimator.EstimatorSpec(
         mode=tf.estimator.ModeKeys.EVAL,
         loss=loss,
         eval_metric_ops={
             'accuracy':
-                tf.metrics.accuracy(
+                tf.compat.v1.metrics.accuracy(
                     labels=labels, predictions=tf.argmax(logits, axis=1)),
         })
 
@@ -226,7 +226,7 @@ def run_mnist(flags_obj):
 
   # Export the model
   if flags_obj.export_dir is not None:
-    image = tf.placeholder(tf.float32, [None, 28, 28])
+    image = tf.compat.v1.placeholder(tf.float32, [None, 28, 28])
     input_fn = tf.estimator.export.build_raw_serving_input_receiver_fn({
         'image': image,
     })
