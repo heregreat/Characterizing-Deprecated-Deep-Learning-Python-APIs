@@ -206,8 +206,10 @@ def run_mnist(flags_obj):
     return ds
 
   def eval_input_fn():
-    return dataset.test(flags_obj.data_dir).batch(
-        flags_obj.batch_size).make_one_shot_iterator().get_next()
+    return tf.compat.v1.data.make_one_shot_iterator(dataset.test(flags_obj.data_dir).batch(
+        flags_obj.batch_size)).get_next()
+    #return dataset.test(flags_obj.data_dir).batch(
+        #flags_obj.batch_size).make_one_shot_iterator().get_next()
 
   # Set up hook that outputs training logs every 100 steps.
   train_hooks = hooks_helper.get_train_hooks(
