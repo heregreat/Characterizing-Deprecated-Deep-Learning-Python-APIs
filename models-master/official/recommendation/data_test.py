@@ -30,8 +30,7 @@ import tensorflow as tf
 from official.recommendation import constants as rconst
 from official.recommendation import data_preprocessing
 from official.recommendation import movielens
-from official.recommendation import popen_helper_internal as popen_helper
-from official.utils.misc import keras_utils
+from official.recommendation import popen_helper
 
 
 DATASET = "ml-test"
@@ -59,8 +58,7 @@ def mock_download(*args, **kwargs):
 class BaseTest(tf.test.TestCase):
 
   def setUp(self):
-    if keras_utils.is_v2_0:
-      tf.compat.v1.disable_eager_execution()
+    tf.compat.v1.disable_eager_execution()
     self.temp_data_dir = self.get_temp_dir()
     ratings_folder = os.path.join(self.temp_data_dir, DATASET)
     tf.io.gfile.makedirs(ratings_folder)
