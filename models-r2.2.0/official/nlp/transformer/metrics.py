@@ -63,7 +63,8 @@ def padded_cross_entropy_loss(logits, labels, smoothing, vocab_size):
     # Calculate smoothing cross entropy
     with tf.name_scope("smoothing_cross_entropy"):
       confidence = 1.0 - smoothing
-      low_confidence = (1.0 - confidence) / tf.cast(vocab_size - 1, tf.float32)
+      #low_confidence = (1.0 - confidence) / tf.cast(vocab_size - 1, tf.float32)
+      low_confidence = (1.0 - confidence) / tf.compat.v1.to_float(vocab_size - 1)
       soft_targets = tf.one_hot(
           tf.cast(labels, tf.int32),
           depth=vocab_size,
@@ -76,11 +77,13 @@ def padded_cross_entropy_loss(logits, labels, smoothing, vocab_size):
       # subtract from the cross entropy loss.
       normalizing_constant = -(
           confidence * tf.math.log(confidence) +
-          tf.cast(vocab_size - 1, tf.float32) * low_confidence *
+          #tf.cast(vocab_size - 1, tf.float32) * low_confidence *
+          tf.compat.v1.to_float(vocab_size - 1) * low_confidence *
           tf.math.log(low_confidence + 1e-20))
       xentropy -= normalizing_constant
 
-    weights = tf.cast(tf.not_equal(labels, 0), tf.float32)
+    #weights = tf.cast(tf.not_equal(labels, 0), tf.float32)
+    weights = tf.compat.v1.to_float(tf.not_equal(labels, 0))
     return xentropy * weights, weights
 
 
@@ -88,24 +91,24 @@ def padded_accuracy(logits, labels):
   """Percentage of times that predictions matches labels on non-0s."""
   with tf.name_scope("padded_accuracy"):
     logits, labels = _pad_tensors_to_same_length(logits, labels)
-    weights = tf.cast(tf.not_equal(labels, 0), tf.float32)
+    weights = tf.compat.v1.to_float(tf.not_equal(labels, 0))
     outputs = tf.cast(tf.argmax(logits, axis=-1), tf.int32)
     padded_labels = tf.cast(labels, tf.int32)
-    return tf.cast(tf.equal(outputs, padded_labels), tf.float32), weights
+    return tf.compat.v1.to_float(tf.equal(outputs, padded_labels)), weights
 
 
 def padded_accuracy_topk(logits, labels, k):
   """Percentage of times that top-k predictions matches labels on non-0s."""
   with tf.name_scope("padded_accuracy_topk"):
     logits, labels = _pad_tensors_to_same_length(logits, labels)
-    weights = tf.cast(tf.not_equal(labels, 0), tf.float32)
+    weights = tf.compat.v1.to_float(tf.not_equal(labels, 0))
     effective_k = tf.minimum(k, tf.shape(logits)[-1])
     _, outputs = tf.nn.top_k(logits, k=effective_k)
     outputs = tf.cast(outputs, tf.int32)
     padded_labels = tf.cast(labels, tf.int32)
     padded_labels = tf.expand_dims(padded_labels, axis=-1)
     padded_labels += tf.zeros_like(outputs)  # Pad to same shape.
-    same = tf.cast(tf.equal(outputs, padded_labels), tf.float32)
+    same = tf.compat.v1.to_float(tf.equal(outputs, padded_labels))
     same_topk = tf.reduce_sum(same, axis=-1)
     return same_topk, weights
 
@@ -118,11 +121,10 @@ def padded_sequence_accuracy(logits, labels):
   """Percentage of times that predictions matches labels everywhere (non-0)."""
   with tf.name_scope("padded_sequence_accuracy"):
     logits, labels = _pad_tensors_to_same_length(logits, labels)
-    weights = tf.cast(tf.not_equal(labels, 0), tf.float32)
+    weights = tf.compat.v1.to_float(tf.not_equal(labels, 0))
     outputs = tf.cast(tf.argmax(logits, axis=-1), tf.int32)
     padded_labels = tf.cast(labels, tf.int32)
-    not_correct = tf.cast(tf.not_equal(outputs, padded_labels),
-                          tf.float32) * weights
+    not_correct = tf.compat.v1.to_float(tf.not_equal(outputs, padded_labels)) * weights
     axis = list(range(1, len(outputs.get_shape())))
     correct_seq = 1.0 - tf.minimum(1.0, tf.reduce_sum(not_correct, axis=axis))
     return correct_seq, tf.constant(1.0)
