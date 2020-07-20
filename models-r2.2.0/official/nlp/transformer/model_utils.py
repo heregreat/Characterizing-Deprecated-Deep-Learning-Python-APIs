@@ -49,13 +49,13 @@ def get_position_encoding(
   # We compute the positional encoding in float32 even if the model uses
   # float16, as many of the ops used, like log and exp, are numerically unstable
   # in float16.
-  position = tf.cast(tf.range(length), tf.float32)
+  position = tf.compat.v1.to_float(tf.range(length))
   num_timescales = hidden_size // 2
   log_timescale_increment = (
       math.log(float(max_timescale) / float(min_timescale)) /
-      (tf.cast(num_timescales, tf.float32) - 1))
+      (tf.compat.v1.to_float(num_timescales) - 1))
   inv_timescales = min_timescale * tf.exp(
-      tf.cast(tf.range(num_timescales), tf.float32) * -log_timescale_increment)
+      tf.compat.v1.to_float(tf.range(num_timescales)) * -log_timescale_increment)
   scaled_time = tf.expand_dims(position, 1) * tf.expand_dims(inv_timescales, 0)
   signal = tf.concat([tf.sin(scaled_time), tf.cos(scaled_time)], axis=1)
   return signal
