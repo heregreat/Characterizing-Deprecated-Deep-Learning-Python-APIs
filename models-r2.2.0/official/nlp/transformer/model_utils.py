@@ -53,7 +53,7 @@ def get_position_encoding(
   num_timescales = hidden_size // 2
   log_timescale_increment = (
       math.log(float(max_timescale) / float(min_timescale)) /
-      (tf.cast(num_timescales) - 1), tf.float32)
+      (tf.cast(num_timescales, tf.float32) - 1))
   inv_timescales = min_timescale * tf.exp(
       tf.cast(tf.range(num_timescales), tf.float32) * -log_timescale_increment)
   scaled_time = tf.expand_dims(position, 1) * tf.expand_dims(inv_timescales, 0)
