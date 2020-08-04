@@ -1,6 +1,6 @@
 type: 'retinanet'
 train:
-          train_file_pattern: ~/detection/data/dir/coco
+  train_file_pattern: /home/nianliu/detection/data/dir/coco
 eval:
-          eval_file_pattern: ~/detection/data/dir/coco
-          val_json_file: ~/detection/data/dir/coco/raw-data/annotations/
+  eval_file_pattern: /home/nianliu/detection/data/dir/coco
+  val_json_file: /home/nianliu/detection/data/dir/coco/raw-data/annotations/
