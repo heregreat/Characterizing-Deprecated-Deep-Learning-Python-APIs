@@ -1,6 +1,6 @@
 type: 'retinanet'
 train:
-          train_file_pattern: <path to the TFRecord training data>
+          train_file_pattern: ~/detection/data/dir/coco
 eval:
-          eval_file_pattern: <path to the TFRecord validation data>
-          val_json_file: <path to the validation annotation JSON file>
+          eval_file_pattern: ~/detection/data/dir/coco
+          val_json_file: ~/detection/data/dir/coco/raw-data/annotations/
