@@ -21,6 +21,7 @@ from __future__ import print_function
 import os
 import random
 import tarfile
+import requests
 
 # pylint: disable=g-bad-import-order
 from absl import app as absl_app
@@ -169,6 +170,7 @@ def download_from_url(path, url):
     filename = os.path.join(path, filename)
     logging.info("Downloading from %s to %s." % (url, filename))
     inprogress_filepath = six.ensure_str(filename) + ".incomplete"
+
     inprogress_filepath, _ = urllib.request.urlretrieve(
         url, inprogress_filepath, reporthook=download_report_hook)
     # Print newline to clear the carriage return from the download progress.
@@ -204,7 +206,7 @@ def download_and_extract(path, url, input_filename, target_filename):
 
   # Download archive file if it doesn't already exist.
   compressed_file = download_from_url(path, url)
-
+  print(compressed_file)
   # Extract compressed files
   logging.info("Extracting %s." % compressed_file)
   with tarfile.open(compressed_file, "r:gz") as corpus_tar:
@@ -383,7 +385,7 @@ def main(unused_argv):
 
   # Download test_data
   logging.info("Step 1/5: Downloading test data")
-  train_files = get_raw_files(FLAGS.data_dir, _TEST_DATA_SOURCES)
+  #train_files = get_raw_files(FLAGS.data_dir, _TEST_DATA_SOURCES)
 
   # Get paths of download/extracted training and evaluation files.
   logging.info("Step 2/5: Downloading data from source")
