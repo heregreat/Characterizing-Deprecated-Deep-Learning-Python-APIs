@@ -35,7 +35,7 @@ def read32(bytestream):
 
 def check_image_file_header(filename):
   """Validate that filename corresponds to images for the MNIST dataset."""
-  with tf.gfile.Open(filename, 'rb') as f:
+  with tf.compat.v1.gfile.Open(filename, 'rb') as f:
     magic = read32(f)
     read32(f)  # num_images, unused
     rows = read32(f)
@@ -51,7 +51,7 @@ def check_image_file_header(filename):
 
 def check_labels_file_header(filename):
   """Validate that filename corresponds to labels for the MNIST dataset."""
-  with tf.gfile.Open(filename, 'rb') as f:
+  with tf.compat.v1.gfile.Open(filename, 'rb') as f:
     magic = read32(f)
     read32(f)  # num_items, unused
     if magic != 2049:
@@ -62,17 +62,17 @@ def check_labels_file_header(filename):
 def download(directory, filename):
   """Download (and unzip) a file from the MNIST dataset if not already done."""
   filepath = os.path.join(directory, filename)
-  if tf.gfile.Exists(filepath):
+  if tf.compat.v1.gfile.Exists(filepath):
     return filepath
-  if not tf.gfile.Exists(directory):
-    tf.gfile.MakeDirs(directory)
+  if not tf.compat.v1.gfile.Exists(directory):
+    tf.compat.v1.gfile.MakeDirs(directory)
   # CVDF mirror of http://yann.lecun.com/exdb/mnist/
   url = 'https://storage.googleapis.com/cvdf-datasets/mnist/' + filename + '.gz'
   _, zipped_filepath = tempfile.mkstemp(suffix='.gz')
   print('Downloading %s to %s' % (url, zipped_filepath))
   urllib.request.urlretrieve(url, zipped_filepath)
   with gzip.open(zipped_filepath, 'rb') as f_in, \
-      tf.gfile.Open(filepath, 'wb') as f_out:
+      tf.compat.v1.gfile.Open(filepath, 'wb') as f_out:
     shutil.copyfileobj(f_in, f_out)
   os.remove(zipped_filepath)
   return filepath
@@ -97,7 +97,8 @@ def dataset(directory, images_file, labels_file):
   def decode_label(label):
     label = tf.decode_raw(label, tf.uint8)  # tf.string -> [tf.uint8]
     label = tf.reshape(label, [])  # label is a scalar
-    return tf.to_int32(label)
+    return tf.cast(label, tf.int32)
+    #return tf.to_int32(label)
 
   images = tf.data.FixedLengthRecordDataset(
       images_file, 28 * 28, header_bytes=16).map(decode_image)
