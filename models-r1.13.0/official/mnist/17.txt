@@ -1,0 +1,167 @@
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+
+Evaluation results:
+	{'accuracy': 0.9664, 'loss': 0.1122793, 'global_step': 600}
+
+
+Evaluation results:
+	{'accuracy': 0.9796, 'loss': 0.06541069, 'global_step': 1200}
+
+
+Evaluation results:
+	{'accuracy': 0.9842, 'loss': 0.048313957, 'global_step': 1800}
+
+
+Evaluation results:
+	{'accuracy': 0.9876, 'loss': 0.038434733, 'global_step': 2400}
+
+
+Evaluation results:
+	{'accuracy': 0.9888, 'loss': 0.035303958, 'global_step': 3000}
+
+
+Evaluation results:
+	{'accuracy': 0.9894, 'loss': 0.03313703, 'global_step': 3600}
+
+
+Evaluation results:
+	{'accuracy': 0.9906, 'loss': 0.029376645, 'global_step': 4200}
+
+
+Evaluation results:
+	{'accuracy': 0.9902, 'loss': 0.029098695, 'global_step': 4800}
+
+
+Evaluation results:
+	{'accuracy': 0.9909, 'loss': 0.025152767, 'global_step': 5400}
+
+
+Evaluation results:
+	{'accuracy': 0.9911, 'loss': 0.0252578, 'global_step': 6000}
+
+
+Evaluation results:
+	{'accuracy': 0.9919, 'loss': 0.02266073, 'global_step': 6600}
+
+
+Evaluation results:
+	{'accuracy': 0.993, 'loss': 0.020414777, 'global_step': 7200}
+
+
+Evaluation results:
+	{'accuracy': 0.9926, 'loss': 0.02299067, 'global_step': 7800}
+
+
+Evaluation results:
+	{'accuracy': 0.991, 'loss': 0.024467204, 'global_step': 8400}
+
+
+Evaluation results:
+	{'accuracy': 0.9936, 'loss': 0.018418554, 'global_step': 9000}
+
+
+Evaluation results:
+	{'accuracy': 0.9918, 'loss': 0.02134243, 'global_step': 9600}
+
+
+Evaluation results:
+	{'accuracy': 0.9919, 'loss': 0.023357477, 'global_step': 10200}
+
+
+Evaluation results:
+	{'accuracy': 0.993, 'loss': 0.022886243, 'global_step': 10800}
+
+
+Evaluation results:
+	{'accuracy': 0.9924, 'loss': 0.020892583, 'global_step': 11400}
+
+
+Evaluation results:
+	{'accuracy': 0.9918, 'loss': 0.023701133, 'global_step': 12000}
+
+
+Evaluation results:
+	{'accuracy': 0.9922, 'loss': 0.022523232, 'global_step': 12600}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.022550013, 'global_step': 13200}
+
+
+Evaluation results:
+	{'accuracy': 0.9924, 'loss': 0.023477264, 'global_step': 13800}
+
+
+Evaluation results:
+	{'accuracy': 0.9925, 'loss': 0.022443138, 'global_step': 14400}
+
+
+Evaluation results:
+	{'accuracy': 0.9929, 'loss': 0.024106743, 'global_step': 15000}
+
+
+Evaluation results:
+	{'accuracy': 0.9932, 'loss': 0.022075195, 'global_step': 15600}
+
+
+Evaluation results:
+	{'accuracy': 0.9922, 'loss': 0.027533585, 'global_step': 16200}
+
+
+Evaluation results:
+	{'accuracy': 0.9919, 'loss': 0.028738385, 'global_step': 16800}
+
+
+Evaluation results:
+	{'accuracy': 0.9925, 'loss': 0.023585938, 'global_step': 17400}
+
+
+Evaluation results:
+	{'accuracy': 0.9925, 'loss': 0.028197253, 'global_step': 18000}
+
+
+Evaluation results:
+	{'accuracy': 0.9922, 'loss': 0.024255883, 'global_step': 18600}
+
+
+Evaluation results:
+	{'accuracy': 0.9928, 'loss': 0.023008969, 'global_step': 19200}
+
+
+Evaluation results:
+	{'accuracy': 0.9919, 'loss': 0.028206902, 'global_step': 19800}
+
+
+Evaluation results:
+	{'accuracy': 0.9922, 'loss': 0.03021322, 'global_step': 20400}
+
+
+Evaluation results:
+	{'accuracy': 0.993, 'loss': 0.02354135, 'global_step': 21000}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.025489932, 'global_step': 21600}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.027747044, 'global_step': 22200}
+
+
+Evaluation results:
+	{'accuracy': 0.9931, 'loss': 0.024635851, 'global_step': 22800}
+
+
+Evaluation results:
+	{'accuracy': 0.9927, 'loss': 0.025944887, 'global_step': 23400}
+
+
+Evaluation results:
+	{'accuracy': 0.9929, 'loss': 0.026761467, 'global_step': 24000}
+
