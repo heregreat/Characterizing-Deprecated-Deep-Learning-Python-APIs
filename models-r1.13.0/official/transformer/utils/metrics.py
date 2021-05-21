@@ -143,8 +143,10 @@ def padded_accuracy(logits, labels):
   with tf.variable_scope("padded_accuracy", values=[logits, labels]):
     logits, labels = _pad_tensors_to_same_length(logits, labels)
     weights = tf.to_float(tf.not_equal(labels, 0))
-    outputs = tf.to_int32(tf.argmax(logits, axis=-1))
-    padded_labels = tf.to_int32(labels)
+    #outputs = tf.to_int32(tf.argmax(logits, axis=-1))
+    outputs = tf.cast(tf.argmax(logits, axis=-1), tf.int32)
+    #padded_labels = tf.to_int32(labels)
+    padded_labels = tf.cast(labels, tf.int32)
     return tf.to_float(tf.equal(outputs, padded_labels)), weights
 
 
@@ -155,8 +157,10 @@ def padded_accuracy_topk(logits, labels, k):
     weights = tf.to_float(tf.not_equal(labels, 0))
     effective_k = tf.minimum(k, tf.shape(logits)[-1])
     _, outputs = tf.nn.top_k(logits, k=effective_k)
-    outputs = tf.to_int32(outputs)
-    padded_labels = tf.to_int32(labels)
+    #outputs = tf.to_int32(outputs)
+    outputs = tf.cast(outputs, tf.int32)
+    #padded_labels = tf.to_int32(labels)
+    padded_labels = tf.cast(labels, tf.int32)
     padded_labels = tf.expand_dims(padded_labels, axis=-1)
     padded_labels += tf.zeros_like(outputs)  # Pad to same shape.
     same = tf.to_float(tf.equal(outputs, padded_labels))
@@ -173,8 +177,10 @@ def padded_sequence_accuracy(logits, labels):
   with tf.variable_scope("padded_sequence_accuracy", values=[logits, labels]):
     logits, labels = _pad_tensors_to_same_length(logits, labels)
     weights = tf.to_float(tf.not_equal(labels, 0))
-    outputs = tf.to_int32(tf.argmax(logits, axis=-1))
-    padded_labels = tf.to_int32(labels)
+    #outputs = tf.to_int32(tf.argmax(logits, axis=-1))
+    outputs = tf.cast(tf.argmax(logits, axis=-1), tf.int32)
+    #padded_labels = tf.to_int32(labels)
+    padded_labels = tf.cast(labels, tf.int32)
     not_correct = tf.to_float(tf.not_equal(outputs, padded_labels)) * weights
     axis = list(range(1, len(outputs.get_shape())))
     correct_seq = 1.0 - tf.minimum(1.0, tf.reduce_sum(not_correct, axis=axis))
@@ -201,7 +207,8 @@ def bleu_score(logits, labels):
   Returns:
     bleu: int, approx bleu score
   """
-  predictions = tf.to_int32(tf.argmax(logits, axis=-1))
+  #predictions = tf.to_int32(tf.argmax(logits, axis=-1))
+  predictions = tf.cast(tf.argmax(logits, axis=-1), tf.int32)
   # TODO: Look into removing use of py_func
   bleu = tf.py_func(compute_bleu, (labels, predictions), tf.float32)
   return bleu, tf.constant(1.0)
@@ -306,7 +313,8 @@ def rouge_2_fscore(logits, labels):
   Returns:
     rouge2_fscore: approx rouge-2 f1 score.
   """
-  predictions = tf.to_int32(tf.argmax(logits, axis=-1))
+  #predictions = tf.to_int32(tf.argmax(logits, axis=-1))
+  predictions = tf.cast(tf.argmax(logits, axis=-1), tf.int32)
   # TODO: Look into removing use of py_func
   rouge_2_f_score = tf.py_func(rouge_n, (predictions, labels), tf.float32)
   return rouge_2_f_score, tf.constant(1.0)
@@ -383,7 +391,8 @@ def rouge_l_fscore(predictions, labels):
   Returns:
     rouge_l_fscore: approx rouge-l f1 score.
   """
-  outputs = tf.to_int32(tf.argmax(predictions, axis=-1))
+  #outputs = tf.to_int32(tf.argmax(predictions, axis=-1))
+  outputs = tf.cast(tf.argmax(predictions, axis=-1), tf.int32)
   rouge_l_f_score = tf.py_func(rouge_l_sentence_level, (outputs, labels),
                                tf.float32)
   return rouge_l_f_score, tf.constant(1.0)
