@@ -70,9 +70,8 @@ def padded_cross_entropy_loss(logits, labels, smoothing, vocab_size):
           depth=vocab_size,
           on_value=confidence,
           off_value=low_confidence)
-      xentropy = tf.nn.softmax_cross_entropy_with_logits(
+      xentropy = tf.compat.v1.nn.softmax_cross_entropy_with_logits(
           logits=logits, labels=soft_targets)
-
       # Calculate the best (lowest) possible value of cross entropy, and
       # subtract from the cross entropy loss.
       normalizing_constant = -(
