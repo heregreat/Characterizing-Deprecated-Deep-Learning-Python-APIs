@@ -134,7 +134,7 @@ def define_compute_bleu_flags():
 
 
 if __name__ == "__main__":
-  tf.logging.set_verbosity(tf.logging.INFO)
+  tf.compat.v1.logging.set_verbosity(tf.logging.INFO)
   define_compute_bleu_flags()
   FLAGS = flags.FLAGS
   absl_app.run(main)
