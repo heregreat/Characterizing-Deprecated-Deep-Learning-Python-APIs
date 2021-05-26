@@ -1,4 +1,5 @@
 #!/bin/bash
+export PYTHONPATH=$PYTHONPATH:$HOME/ModelGarden/models-r1.13.0
 PARAM_SET=big
 DATA_DIR=$HOME/transformer/data
 API=original
