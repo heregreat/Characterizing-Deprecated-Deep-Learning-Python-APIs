@@ -77,7 +77,7 @@ def parse_record(raw_record, is_training, dtype):
   image = tf.cast(image, dtype)
 
   # TODO(haoyuzhang,hongkuny,tobyboyd): Remove or replace the use of V1 API
-  st = tf.sparse.SparseTensor(indices=label, values=[1], dense_shape=[NUM_CLASSES,1])
+  st = tf.sparse.SparseTensor(indices=[label], values=[1], dense_shape=[NUM_CLASSES])
   label = tf.sparse.to_dense(st)
   # label = tf.compat.v1.sparse_to_dense(label, (NUM_CLASSES,), 1)
   return image, label
