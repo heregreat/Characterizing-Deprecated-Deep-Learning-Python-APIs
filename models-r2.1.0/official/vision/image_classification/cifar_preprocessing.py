@@ -62,7 +62,7 @@ def parse_record(raw_record, is_training, dtype):
 
   # The first byte represents the label, which we convert from uint8 to int32
   # and then to one-hot.
-  label = tf.cast(record_vector[0], tf.int32)
+  label = tf.cast(record_vector[0], tf.int64)
 
   # The remaining bytes after the label represent the image, which we reshape
   # from [depth * height * width] to [depth, height, width].
