@@ -1,0 +1,744 @@
+2021-06-27 14:28:42.197790: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer.so.6
+2021-06-27 14:28:42.687593: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer_plugin.so.6
+/root/ModelGarden/models-r2.1.0/official/modeling/hyperparams/params_dict.py:402: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  params_dict = yaml.load(dict_or_string_or_yaml_file)
+I0627 14:28:52.993681 139917683636032 main.py:195] Model Parameters: {'anchor': {'anchor_size': 4.0,
+            'aspect_ratios': [1.0, 2.0, 0.5],
+            'max_level': 7,
+            'min_level': 3,
+            'num_scales': 3},
+ 'architecture': {'backbone': 'resnet',
+                  'multilevel_features': 'fpn',
+                  'parser': 'retinanet_parser',
+                  'use_bfloat16': False},
+ 'enable_summary': False,
+ 'eval': {'batch_size': 8,
+          'eval_file_pattern': 'gs://apiss/coco/val-*',
+          'eval_samples': 5000,
+          'eval_timeout': None,
+          'input_sharding': True,
+          'min_eval_interval': 180,
+          'type': 'box',
+          'val_json_file': 'gs://apiss/coco/instances_val2017.json'},
+ 'fpn': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                        'batch_norm_momentum': 0.997,
+                        'batch_norm_trainable': True},
+         'fpn_feat_dims': 256,
+         'max_level': 7,
+         'min_level': 3,
+         'use_separable_conv': False},
+ 'model_dir': 'gs://apiss/coco/Model/cocopy_func10',
+ 'nasfpn': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                           'batch_norm_momentum': 0.997,
+                           'batch_norm_trainable': True},
+            'dropblock': {'dropblock_keep_prob': None, 'dropblock_size': None},
+            'fpn_feat_dims': 256,
+            'max_level': 7,
+            'min_level': 3,
+            'num_repeats': 5,
+            'use_separable_conv': False},
+ 'postprocess': {'max_level': 7,
+                 'max_total_size': 100,
+                 'min_level': 3,
+                 'nms_iou_threshold': 0.5,
+                 'pre_nms_num_boxes': 5000,
+                 'score_threshold': 0.05,
+                 'use_batched_nms': False},
+ 'predict': {'predict_batch_size': 8},
+ 'resnet': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                           'batch_norm_momentum': 0.997,
+                           'batch_norm_trainable': True},
+            'dropblock': {'dropblock_keep_prob': None, 'dropblock_size': None},
+            'resnet_depth': 50},
+ 'retinanet_head': {'anchors_per_location': 9,
+                    'batch_norm': {'batch_norm_epsilon': 0.0001,
+                                   'batch_norm_momentum': 0.997,
+                                   'batch_norm_trainable': True},
+                    'max_level': 7,
+                    'min_level': 3,
+                    'num_classes': 91,
+                    'retinanet_head_num_convs': 4,
+                    'retinanet_head_num_filters': 256,
+                    'use_separable_conv': False},
+ 'retinanet_loss': {'box_loss_weight': 50,
+                    'focal_loss_alpha': 0.25,
+                    'focal_loss_gamma': 1.5,
+                    'huber_loss_delta': 0.1,
+                    'num_classes': 91},
+ 'retinanet_parser': {'aug_rand_hflip': True,
+                      'aug_scale_max': 1.0,
+                      'aug_scale_min': 1.0,
+                      'autoaugment_policy_name': 'v0',
+                      'match_threshold': 0.5,
+                      'max_num_instances': 100,
+                      'num_channels': 3,
+                      'output_size': [640, 640],
+                      'skip_crowd_during_training': True,
+                      'unmatched_threshold': 0.5,
+                      'use_autoaugment': False,
+                      'use_bfloat16': False},
+ 'strategy_config': {'all_reduce_alg': None,
+                     'num_gpus': 0,
+                     'num_packs': 1,
+                     'task_index': -1,
+                     'tpu': 'node-1',
+                     'worker_hosts': None},
+ 'strategy_type': 'tpu',
+ 'train': {'batch_size': 64,
+           'checkpoint': {'path': 'gs://cloud-tpu-checkpoints/retinanet/resnet50-checkpoint-2018-02-07',
+                          'prefix': 'resnet50/'},
+           'frozen_variable_prefix': '(resnet\\d+/)conv2d(|_([1-9]|10))\\/',
+           'input_sharding': False,
+           'iterations_per_loop': 500,
+           'l2_weight_decay': 0.0001,
+           'learning_rate': {'init_learning_rate': 0.08,
+                             'learning_rate_levels': [0.008, 0.0008],
+                             'learning_rate_steps': [15000, 20000],
+                             'type': 'step',
+                             'warmup_learning_rate': 0.0067,
+                             'warmup_steps': 500},
+           'optimizer': {'momentum': 0.9, 'nesterov': True, 'type': 'momentum'},
+           'total_steps': 5000,
+           'train_file_pattern': 'gs://apiss/coco/train-*',
+           'transpose_input': False},
+ 'type': 'retinanet',
+ 'use_tpu': True}
+I0627 14:28:53.393620 139917683636032 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 14:28:53.393929 139917683636032 client.py:777] Refreshing access_token
+I0627 14:28:53.702733 139917683636032 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 14:28:53.703004 139917683636032 client.py:777] Refreshing access_token
+2021-06-27 14:28:53.971916: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-06-27 14:28:53.971997: E tensorflow/stream_executor/cuda/cuda_driver.cc:351] failed call to cuInit: UNKNOWN ERROR (-1)
+2021-06-27 14:28:53.972044: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (4772c6b3998a): /proc/driver/nvidia/version does not exist
+I0627 14:28:53.976471 139917683636032 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 14:28:53.976734 139917683636032 client.py:777] Refreshing access_token
+I0627 14:28:54.073342 139917683636032 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 14:28:54.073616 139917683636032 client.py:777] Refreshing access_token
+I0627 14:28:54.194676 139917683636032 remote.py:177] Entering into master device scope: /job:worker/replica:0/task:0/device:CPU:0
+2021-06-27 14:28:54.195181: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-06-27 14:28:54.520291: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2299995000 Hz
+2021-06-27 14:28:54.525870: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x64220c0 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-06-27 14:28:54.525934: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-06-27 14:28:54.765301: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job worker -> {0 -> 10.111.230.146:8470}
+2021-06-27 14:28:54.765383: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:30064}
+2021-06-27 14:28:54.791633: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job worker -> {0 -> 10.111.230.146:8470}
+2021-06-27 14:28:54.791689: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:30064}
+2021-06-27 14:28:54.812636: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:390] Started server with target: grpc://localhost:30064
+INFO:tensorflow:Initializing the TPU system: node-1
+I0627 14:28:54.813813 139917683636032 tpu_strategy_util.py:72] Initializing the TPU system: node-1
+INFO:tensorflow:Clearing out eager caches
+I0627 14:28:55.105563 139917683636032 tpu_strategy_util.py:100] Clearing out eager caches
+INFO:tensorflow:Finished initializing TPU system.
+I0627 14:28:59.708241 139917683636032 tpu_strategy_util.py:123] Finished initializing TPU system.
+I0627 14:28:59.748832 139917683636032 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 14:28:59.749073 139917683636032 client.py:777] Refreshing access_token
+I0627 14:28:59.846229 139917683636032 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 14:28:59.846457 139917683636032 client.py:777] Refreshing access_token
+INFO:tensorflow:Found TPU system:
+I0627 14:28:59.954722 139917683636032 tpu_system_metadata.py:140] Found TPU system:
+INFO:tensorflow:*** Num TPU Cores: 8
+I0627 14:28:59.954941 139917683636032 tpu_system_metadata.py:141] *** Num TPU Cores: 8
+INFO:tensorflow:*** Num TPU Workers: 1
+I0627 14:28:59.955084 139917683636032 tpu_system_metadata.py:142] *** Num TPU Workers: 1
+INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+I0627 14:28:59.955190 139917683636032 tpu_system_metadata.py:144] *** Num TPU Cores Per Worker: 8
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0627 14:28:59.955369 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0627 14:28:59.956500 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0627 14:28:59.956608 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+I0627 14:28:59.956783 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+I0627 14:28:59.956933 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+I0627 14:28:59.957066 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+I0627 14:28:59.957172 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+I0627 14:28:59.957295 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+I0627 14:28:59.957406 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+I0627 14:28:59.957508 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+I0627 14:28:59.957613 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+I0627 14:28:59.957732 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0627 14:28:59.957834 139917683636032 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0627 14:28:59.960811 139917683636032 main.py:93] Train num_replicas_in_sync 8 num_workers 1 is_multi_host False
+I0627 14:28:59.960988 139917683636032 distributed_executor.py:145] Save config to model_dir gs://apiss/coco/Model/cocopy_func10.
+WARNING:tensorflow:AutoGraph could not transform <function InputFn.__call__.<locals>.<lambda> at 0x7f40740ec048> and will run it as-is.
+Cause: Unable to identify source code of lambda function <function InputFn.__call__.<locals>.<lambda> at 0x7f40740ec048>. It was defined on this line: from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+map_func, which must contain a single lambda with matching signature. To avoid ambiguity, define each lambda in a separate expression.
+W0627 14:29:01.653105 139917683636032 ag_logging.py:146] AutoGraph could not transform <function InputFn.__call__.<locals>.<lambda> at 0x7f40740ec048> and will run it as-is.
+Cause: Unable to identify source code of lambda function <function InputFn.__call__.<locals>.<lambda> at 0x7f40740ec048>. It was defined on this line: from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+map_func, which must contain a single lambda with matching signature. To avoid ambiguity, define each lambda in a separate expression.
+I0627 14:29:42.264461 139917683636032 distributed_executor.py:382] Checkpoint file gs://apiss/coco/Model/cocopy_func10/ctl_step_5000.ckpt-10 found and restoring from checkpoint
+I0627 14:29:47.619958 139917683636032 distributed_executor.py:386] Loading from checkpoint file completed. Init step 5000
+I0627 14:29:47.654385 139917683636032 detection_executor.py:60] Filter trainable variables from 285 to 274
+E0627 14:29:47.654602 139917683636032 detection_executor.py:66] Detection: train metric is not an instance of tf.keras.metrics.Metric.
+I0627 14:29:47.654966 139917683636032 distributed_executor.py:411] Training started
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+W0627 14:29:47.896053 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.momentum
+W0627 14:29:47.896271 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer.momentum
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-1.gamma
+W0627 14:29:47.896499 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-1.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-1.beta
+W0627 14:29:47.896620 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-1.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-3.gamma
+W0627 14:29:47.896727 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-3.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-3.beta
+W0627 14:29:47.896831 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-3.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-5.gamma
+W0627 14:29:47.896925 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-5.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-5.beta
+W0627 14:29:47.897046 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-5.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-8.gamma
+W0627 14:29:47.897150 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-8.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-8.beta
+W0627 14:29:47.897236 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-8.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-9.gamma
+W0627 14:29:47.897337 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-9.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-9.beta
+W0627 14:29:47.897459 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-9.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-11.gamma
+W0627 14:29:47.897565 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-11.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-11.beta
+W0627 14:29:47.897655 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-11.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-13.gamma
+W0627 14:29:47.897755 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-13.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-13.beta
+W0627 14:29:47.897869 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-13.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-15.gamma
+W0627 14:29:47.897956 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-15.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-15.beta
+W0627 14:29:47.898045 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-15.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-17.gamma
+W0627 14:29:47.898154 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-17.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-17.beta
+W0627 14:29:47.898255 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-17.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-19.gamma
+W0627 14:29:47.898365 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-19.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-19.beta
+W0627 14:29:47.898468 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-19.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-21.gamma
+W0627 14:29:47.898573 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-21.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-21.beta
+W0627 14:29:47.898669 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-21.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-22.kernel
+W0627 14:29:47.898773 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-22.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-23.gamma
+W0627 14:29:47.898883 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-23.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-23.beta
+W0627 14:29:47.898969 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-23.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-24.kernel
+W0627 14:29:47.899065 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-24.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-25.gamma
+W0627 14:29:47.899159 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-25.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-25.beta
+W0627 14:29:47.899252 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-25.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-26.kernel
+W0627 14:29:47.899346 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-26.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-27.kernel
+W0627 14:29:47.899440 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-27.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-28.gamma
+W0627 14:29:47.899519 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-28.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-28.beta
+W0627 14:29:47.899593 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-28.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-29.gamma
+W0627 14:29:47.899674 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-29.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-29.beta
+W0627 14:29:47.899797 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-29.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-30.kernel
+W0627 14:29:47.899896 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-30.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-31.gamma
+W0627 14:29:47.899976 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-31.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-31.beta
+W0627 14:29:47.900053 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-31.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-32.kernel
+W0627 14:29:47.900129 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-32.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-33.gamma
+W0627 14:29:47.900205 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-33.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-33.beta
+W0627 14:29:47.900282 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-33.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-34.kernel
+W0627 14:29:47.900359 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-34.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-35.gamma
+W0627 14:29:47.900445 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-35.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-35.beta
+W0627 14:29:47.900528 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-35.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-36.kernel
+W0627 14:29:47.900604 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-36.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-37.gamma
+W0627 14:29:47.900681 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-37.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-37.beta
+W0627 14:29:47.900758 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-37.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-38.kernel
+W0627 14:29:47.900849 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-38.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-39.gamma
+W0627 14:29:47.900920 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-39.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-39.beta
+W0627 14:29:47.900995 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-39.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-40.kernel
+W0627 14:29:47.901072 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-40.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-41.gamma
+W0627 14:29:47.901154 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-41.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-41.beta
+W0627 14:29:47.901240 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-41.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-42.kernel
+W0627 14:29:47.901329 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-42.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-43.gamma
+W0627 14:29:47.901412 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-43.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-43.beta
+W0627 14:29:47.901496 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-43.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-44.kernel
+W0627 14:29:47.901582 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-44.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-45.gamma
+W0627 14:29:47.901659 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-45.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-45.beta
+W0627 14:29:47.901744 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-45.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-46.kernel
+W0627 14:29:47.901831 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-46.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-47.gamma
+W0627 14:29:47.901911 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-47.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-47.beta
+W0627 14:29:47.901988 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-47.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-48.kernel
+W0627 14:29:47.902065 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-48.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-49.gamma
+W0627 14:29:47.902139 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-49.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-49.beta
+W0627 14:29:47.902213 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-49.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-50.kernel
+W0627 14:29:47.902286 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-50.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-51.gamma
+W0627 14:29:47.902361 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-51.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-51.beta
+W0627 14:29:47.902438 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-51.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-52.kernel
+W0627 14:29:47.902517 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-52.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-53.kernel
+W0627 14:29:47.902595 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-53.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-54.gamma
+W0627 14:29:47.902673 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-54.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-54.beta
+W0627 14:29:47.902751 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-54.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-55.gamma
+W0627 14:29:47.902832 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-55.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-55.beta
+W0627 14:29:47.902909 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-55.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-56.kernel
+W0627 14:29:47.902987 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-56.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-57.gamma
+W0627 14:29:47.903061 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-57.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-57.beta
+W0627 14:29:47.903136 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-57.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-58.kernel
+W0627 14:29:47.903214 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-58.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-59.gamma
+W0627 14:29:47.903289 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-59.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-59.beta
+W0627 14:29:47.903364 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-59.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-60.kernel
+W0627 14:29:47.903441 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-60.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-61.gamma
+W0627 14:29:47.903514 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-61.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-61.beta
+W0627 14:29:47.903588 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-61.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-62.kernel
+W0627 14:29:47.903662 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-62.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-63.gamma
+W0627 14:29:47.903748 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-63.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-63.beta
+W0627 14:29:47.903842 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-63.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-64.kernel
+W0627 14:29:47.903921 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-64.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-65.gamma
+W0627 14:29:47.903993 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-65.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-65.beta
+W0627 14:29:47.904064 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-65.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-66.kernel
+W0627 14:29:47.904139 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-66.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-67.gamma
+W0627 14:29:47.904213 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-67.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-67.beta
+W0627 14:29:47.904288 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-67.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-68.kernel
+W0627 14:29:47.904362 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-68.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-69.gamma
+W0627 14:29:47.904435 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-69.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-69.beta
+W0627 14:29:47.904511 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-69.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-70.kernel
+W0627 14:29:47.904586 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-70.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-71.gamma
+W0627 14:29:47.904661 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-71.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-71.beta
+W0627 14:29:47.904732 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-71.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-72.kernel
+W0627 14:29:47.904815 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-72.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-73.gamma
+W0627 14:29:47.904893 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-73.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-73.beta
+W0627 14:29:47.904971 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-73.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-74.kernel
+W0627 14:29:47.905047 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-74.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-75.gamma
+W0627 14:29:47.905126 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-75.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-75.beta
+W0627 14:29:47.905199 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-75.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-76.kernel
+W0627 14:29:47.905275 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-76.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-77.gamma
+W0627 14:29:47.905350 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-77.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-77.beta
+W0627 14:29:47.905429 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-77.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-78.kernel
+W0627 14:29:47.905506 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-78.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-79.gamma
+W0627 14:29:47.905583 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-79.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-79.beta
+W0627 14:29:47.905660 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-79.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-80.kernel
+W0627 14:29:47.905736 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-80.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-81.gamma
+W0627 14:29:47.905819 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-81.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-81.beta
+W0627 14:29:47.905893 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-81.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-82.kernel
+W0627 14:29:47.905966 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-82.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-83.gamma
+W0627 14:29:47.906044 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-83.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-83.beta
+W0627 14:29:47.906121 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-83.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-84.kernel
+W0627 14:29:47.906198 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-84.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-85.gamma
+W0627 14:29:47.906272 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-85.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-85.beta
+W0627 14:29:47.906345 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-85.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-86.kernel
+W0627 14:29:47.906421 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-86.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-87.gamma
+W0627 14:29:47.906492 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-87.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-87.beta
+W0627 14:29:47.906568 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-87.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-88.kernel
+W0627 14:29:47.906642 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-88.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-89.gamma
+W0627 14:29:47.906716 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-89.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-89.beta
+W0627 14:29:47.906802 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-89.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-90.kernel
+W0627 14:29:47.906882 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-90.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-91.kernel
+W0627 14:29:47.906959 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-91.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-92.gamma
+W0627 14:29:47.907037 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-92.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-92.beta
+W0627 14:29:47.907114 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-92.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-93.gamma
+W0627 14:29:47.907188 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-93.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-93.beta
+W0627 14:29:47.907260 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-93.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-94.kernel
+W0627 14:29:47.907334 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-94.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-95.gamma
+W0627 14:29:47.907412 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-95.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-95.beta
+W0627 14:29:47.907505 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-95.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-96.kernel
+W0627 14:29:47.907581 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-96.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-97.gamma
+W0627 14:29:47.907651 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-97.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-97.beta
+W0627 14:29:47.907722 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-97.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-98.kernel
+W0627 14:29:47.907826 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-98.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-99.gamma
+W0627 14:29:47.907903 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-99.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-99.beta
+W0627 14:29:47.907981 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-99.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-100.kernel
+W0627 14:29:47.908056 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-100.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-101.gamma
+W0627 14:29:47.908134 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-101.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-101.beta
+W0627 14:29:47.908207 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-101.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-102.kernel
+W0627 14:29:47.908282 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-102.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-103.gamma
+W0627 14:29:47.908358 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-103.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-103.beta
+W0627 14:29:47.908431 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-103.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-104.kernel
+W0627 14:29:47.908510 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-104.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-105.gamma
+W0627 14:29:47.908587 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-105.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-105.beta
+W0627 14:29:47.908666 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-105.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-106.kernel
+W0627 14:29:47.908744 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-106.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-106.bias
+W0627 14:29:47.908829 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-106.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-107.kernel
+W0627 14:29:47.908900 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-107.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-107.bias
+W0627 14:29:47.908982 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-107.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-108.kernel
+W0627 14:29:47.909071 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-108.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-108.bias
+W0627 14:29:47.909146 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-108.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-109.kernel
+W0627 14:29:47.909221 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-109.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-109.bias
+W0627 14:29:47.909300 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-109.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-110.kernel
+W0627 14:29:47.909379 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-110.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-110.bias
+W0627 14:29:47.909450 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-110.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-111.kernel
+W0627 14:29:47.909526 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-111.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-111.bias
+W0627 14:29:47.909603 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-111.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-112.kernel
+W0627 14:29:47.909679 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-112.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-112.bias
+W0627 14:29:47.909752 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-112.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-113.kernel
+W0627 14:29:47.909839 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-113.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-113.bias
+W0627 14:29:47.909912 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-113.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-114.gamma
+W0627 14:29:47.909990 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-114.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-114.beta
+W0627 14:29:47.910068 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-114.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-115.gamma
+W0627 14:29:47.910141 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-115.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-115.beta
+W0627 14:29:47.910217 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-115.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-116.gamma
+W0627 14:29:47.910291 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-116.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-116.beta
+W0627 14:29:47.910367 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-116.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-117.gamma
+W0627 14:29:47.910442 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-117.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-117.beta
+W0627 14:29:47.910513 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-117.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-118.gamma
+W0627 14:29:47.910588 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-118.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-118.beta
+W0627 14:29:47.910661 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-118.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-119.kernel
+W0627 14:29:47.910733 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-119.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-119.bias
+W0627 14:29:47.910816 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-119.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-120.kernel
+W0627 14:29:47.910892 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-120.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-120.bias
+W0627 14:29:47.910970 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-120.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-121.gamma
+W0627 14:29:47.911045 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-121.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-121.beta
+W0627 14:29:47.911119 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-121.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-122.gamma
+W0627 14:29:47.911194 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-122.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-122.beta
+W0627 14:29:47.911271 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-122.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-123.gamma
+W0627 14:29:47.911538 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-123.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-123.beta
+W0627 14:29:47.911658 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-123.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-124.gamma
+W0627 14:29:47.911805 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-124.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-124.beta
+W0627 14:29:47.911905 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-124.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-125.gamma
+W0627 14:29:47.911993 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-125.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-125.beta
+W0627 14:29:47.912081 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-125.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-126.gamma
+W0627 14:29:47.912156 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-126.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-126.beta
+W0627 14:29:47.912231 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-126.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-127.gamma
+W0627 14:29:47.912308 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-127.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-127.beta
+W0627 14:29:47.912391 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-127.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-128.gamma
+W0627 14:29:47.912468 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-128.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-128.beta
+W0627 14:29:47.912548 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-128.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-129.gamma
+W0627 14:29:47.912629 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-129.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-129.beta
+W0627 14:29:47.912705 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-129.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-130.gamma
+W0627 14:29:47.912794 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-130.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-130.beta
+W0627 14:29:47.912878 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-130.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-131.kernel
+W0627 14:29:47.912956 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-131.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-131.bias
+W0627 14:29:47.913037 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-131.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-132.kernel
+W0627 14:29:47.913114 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-132.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-132.bias
+W0627 14:29:47.913192 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-132.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-133.gamma
+W0627 14:29:47.913266 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-133.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-133.beta
+W0627 14:29:47.913343 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-133.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-134.gamma
+W0627 14:29:47.913423 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-134.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-134.beta
+W0627 14:29:47.913497 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-134.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-135.gamma
+W0627 14:29:47.913573 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-135.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-135.beta
+W0627 14:29:47.913646 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-135.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-136.gamma
+W0627 14:29:47.913724 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-136.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-136.beta
+W0627 14:29:47.913807 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-136.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-137.gamma
+W0627 14:29:47.913883 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-137.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-137.beta
+W0627 14:29:47.913960 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-137.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-138.gamma
+W0627 14:29:47.914032 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-138.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-138.beta
+W0627 14:29:47.914108 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-138.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-139.gamma
+W0627 14:29:47.914183 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-139.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-139.beta
+W0627 14:29:47.914258 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-139.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-140.gamma
+W0627 14:29:47.914339 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-140.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-140.beta
+W0627 14:29:47.914420 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-140.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-141.gamma
+W0627 14:29:47.914510 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-141.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-141.beta
+W0627 14:29:47.914590 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-141.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-142.gamma
+W0627 14:29:47.914665 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-142.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-142.beta
+W0627 14:29:47.914741 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-142.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-143.kernel
+W0627 14:29:47.914829 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-143.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-143.bias
+W0627 14:29:47.914891 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-143.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-144.kernel
+W0627 14:29:47.914949 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-144.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-144.bias
+W0627 14:29:47.915043 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-144.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-145.gamma
+W0627 14:29:47.915145 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-145.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-145.beta
+W0627 14:29:47.915254 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-145.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-146.gamma
+W0627 14:29:47.915362 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-146.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-146.beta
+W0627 14:29:47.915470 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-146.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-147.gamma
+W0627 14:29:47.915578 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-147.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-147.beta
+W0627 14:29:47.915675 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-147.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-148.gamma
+W0627 14:29:47.915802 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-148.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-148.beta
+W0627 14:29:47.915895 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-148.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-149.gamma
+W0627 14:29:47.915979 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-149.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-149.beta
+W0627 14:29:47.916057 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-149.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-150.gamma
+W0627 14:29:47.916146 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-150.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-150.beta
+W0627 14:29:47.916228 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-150.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-151.gamma
+W0627 14:29:47.916308 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-151.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-151.beta
+W0627 14:29:47.916381 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-151.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-152.gamma
+W0627 14:29:47.916456 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-152.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-152.beta
+W0627 14:29:47.916533 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-152.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-153.gamma
+W0627 14:29:47.916612 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-153.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-153.beta
+W0627 14:29:47.916689 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-153.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-154.gamma
+W0627 14:29:47.916767 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-154.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-154.beta
+W0627 14:29:47.916860 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-154.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-155.kernel
+W0627 14:29:47.916938 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-155.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-155.bias
+W0627 14:29:47.917018 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-155.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-156.kernel
+W0627 14:29:47.917098 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-156.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-156.bias
+W0627 14:29:47.917177 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-156.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-157.gamma
+W0627 14:29:47.917257 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-157.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-157.beta
+W0627 14:29:47.917337 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-157.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-158.gamma
+W0627 14:29:47.917431 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-158.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-158.beta
+W0627 14:29:47.917511 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-158.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-159.gamma
+W0627 14:29:47.917590 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-159.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-159.beta
+W0627 14:29:47.917670 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-159.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-160.gamma
+W0627 14:29:47.917744 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-160.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-160.beta
+W0627 14:29:47.917841 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-160.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-161.gamma
+W0627 14:29:47.917928 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-161.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-161.beta
+W0627 14:29:47.918007 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-161.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-162.gamma
+W0627 14:29:47.918085 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-162.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-162.beta
+W0627 14:29:47.918162 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-162.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-163.gamma
+W0627 14:29:47.918240 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-163.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-163.beta
+W0627 14:29:47.918321 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-163.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-164.gamma
+W0627 14:29:47.918399 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-164.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-164.beta
+W0627 14:29:47.918481 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-164.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-165.gamma
+W0627 14:29:47.918570 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-165.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-165.beta
+W0627 14:29:47.918647 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-165.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-166.gamma
+W0627 14:29:47.918725 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-166.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-166.beta
+W0627 14:29:47.918813 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-166.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-167.kernel
+W0627 14:29:47.918889 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-167.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-167.bias
+W0627 14:29:47.918962 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-167.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-168.kernel
+W0627 14:29:47.919027 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-168.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-168.bias
+W0627 14:29:47.919106 139917683636032 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'momentum' for (root).model.layer_with_weights-168.bias
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+W0627 14:29:47.919189 139917683636032 util.py:152] A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+2021-06-27 14:29:48.563634: W ./tensorflow/core/distributed_runtime/eager/destroy_tensor_handle_node.h:79] Ignoring an error encountered when deleting remote tensors handles: Invalid argument: Unable to find a context_id matching the specified one (11455142033645026262). Perhaps the worker was restarted, or the context was GC'd?
+Additional GRPC error information:
+{"created":"@1624818588.563502532","description":"Error received from peer","file":"external/grpc/src/core/lib/surface/call.cc","file_line":1039,"grpc_message":"Unable to find a context_id matching the specified one (11455142033645026262). Perhaps the worker was restarted, or the context was GC'd?","grpc_status":3}
