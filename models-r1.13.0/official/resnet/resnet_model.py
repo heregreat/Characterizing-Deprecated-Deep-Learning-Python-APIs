@@ -57,7 +57,7 @@ def batch_norm(inputs, training, data_format):
   return tf.keras.layers.BatchNormalization(
       axis=1 if data_format == 'channels_first' else 3,
       momentum=_BATCH_NORM_DECAY, epsilon=_BATCH_NORM_EPSILON, center=True,
-      scale=True, training=training, fused=True).apply(inputs)
+      scale=True, fused=True)(inputs, training=training)
 
 
 def fixed_padding(inputs, kernel_size, data_format):
