@@ -87,13 +87,18 @@ def conv2d_fixed_padding(inputs, filters, kernel_size, strides, data_format):
   # dimensions of `inputs` (as opposed to using `tf.layers.conv2d` alone).
   if strides > 1:
     inputs = fixed_padding(inputs, kernel_size, data_format)
-
+  '''
   return tf.layers.conv2d(
       inputs=inputs, filters=filters, kernel_size=kernel_size, strides=strides,
       padding=('SAME' if strides == 1 else 'VALID'), use_bias=False,
       kernel_initializer=tf.variance_scaling_initializer(),
       data_format=data_format)
-
+  '''
+  return tf.keras.layers.Conv2D(
+      filters=filters, kernel_size=kernel_size, strides=strides,
+      padding=('SAME' if strides == 1 else 'VALID'), use_bias=False,
+      kernel_initializer=tf.variance_scaling_initializer(),
+      data_format=data_format).apply(inputs)
 
 ################################################################################
 # ResNet block definitions.
@@ -541,7 +546,7 @@ class Model(object):
       inputs = tf.identity(inputs, 'final_reduce_mean')
 
       inputs = tf.squeeze(inputs, axes)
-      #inputs = tf.layers.dense(inputs=inputs, units=self.num_classes)
-      inputs = tf.keras.layers.Dense(self.num_classes).apply(inputs)
+      inputs = tf.layers.dense(inputs=inputs, units=self.num_classes)
+      #inputs = tf.keras.layers.Dense(self.num_classes).apply(inputs)
       inputs = tf.identity(inputs, 'final_dense')
       return inputs
