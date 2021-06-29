@@ -542,6 +542,6 @@ class Model(object):
 
       inputs = tf.squeeze(inputs, axes)
       inputs = tf.layers.dense(inputs=inputs, units=self.num_classes)
-      #inputs = tf.layers.dense(units=self.num_classes)(input)
-      inputs = tf.identity(inputs, 'final_dense')
+      inputs = tf.layers.dense(units=self.num_classes)(input)
+      #inputs = tf.identity(inputs, 'final_dense')
       return inputs
