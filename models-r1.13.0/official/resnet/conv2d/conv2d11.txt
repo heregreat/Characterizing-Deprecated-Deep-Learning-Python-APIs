@@ -1,0 +1,242 @@
+2021-06-29 08:39:21.197740: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-06-29 08:39:21.298903: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-06-29 08:39:21.299931: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x257bf90 executing computations on platform CUDA. Devices:
+2021-06-29 08:39:21.299970: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2021-06-29 08:39:21.302419: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2299995000 Hz
+2021-06-29 08:39:21.302763: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x263f8b0 executing computations on platform Host. Devices:
+2021-06-29 08:39:21.302798: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2021-06-29 08:39:21.302990: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.78GiB freeMemory: 15.18GiB
+2021-06-29 08:39:21.303020: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-06-29 08:39:21.303968: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-06-29 08:39:21.303996: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-06-29 08:39:21.304006: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-06-29 08:39:21.304093: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/device:GPU:0 with 14770 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+I0629 08:39:21.310803 140649387288384 run_config.py:532] Initializing RunConfig with distribution strategies.
+I0629 08:39:21.311158 140649387288384 estimator_training.py:166] Not using Distribute Coordinator.
+I0629 08:39:21.311652 140649387288384 estimator.py:201] Using config: {'_model_dir': '/root/imagenet/model_conv2d11/', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 86400, '_session_config': allow_soft_placement: true
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': <tensorflow.contrib.distribute.python.one_device_strategy.OneDeviceStrategy object at 0x7feaf3867978>, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7feaf3867a58>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_distribute_coordinator_mode': None}
+2021-06-29 08:39:22.547998: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-06-29 08:39:22.548059: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-06-29 08:39:22.548073: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-06-29 08:39:22.548084: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-06-29 08:39:22.548387: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/device:GPU:0 with 14770 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+I0629 08:39:22.614159 140649387288384 logger.py:151] Benchmark run: {'model_name': 'resnet', 'dataset': {'name': 'ImageNet'}, 'machine_config': {'cpu_info': {'num_cores': 4, 'cpu_info': 'intel', 'mhz_per_cpu': 1000000.0}, 'gpu_info': {'count': 1, 'model': 'Tesla V100-SXM2-16GB'}, 'memory_total': 15766540288, 'memory_available': 13296451584}, 'test_id': None, 'run_date': '2021-06-29T08:39:21.312670Z', 'tensorflow_version': {'version': '1.13.2', 'git_hash': "b'v1.13.2-5-g04256c89d8'"}, 'tensorflow_environment_variables': [], 'run_parameters': [{'name': 'batch_size', 'long_value': 32}, {'name': 'dtype', 'string_value': "<dtype: 'float32'>"}, {'name': 'resnet_size', 'string_value': '50'}, {'name': 'resnet_version', 'string_value': '1'}, {'name': 'synthetic_data', 'bool_value': 'False'}, {'name': 'train_epochs', 'long_value': 1}], 'test_environment': 'GCP'}
+I0629 08:39:22.614534 140649387288384 resnet_run_loop.py:560] Starting cycle: 0/1
+W0629 08:39:22.647485 140649387288384 deprecation.py:323] From imagenet_main.py:192: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+W0629 08:39:22.671548 140649387288384 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_run_loop.py:95: map_and_batch (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.map_and_batch(...)`.
+W0629 08:39:22.690539 140649387288384 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/imagenet_preprocessing.py:83: sample_distorted_bounding_box (from tensorflow.python.ops.image_ops_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+`seed2` arg is deprecated.Use sample_distorted_bounding_box_v2 instead.
+W0629 08:39:22.700353 140649387288384 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/control_flow_ops.py:3632: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+I0629 08:39:22.829513 140649387288384 estimator.py:1111] Calling model_fn.
+W0629 08:39:22.845335 140649387288384 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_model.py:54: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.batch_normalization instead.
+W0629 08:39:22.877119 140649387288384 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_model.py:522: max_pooling2d (from tensorflow.python.layers.pooling) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.max_pooling2d instead.
+W0629 08:39:25.383960 140649387288384 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_model.py:549: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+W0629 08:39:25.411313 140649387288384 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+W0629 08:39:25.736345 140649387288384 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/math_ops.py:3066: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+I0629 08:39:27.962158 140649387288384 estimator.py:1113] Done calling model_fn.
+I0629 08:39:28.200628 140649387288384 basic_session_run_hooks.py:527] Create CheckpointSaverHook.
+I0629 08:39:29.719912 140649387288384 monitored_session.py:222] Graph was finalized.
+2021-06-29 08:39:29.721007: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-06-29 08:39:29.721072: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-06-29 08:39:29.721085: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-06-29 08:39:29.721097: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-06-29 08:39:29.721221: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14770 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+I0629 08:39:31.790581 140649387288384 session_manager.py:491] Running local_init_op.
+I0629 08:39:31.876491 140649387288384 session_manager.py:493] Done running local_init_op.
+I0629 08:39:35.008462 140649387288384 basic_session_run_hooks.py:594] Saving checkpoints for 0 into /root/imagenet/model_conv2d11/model.ckpt.
+I0629 08:39:36.344168 140649387288384 util.py:164] Initialize strategy
+2021-06-29 08:39:37.619334: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+I0629 08:39:44.818649 140649387288384 basic_session_run_hooks.py:249] cross_entropy = 7.794254, learning_rate = 0.0, train_accuracy = 0.0
+I0629 08:39:44.819789 140649387288384 basic_session_run_hooks.py:249] loss = 9.189084, step = 0
+I0629 08:39:56.755680 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 8.37687
+I0629 08:39:56.756938 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.585018, learning_rate = 7.992727e-06, train_accuracy = 0.0 (11.938 sec)
+I0629 08:39:56.757145 140649387288384 basic_session_run_hooks.py:247] loss = 8.979847, step = 100 (11.937 sec)
+I0629 08:40:07.387497 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40572
+I0629 08:40:07.388773 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.5852413, learning_rate = 1.5985454e-05, train_accuracy = 0.0 (10.632 sec)
+I0629 08:40:07.389021 140649387288384 basic_session_run_hooks.py:247] loss = 8.980066, step = 200 (10.632 sec)
+I0629 08:40:17.980128 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.44054
+I0629 08:40:17.981303 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.709504, learning_rate = 2.397818e-05, train_accuracy = 0.0 (10.593 sec)
+I0629 08:40:17.982335 140649387288384 basic_session_run_hooks.py:247] loss = 9.104323, step = 300 (10.593 sec)
+I0629 08:40:28.555240 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.45617
+I0629 08:40:28.556587 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.2635126, learning_rate = 3.1970907e-05, train_accuracy = 0.0 (10.575 sec)
+I0629 08:40:28.557907 140649387288384 basic_session_run_hooks.py:247] loss = 8.658325, step = 400 (10.576 sec)
+I0629 08:40:39.194721 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.39894
+I0629 08:40:39.196036 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.478778, learning_rate = 3.9963634e-05, train_accuracy = 0.0 (10.639 sec)
+I0629 08:40:39.196300 140649387288384 basic_session_run_hooks.py:247] loss = 8.873583, step = 500 (10.638 sec)
+I0629 08:40:49.843113 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.3911
+I0629 08:40:49.844481 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.084964, learning_rate = 4.795636e-05, train_accuracy = 0.004464286 (10.648 sec)
+I0629 08:40:49.844761 140649387288384 basic_session_run_hooks.py:247] loss = 8.479762, step = 600 (10.648 sec)
+I0629 08:41:00.434419 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.44169
+I0629 08:41:00.435715 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.1913505, learning_rate = 5.5949087e-05, train_accuracy = 0.00390625 (10.591 sec)
+I0629 08:41:00.435952 140649387288384 basic_session_run_hooks.py:247] loss = 8.586143, step = 700 (10.591 sec)
+I0629 08:41:11.032437 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.43572
+I0629 08:41:11.033820 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.1896105, learning_rate = 6.3941814e-05, train_accuracy = 0.0034722222 (10.598 sec)
+I0629 08:41:11.034087 140649387288384 basic_session_run_hooks.py:247] loss = 8.584396, step = 800 (10.598 sec)
+I0629 08:41:21.640729 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42665
+I0629 08:41:21.642045 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.9489946, learning_rate = 7.193454e-05, train_accuracy = 0.003125 (10.608 sec)
+I0629 08:41:21.643031 140649387288384 basic_session_run_hooks.py:247] loss = 8.343775, step = 900 (10.609 sec)
+I0629 08:41:32.308149 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.37428
+I0629 08:41:32.309543 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.2201805, learning_rate = 7.992727e-05, train_accuracy = 0.0028409092 (10.667 sec)
+I0629 08:41:32.309824 140649387288384 basic_session_run_hooks.py:247] loss = 8.614956, step = 1000 (10.667 sec)
+I0629 08:41:42.939267 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40635
+I0629 08:41:42.940738 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.2691784, learning_rate = 8.7919994e-05, train_accuracy = 0.0026041667 (10.631 sec)
+I0629 08:41:42.941722 140649387288384 basic_session_run_hooks.py:247] loss = 8.663949, step = 1100 (10.632 sec)
+I0629 08:41:53.554760 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42019
+I0629 08:41:53.561573 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.040596, learning_rate = 9.591272e-05, train_accuracy = 0.0024038462 (10.621 sec)
+I0629 08:41:53.561827 140649387288384 basic_session_run_hooks.py:247] loss = 8.435362, step = 1200 (10.620 sec)
+I0629 08:42:04.200740 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.39326
+I0629 08:42:04.201961 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.019985, learning_rate = 0.00010390545, train_accuracy = 0.002232143 (10.640 sec)
+I0629 08:42:04.202178 140649387288384 basic_session_run_hooks.py:247] loss = 8.414747, step = 1300 (10.640 sec)
+I0629 08:42:14.807004 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42835
+I0629 08:42:14.808356 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.926502, learning_rate = 0.000111898175, train_accuracy = 0.0020833334 (10.606 sec)
+I0629 08:42:14.808608 140649387288384 basic_session_run_hooks.py:247] loss = 8.32126, step = 1400 (10.606 sec)
+I0629 08:42:25.434370 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40969
+I0629 08:42:25.435868 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.7487183, learning_rate = 0.0001198909, train_accuracy = 0.001953125 (10.628 sec)
+I0629 08:42:25.436142 140649387288384 basic_session_run_hooks.py:247] loss = 8.143472, step = 1500 (10.628 sec)
+I0629 08:42:36.029343 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.43843
+I0629 08:42:36.030569 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.0788965, learning_rate = 0.00012788363, train_accuracy = 0.0018382353 (10.595 sec)
+I0629 08:42:36.031522 140649387288384 basic_session_run_hooks.py:247] loss = 8.473643, step = 1600 (10.595 sec)
+I0629 08:42:46.636713 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42741
+I0629 08:42:46.638051 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.000756, learning_rate = 0.00013587635, train_accuracy = 0.0017361111 (10.607 sec)
+I0629 08:42:46.639408 140649387288384 basic_session_run_hooks.py:247] loss = 8.395494, step = 1700 (10.608 sec)
+I0629 08:42:57.244508 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.427
+I0629 08:42:57.245713 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.935184, learning_rate = 0.00014386908, train_accuracy = 0.0016447369 (10.608 sec)
+I0629 08:42:57.245927 140649387288384 basic_session_run_hooks.py:247] loss = 8.329912, step = 1800 (10.607 sec)
+I0629 08:43:07.879271 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40315
+I0629 08:43:07.880702 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.899951, learning_rate = 0.00015186181, train_accuracy = 0.0015625 (10.635 sec)
+I0629 08:43:07.880957 140649387288384 basic_session_run_hooks.py:247] loss = 8.294664, step = 1900 (10.635 sec)
+I0629 08:43:18.486586 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42744
+I0629 08:43:18.487859 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.8955545, learning_rate = 0.00015985454, train_accuracy = 0.0014880953 (10.607 sec)
+I0629 08:43:18.488103 140649387288384 basic_session_run_hooks.py:247] loss = 8.29025, step = 2000 (10.607 sec)
+I0629 08:43:29.097225 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.4245
+I0629 08:43:29.098742 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.925741, learning_rate = 0.00016784726, train_accuracy = 0.0014204546 (10.611 sec)
+I0629 08:43:29.099936 140649387288384 basic_session_run_hooks.py:247] loss = 8.3204155, step = 2100 (10.612 sec)
+I0629 08:43:39.688076 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.44211
+I0629 08:43:39.689370 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.895372, learning_rate = 0.00017583999, train_accuracy = 0.0013586957 (10.591 sec)
+I0629 08:43:39.689592 140649387288384 basic_session_run_hooks.py:247] loss = 8.290027, step = 2200 (10.590 sec)
+I0629 08:43:50.311859 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.41284
+I0629 08:43:50.313226 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.804351, learning_rate = 0.00018383272, train_accuracy = 0.0013020834 (10.624 sec)
+I0629 08:43:50.313480 140649387288384 basic_session_run_hooks.py:247] loss = 8.198984, step = 2300 (10.624 sec)
+I0629 08:44:00.894279 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.44965
+I0629 08:44:00.895614 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.9079704, learning_rate = 0.00019182544, train_accuracy = 0.00125 (10.582 sec)
+I0629 08:44:00.895859 140649387288384 basic_session_run_hooks.py:247] loss = 8.302579, step = 2400 (10.582 sec)
+I0629 08:44:11.495562 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.43283
+I0629 08:44:11.496904 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.8532963, learning_rate = 0.00019981817, train_accuracy = 0.0012019231 (10.601 sec)
+I0629 08:44:11.497150 140649387288384 basic_session_run_hooks.py:247] loss = 8.247878, step = 2500 (10.601 sec)
+I0629 08:44:22.113845 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.41771
+I0629 08:44:22.115121 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.8756576, learning_rate = 0.0002078109, train_accuracy = 0.0011574074 (10.618 sec)
+I0629 08:44:22.115346 140649387288384 basic_session_run_hooks.py:247] loss = 8.270211, step = 2600 (10.618 sec)
+I0629 08:44:32.762125 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.3912
+I0629 08:44:32.763470 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.997624, learning_rate = 0.00021580362, train_accuracy = 0.0011160715 (10.648 sec)
+I0629 08:44:32.763713 140649387288384 basic_session_run_hooks.py:247] loss = 8.392152, step = 2700 (10.648 sec)
+I0629 08:44:43.378400 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.4195
+I0629 08:44:43.379928 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.9394555, learning_rate = 0.00022379635, train_accuracy = 0.0010775862 (10.616 sec)
+I0629 08:44:43.380218 140649387288384 basic_session_run_hooks.py:247] loss = 8.333958, step = 2800 (10.617 sec)
+I0629 08:44:54.004519 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.41075
+I0629 08:44:54.005859 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.9847517, learning_rate = 0.00023178908, train_accuracy = 0.0010416667 (10.626 sec)
+I0629 08:44:54.006087 140649387288384 basic_session_run_hooks.py:247] loss = 8.379227, step = 2900 (10.626 sec)
+I0629 08:45:04.609008 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42997
+I0629 08:45:04.610302 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.871781, learning_rate = 0.0002397818, train_accuracy = 0.0010080645 (10.604 sec)
+I0629 08:45:04.610548 140649387288384 basic_session_run_hooks.py:247] loss = 8.266225, step = 3000 (10.604 sec)
+I0629 08:45:15.246291 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40089
+I0629 08:45:15.247604 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.916934, learning_rate = 0.00024777453, train_accuracy = 0.0009765625 (10.637 sec)
+I0629 08:45:15.247833 140649387288384 basic_session_run_hooks.py:247] loss = 8.311343, step = 3100 (10.637 sec)
+I0629 08:45:25.878819 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.4051
+I0629 08:45:25.880095 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.948565, learning_rate = 0.00025576726, train_accuracy = 0.0009469697 (10.632 sec)
+I0629 08:45:25.880318 140649387288384 basic_session_run_hooks.py:247] loss = 8.342936, step = 3200 (10.632 sec)
+I0629 08:45:36.489386 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42456
+I0629 08:45:36.490544 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.972453, learning_rate = 0.00026375998, train_accuracy = 0.00091911765 (10.610 sec)
+I0629 08:45:36.490730 140649387288384 basic_session_run_hooks.py:247] loss = 8.366782, step = 3300 (10.610 sec)
+I0629 08:45:47.142740 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.38672
+I0629 08:45:47.144219 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.882992, learning_rate = 0.0002717527, train_accuracy = 0.00089285715 (10.654 sec)
+I0629 08:45:47.144450 140649387288384 basic_session_run_hooks.py:247] loss = 8.277278, step = 3400 (10.654 sec)
+I0629 08:45:57.755446 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42269
+I0629 08:45:57.761385 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.697983, learning_rate = 0.00027974544, train_accuracy = 0.00086805556 (10.617 sec)
+I0629 08:45:57.761629 140649387288384 basic_session_run_hooks.py:247] loss = 8.092223, step = 3500 (10.617 sec)
+I0629 08:46:08.393973 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.39977
+I0629 08:46:08.395309 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.024702, learning_rate = 0.00028773816, train_accuracy = 0.0016891892 (10.634 sec)
+I0629 08:46:08.395525 140649387288384 basic_session_run_hooks.py:247] loss = 8.418894, step = 3600 (10.634 sec)
+I0629 08:46:18.983853 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.44299
+I0629 08:46:18.985166 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.1619825, learning_rate = 0.0002957309, train_accuracy = 0.0016447369 (10.590 sec)
+I0629 08:46:18.985342 140649387288384 basic_session_run_hooks.py:247] loss = 8.55612, step = 3700 (10.590 sec)
+I0629 08:46:29.623029 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.39922
+I0629 08:46:29.624243 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.991143, learning_rate = 0.00030372362, train_accuracy = 0.0016025641 (10.639 sec)
+I0629 08:46:29.625202 140649387288384 basic_session_run_hooks.py:247] loss = 8.385222, step = 3800 (10.640 sec)
+I0629 08:46:40.258146 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40283
+I0629 08:46:40.259454 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.0473304, learning_rate = 0.00031171634, train_accuracy = 0.0015625 (10.635 sec)
+I0629 08:46:40.259681 140649387288384 basic_session_run_hooks.py:247] loss = 8.441347, step = 3900 (10.634 sec)
+I0629 08:46:50.886723 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40858
+I0629 08:46:50.887929 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.9904227, learning_rate = 0.00031970907, train_accuracy = 0.0015243902 (10.628 sec)
+I0629 08:46:50.889294 140649387288384 basic_session_run_hooks.py:247] loss = 8.384373, step = 4000 (10.630 sec)
+I0629 08:47:01.500977 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.4213
+I0629 08:47:01.502347 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.868281, learning_rate = 0.0003277018, train_accuracy = 0.0014880953 (10.614 sec)
+I0629 08:47:01.502590 140649387288384 basic_session_run_hooks.py:247] loss = 8.262161, step = 4100 (10.613 sec)
+I0629 08:47:12.108528 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42723
+I0629 08:47:12.109750 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.866586, learning_rate = 0.00033569452, train_accuracy = 0.0014534884 (10.607 sec)
+I0629 08:47:12.109969 140649387288384 basic_session_run_hooks.py:247] loss = 8.260395, step = 4200 (10.607 sec)
+I0629 08:47:22.725954 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.41849
+I0629 08:47:22.727233 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.029954, learning_rate = 0.00034368725, train_accuracy = 0.0014204546 (10.617 sec)
+I0629 08:47:22.727549 140649387288384 basic_session_run_hooks.py:247] loss = 8.423693, step = 4300 (10.618 sec)
+I0629 08:47:33.327119 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.43296
+I0629 08:47:33.328345 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.800724, learning_rate = 0.00035167998, train_accuracy = 0.0013888889 (10.601 sec)
+I0629 08:47:33.328585 140649387288384 basic_session_run_hooks.py:247] loss = 8.19439, step = 4400 (10.601 sec)
+I0629 08:47:43.958061 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.40647
+I0629 08:47:43.959426 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.0221524, learning_rate = 0.0003596727, train_accuracy = 0.0013586957 (10.631 sec)
+I0629 08:47:43.959735 140649387288384 basic_session_run_hooks.py:247] loss = 8.415745, step = 4500 (10.631 sec)
+I0629 08:47:54.574545 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.41931
+I0629 08:47:54.575940 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.7508144, learning_rate = 0.00036766543, train_accuracy = 0.0013297872 (10.617 sec)
+I0629 08:47:54.576962 140649387288384 basic_session_run_hooks.py:247] loss = 8.144332, step = 4600 (10.617 sec)
+I0629 08:48:05.182317 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42707
+I0629 08:48:05.183440 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 7.0013885, learning_rate = 0.00037565816, train_accuracy = 0.0013020834 (10.608 sec)
+I0629 08:48:05.183671 140649387288384 basic_session_run_hooks.py:247] loss = 8.394831, step = 4700 (10.607 sec)
+I0629 08:48:15.788638 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.42834
+I0629 08:48:15.789944 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.7771664, learning_rate = 0.00038365088, train_accuracy = 0.0019132653 (10.607 sec)
+I0629 08:48:15.790153 140649387288384 basic_session_run_hooks.py:247] loss = 8.170531, step = 4800 (10.606 sec)
+I0629 08:48:26.379490 140649387288384 basic_session_run_hooks.py:680] global_step/sec: 9.44211
+I0629 08:48:26.380859 140649387288384 basic_session_run_hooks.py:247] cross_entropy = 6.833682, learning_rate = 0.0003916436, train_accuracy = 0.0025 (10.591 sec)
+I0629 08:48:26.381123 140649387288384 basic_session_run_hooks.py:247] loss = 8.226967, step = 4900 (10.591 sec)
+I0629 08:48:36.852417 140649387288384 basic_session_run_hooks.py:594] Saving checkpoints for 5000 into /root/imagenet/model_conv2d11/model.ckpt.
+I0629 08:48:37.540770 140649387288384 util.py:168] Finalize strategy.
+I0629 08:48:37.661182 140649387288384 estimator.py:359] Loss for final step: 8.264536.
+I0629 08:48:37.661998 140649387288384 resnet_run_loop.py:566] Starting to evaluate.
+I0629 08:48:37.746318 140649387288384 estimator.py:1111] Calling model_fn.
+I0629 08:48:39.546931 140649387288384 estimator.py:1113] Done calling model_fn.
+I0629 08:48:39.565048 140649387288384 evaluation.py:257] Starting evaluation at 2021-06-29T08:48:39Z
+I0629 08:48:40.189443 140649387288384 monitored_session.py:222] Graph was finalized.
+2021-06-29 08:48:40.189970: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-06-29 08:48:40.190125: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-06-29 08:48:40.190144: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-06-29 08:48:40.190169: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-06-29 08:48:40.190353: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14770 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+W0629 08:48:40.191258 140649387288384 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+I0629 08:48:40.192914 140649387288384 saver.py:1270] Restoring parameters from /root/imagenet/model_conv2d11/model.ckpt-5000
+I0629 08:48:40.738623 140649387288384 session_manager.py:491] Running local_init_op.
+I0629 08:48:40.781910 140649387288384 session_manager.py:493] Done running local_init_op.
+I0629 08:48:41.536973 140649387288384 evaluation.py:277] Finished evaluation at 2021-06-29-08:48:41
+I0629 08:48:41.537211 140649387288384 estimator.py:1979] Saving dict for global step 5000: accuracy = 0.0, accuracy_top_5 = 0.0, global_step = 5000, loss = 0.0
+I0629 08:48:42.057973 140649387288384 estimator.py:2039] Saving 'checkpoint_path' summary for global step 5000: /root/imagenet/model_conv2d11/model.ckpt-5000
+I0629 08:48:42.058918 140649387288384 logger.py:146] Benchmark metric: {'name': 'accuracy', 'value': 0.0, 'unit': None, 'global_step': 5000, 'timestamp': '2021-06-29T08:48:42.058786Z', 'extras': []}
+I0629 08:48:42.059087 140649387288384 logger.py:146] Benchmark metric: {'name': 'accuracy_top_5', 'value': 0.0, 'unit': None, 'global_step': 5000, 'timestamp': '2021-06-29T08:48:42.059069Z', 'extras': []}
+I0629 08:48:42.059263 140649387288384 logger.py:146] Benchmark metric: {'name': 'loss', 'value': 0.0, 'unit': None, 'global_step': 5000, 'timestamp': '2021-06-29T08:48:42.059156Z', 'extras': []}
