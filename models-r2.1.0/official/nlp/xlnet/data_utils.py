@@ -107,12 +107,18 @@ def file_based_input_fn_builder(input_file, name_to_features, batch_size,
     # that under TPU strategy, setting drop_remainder=False in
     # tf.data.Dataset.batch() while data_size can be divided by global
     # batch_size will trigger dynamic_dimension related TPU compilation error.
+    '''
     d = d.apply(
         tf.data.experimental.map_and_batch(
             lambda record: _decode_record(record, name_to_features),
             batch_size=batch_size,
             num_parallel_batches=num_threads,
             drop_remainder=True))
+    '''
+    d = d.map(
+        lambda record: _decode_record(record, name_to_features),
+        num_parallel_calls=tf.data.experimental.AUTOTUNE)
+    d = d.batch(batch_size, drop_remainder=is_training)
 
     # When `input_file` is a path to a single file or a list
     # containing a single path, disable auto sharding so that
