@@ -511,17 +511,10 @@ class Model(object):
         inputs = tf.nn.relu(inputs)
 
       if self.first_pool_size:
-        """
         inputs = tf.layers.max_pooling2d(
             inputs=inputs, pool_size=self.first_pool_size,
             strides=self.first_pool_stride, padding='SAME',
             data_format=self.data_format)
-        """
-        inputs = tf.keras.layers.MaxPooling2D(
-            pool_size=self.first_pool_size,
-            strides=self.first_pool_stride, padding='SAME',
-            data_format=self.data_format)(inputs)
-        
         inputs = tf.identity(inputs, 'initial_max_pool')
 
       for i, num_blocks in enumerate(self.block_sizes):
@@ -548,6 +541,7 @@ class Model(object):
       inputs = tf.identity(inputs, 'final_reduce_mean')
 
       inputs = tf.squeeze(inputs, axes)
-      inputs = tf.layers.dense(inputs=inputs, units=self.num_classes)
+      #inputs = tf.layers.dense(inputs=inputs, units=self.num_classes)
+      inputs = tf.keras.layers.Dense(units=self.num_classes)(input)
       inputs = tf.identity(inputs, 'final_dense')
       return inputs
