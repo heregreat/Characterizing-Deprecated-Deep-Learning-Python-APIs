@@ -48,10 +48,16 @@ def batch_norm(inputs, training, data_format):
   """Performs a batch normalization using a standard set of parameters."""
   # We set fused=True for a significant performance boost. See
   # https://www.tensorflow.org/performance/performance_guide#common_fused_ops
+  '''
   return tf.layers.batch_normalization(
       inputs=inputs, axis=1 if data_format == 'channels_first' else 3,
       momentum=_BATCH_NORM_DECAY, epsilon=_BATCH_NORM_EPSILON, center=True,
       scale=True, training=training, fused=True)
+  '''
+  return tf.keras.layers.BatchNormalization(
+      axis=1 if data_format == 'channels_first' else 3,
+      momentum=_BATCH_NORM_DECAY, epsilon=_BATCH_NORM_EPSILON, center=True,
+      scale=True, fused=True)(inputs, training=training)
 
 
 def fixed_padding(inputs, kernel_size, data_format):
@@ -93,7 +99,13 @@ def conv2d_fixed_padding(inputs, filters, kernel_size, strides, data_format):
       padding=('SAME' if strides == 1 else 'VALID'), use_bias=False,
       kernel_initializer=tf.variance_scaling_initializer(),
       data_format=data_format)
-
+  '''
+  return tf.keras.layers.Conv2D(
+      filters=filters, kernel_size=kernel_size, strides=strides,
+      padding=('SAME' if strides == 1 else 'VALID'), use_bias=False,
+      kernel_initializer=tf.variance_scaling_initializer(),
+      data_format=data_format).apply(inputs)
+  '''
 
 ################################################################################
 # ResNet block definitions.
@@ -542,5 +554,6 @@ class Model(object):
 
       inputs = tf.squeeze(inputs, axes)
       inputs = tf.layers.dense(inputs=inputs, units=self.num_classes)
+      #inputs = tf.keras.layers.Dense(self.num_classes).apply(inputs)
       inputs = tf.identity(inputs, 'final_dense')
       return inputs

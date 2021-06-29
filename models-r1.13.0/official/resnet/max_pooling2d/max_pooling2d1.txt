@@ -1,0 +1,72 @@
+2021-06-28 22:46:34.987622: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-06-28 22:46:35.092098: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-06-28 22:46:35.093113: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x2d1af90 executing computations on platform CUDA. Devices:
+2021-06-28 22:46:35.093149: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2021-06-28 22:46:35.096305: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2299995000 Hz
+2021-06-28 22:46:35.096682: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x2dde8b0 executing computations on platform Host. Devices:
+2021-06-28 22:46:35.096720: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2021-06-28 22:46:35.096914: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.78GiB freeMemory: 15.18GiB
+2021-06-28 22:46:35.096943: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-06-28 22:46:35.098116: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-06-28 22:46:35.098146: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-06-28 22:46:35.098164: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-06-28 22:46:35.098300: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/device:GPU:0 with 14770 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+I0628 22:46:35.104522 140696352933696 run_config.py:532] Initializing RunConfig with distribution strategies.
+I0628 22:46:35.104935 140696352933696 estimator_training.py:166] Not using Distribute Coordinator.
+I0628 22:46:35.105482 140696352933696 estimator.py:201] Using config: {'_model_dir': '/root/imagenet/model_max_pooling2d1/', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 86400, '_session_config': allow_soft_placement: true
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': <tensorflow.contrib.distribute.python.one_device_strategy.OneDeviceStrategy object at 0x7ff5e2e53908>, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7ff5e2e539e8>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_distribute_coordinator_mode': None}
+2021-06-28 22:46:36.283291: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-06-28 22:46:36.283355: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-06-28 22:46:36.283364: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-06-28 22:46:36.283373: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-06-28 22:46:36.283516: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/device:GPU:0 with 14770 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+I0628 22:46:36.323486 140696352933696 logger.py:151] Benchmark run: {'model_name': 'resnet', 'dataset': {'name': 'ImageNet'}, 'machine_config': {'cpu_info': {'num_cores': 4, 'cpu_info': 'intel', 'mhz_per_cpu': 1000000.0}, 'gpu_info': {'count': 1, 'model': 'Tesla V100-SXM2-16GB'}, 'memory_total': 15766540288, 'memory_available': 13375500288}, 'test_id': None, 'run_date': '2021-06-28T22:46:35.106510Z', 'tensorflow_version': {'version': '1.13.2', 'git_hash': "b'v1.13.2-5-g04256c89d8'"}, 'tensorflow_environment_variables': [], 'run_parameters': [{'name': 'batch_size', 'long_value': 32}, {'name': 'dtype', 'string_value': "<dtype: 'float32'>"}, {'name': 'resnet_size', 'string_value': '50'}, {'name': 'resnet_version', 'string_value': '1'}, {'name': 'synthetic_data', 'bool_value': 'False'}, {'name': 'train_epochs', 'long_value': 1}], 'test_environment': 'GCP'}
+I0628 22:46:36.323905 140696352933696 resnet_run_loop.py:560] Starting cycle: 0/1
+I0628 22:46:36.341960 140696352933696 estimator.py:351] Skipping training since max_steps has already saved.
+I0628 22:46:36.342121 140696352933696 resnet_run_loop.py:566] Starting to evaluate.
+W0628 22:46:36.347408 140696352933696 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/framework/op_def_library.py:263: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+W0628 22:46:36.353373 140696352933696 deprecation.py:323] From imagenet_main.py:192: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+W0628 22:46:36.373241 140696352933696 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_run_loop.py:95: map_and_batch (from tensorflow.contrib.data.python.ops.batching) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.map_and_batch(...)`.
+I0628 22:46:36.442663 140696352933696 estimator.py:1111] Calling model_fn.
+W0628 22:46:36.447282 140696352933696 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_model.py:95: conv2d (from tensorflow.python.layers.convolutional) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.conv2d instead.
+W0628 22:46:36.461045 140696352933696 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_model.py:54: batch_normalization (from tensorflow.python.layers.normalization) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.batch_normalization instead.
+W0628 22:46:38.146350 140696352933696 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/resnet/resnet_model.py:551: dense (from tensorflow.python.layers.core) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use keras.layers.dense instead.
+W0628 22:46:38.170420 140696352933696 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/losses/losses_impl.py:209: to_float (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+I0628 22:46:38.258325 140696352933696 estimator.py:1113] Done calling model_fn.
+I0628 22:46:38.278664 140696352933696 evaluation.py:257] Starting evaluation at 2021-06-28T22:46:38Z
+I0628 22:46:39.043644 140696352933696 monitored_session.py:222] Graph was finalized.
+2021-06-28 22:46:39.044269: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-06-28 22:46:39.044372: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-06-28 22:46:39.044419: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-06-28 22:46:39.044457: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-06-28 22:46:39.044651: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14770 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+W0628 22:46:39.045539 140696352933696 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/training/saver.py:1266: checkpoint_exists (from tensorflow.python.training.checkpoint_management) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use standard file APIs to check for files with this prefix.
+I0628 22:46:39.047229 140696352933696 saver.py:1270] Restoring parameters from /root/imagenet/model_max_pooling2d1/model.ckpt-5000
+I0628 22:46:40.374836 140696352933696 session_manager.py:491] Running local_init_op.
+I0628 22:46:40.414621 140696352933696 session_manager.py:493] Done running local_init_op.
+2021-06-28 22:46:41.034811: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+I0628 22:46:41.424588 140696352933696 evaluation.py:277] Finished evaluation at 2021-06-28-22:46:41
+I0628 22:46:41.424840 140696352933696 estimator.py:1979] Saving dict for global step 5000: accuracy = 0.0, accuracy_top_5 = 0.0, global_step = 5000, loss = 0.0
+I0628 22:46:41.774867 140696352933696 estimator.py:2039] Saving 'checkpoint_path' summary for global step 5000: /root/imagenet/model_max_pooling2d1/model.ckpt-5000
+I0628 22:46:41.775851 140696352933696 logger.py:146] Benchmark metric: {'name': 'accuracy', 'value': 0.0, 'unit': None, 'global_step': 5000, 'timestamp': '2021-06-28T22:46:41.775784Z', 'extras': []}
+I0628 22:46:41.776040 140696352933696 logger.py:146] Benchmark metric: {'name': 'accuracy_top_5', 'value': 0.0, 'unit': None, 'global_step': 5000, 'timestamp': '2021-06-28T22:46:41.776019Z', 'extras': []}
+I0628 22:46:41.776173 140696352933696 logger.py:146] Benchmark metric: {'name': 'loss', 'value': 0.0, 'unit': None, 'global_step': 5000, 'timestamp': '2021-06-28T22:46:41.776137Z', 'extras': []}
