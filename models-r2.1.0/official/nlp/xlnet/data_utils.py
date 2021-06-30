@@ -92,12 +92,16 @@ def file_based_input_fn_builder(input_file, name_to_features, batch_size,
       d = tf.data.Dataset.from_tensor_slices(input_file)
       # file level shuffle
       d = d.shuffle(len(input_file)).repeat()
-
+      '''
       d = d.apply(
           tf.data.experimental.parallel_interleave(
               tf.data.TFRecordDataset,
               sloppy=is_training,
               cycle_length=cycle_length))
+      '''
+      d = d.interleave(
+          tf.data.TFRecordDataset,
+          cycle_length=cycle_length)
 
       if is_training:
         # sample level shuffle
@@ -107,7 +111,7 @@ def file_based_input_fn_builder(input_file, name_to_features, batch_size,
     # that under TPU strategy, setting drop_remainder=False in
     # tf.data.Dataset.batch() while data_size can be divided by global
     # batch_size will trigger dynamic_dimension related TPU compilation error.
-    '''
+
     d = d.apply(
         tf.data.experimental.map_and_batch(
             lambda record: _decode_record(record, name_to_features),
@@ -119,7 +123,7 @@ def file_based_input_fn_builder(input_file, name_to_features, batch_size,
         lambda record: _decode_record(record, name_to_features),
         num_parallel_calls=tf.data.experimental.AUTOTUNE)
     d = d.batch(batch_size, drop_remainder=is_training)
-
+    '''
     # When `input_file` is a path to a single file or a list
     # containing a single path, disable auto sharding so that
     # same input file is sent to all workers.
@@ -734,11 +738,15 @@ def parse_files_to_dataset(parser,
 
     # `sloppy` mode means that the interleaving is not exact. This adds
     # even more randomness to the training pipeline.
+    '''
     dataset = dataset.apply(
         tf.data.experimental.parallel_interleave(
             tf.data.TFRecordDataset,
             sloppy=True,
             cycle_length=cycle_length))
+    '''
+    dataset = dataset.interleave(tf.data.TFRecordDataset,
+            cycle_length=cycle_length)
     buffer_size = 2048
     logging.info("Perform sample-level shuffle with size %d", buffer_size)
     dataset = dataset.shuffle(buffer_size=buffer_size)
