@@ -1,0 +1,238 @@
+/home/nianliu/ModelGarden/models-r2.1.0/official/modeling/hyperparams/params_dict.py:402: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  params_dict = yaml.load(dict_or_string_or_yaml_file)
+I0817 02:50:05.373655 139935678867264 main.py:195] Model Parameters: {'anchor': {'anchor_size': 4.0,
+            'aspect_ratios': [1.0, 2.0, 0.5],
+            'max_level': 7,
+            'min_level': 3,
+            'num_scales': 3},
+ 'architecture': {'backbone': 'resnet',
+                  'multilevel_features': 'fpn',
+                  'parser': 'retinanet_parser',
+                  'use_bfloat16': False},
+ 'enable_summary': False,
+ 'eval': {'batch_size': 8,
+          'eval_file_pattern': 'gs://apiss/coco/val-*',
+          'eval_samples': 1000,
+          'eval_timeout': None,
+          'input_sharding': True,
+          'min_eval_interval': 180,
+          'type': 'box',
+          'val_json_file': 'gs://apiss/coco/instances_val2017.json'},
+ 'fpn': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                        'batch_norm_momentum': 0.997,
+                        'batch_norm_trainable': True},
+         'fpn_feat_dims': 256,
+         'max_level': 7,
+         'min_level': 3,
+         'use_separable_conv': False},
+ 'model_dir': 'gs://apiss/coco/Model/cocopy_func_new6',
+ 'nasfpn': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                           'batch_norm_momentum': 0.997,
+                           'batch_norm_trainable': True},
+            'dropblock': {'dropblock_keep_prob': None, 'dropblock_size': None},
+            'fpn_feat_dims': 256,
+            'max_level': 7,
+            'min_level': 3,
+            'num_repeats': 5,
+            'use_separable_conv': False},
+ 'postprocess': {'max_level': 7,
+                 'max_total_size': 100,
+                 'min_level': 3,
+                 'nms_iou_threshold': 0.5,
+                 'pre_nms_num_boxes': 5000,
+                 'score_threshold': 0.05,
+                 'use_batched_nms': False},
+ 'predict': {'predict_batch_size': 8},
+ 'resnet': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                           'batch_norm_momentum': 0.997,
+                           'batch_norm_trainable': True},
+            'dropblock': {'dropblock_keep_prob': None, 'dropblock_size': None},
+            'resnet_depth': 50},
+ 'retinanet_head': {'anchors_per_location': 9,
+                    'batch_norm': {'batch_norm_epsilon': 0.0001,
+                                   'batch_norm_momentum': 0.997,
+                                   'batch_norm_trainable': True},
+                    'max_level': 7,
+                    'min_level': 3,
+                    'num_classes': 91,
+                    'retinanet_head_num_convs': 4,
+                    'retinanet_head_num_filters': 256,
+                    'use_separable_conv': False},
+ 'retinanet_loss': {'box_loss_weight': 50,
+                    'focal_loss_alpha': 0.25,
+                    'focal_loss_gamma': 1.5,
+                    'huber_loss_delta': 0.1,
+                    'num_classes': 91},
+ 'retinanet_parser': {'aug_rand_hflip': True,
+                      'aug_scale_max': 1.0,
+                      'aug_scale_min': 1.0,
+                      'autoaugment_policy_name': 'v0',
+                      'match_threshold': 0.5,
+                      'max_num_instances': 100,
+                      'num_channels': 3,
+                      'output_size': [640, 640],
+                      'skip_crowd_during_training': True,
+                      'unmatched_threshold': 0.5,
+                      'use_autoaugment': False,
+                      'use_bfloat16': False},
+ 'strategy_config': {'all_reduce_alg': None,
+                     'num_gpus': 0,
+                     'num_packs': 1,
+                     'task_index': -1,
+                     'tpu': 'node-1',
+                     'worker_hosts': None},
+ 'strategy_type': 'tpu',
+ 'train': {'batch_size': 64,
+           'checkpoint': {'path': '', 'prefix': ''},
+           'frozen_variable_prefix': '(resnet\\d+/)conv2d(|_([1-9]|10))\\/',
+           'input_sharding': False,
+           'iterations_per_loop': 500,
+           'l2_weight_decay': 0.0001,
+           'learning_rate': {'init_learning_rate': 0.08,
+                             'learning_rate_levels': [0.008, 0.0008],
+                             'learning_rate_steps': [15000, 20000],
+                             'type': 'step',
+                             'warmup_learning_rate': 0.0067,
+                             'warmup_steps': 500},
+           'optimizer': {'momentum': 0.9, 'nesterov': True, 'type': 'momentum'},
+           'total_steps': 22500,
+           'train_file_pattern': '',
+           'transpose_input': False},
+ 'type': 'retinanet',
+ 'use_tpu': True}
+I0817 02:50:05.422033 139935678867264 discovery.py:280] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I0817 02:50:05.467430 139935678867264 discovery.py:911] URL being requested: GET https://tpu.googleapis.com/v1/projects/concordia-sense-lab-project/locations/us-central1-a/nodes/node-1?alt=json
+I0817 02:50:05.467624 139935678867264 transport.py:157] Attempting refresh to obtain initial access_token
+I0817 02:50:05.467782 139935678867264 client.py:777] Refreshing access_token
+I0817 02:50:05.632951 139935678867264 discovery.py:280] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I0817 02:50:05.676855 139935678867264 discovery.py:911] URL being requested: GET https://tpu.googleapis.com/v1/projects/concordia-sense-lab-project/locations/us-central1-a/nodes/node-1?alt=json
+I0817 02:50:05.677060 139935678867264 transport.py:157] Attempting refresh to obtain initial access_token
+I0817 02:50:05.677172 139935678867264 client.py:777] Refreshing access_token
+I0817 02:50:05.762866 139935678867264 discovery.py:280] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I0817 02:50:05.801512 139935678867264 discovery.py:911] URL being requested: GET https://tpu.googleapis.com/v1/projects/concordia-sense-lab-project/locations/us-central1-a/nodes/node-1?alt=json
+I0817 02:50:05.801777 139935678867264 transport.py:157] Attempting refresh to obtain initial access_token
+I0817 02:50:05.801915 139935678867264 client.py:777] Refreshing access_token
+I0817 02:50:05.883395 139935678867264 discovery.py:280] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I0817 02:50:05.917666 139935678867264 discovery.py:911] URL being requested: GET https://tpu.googleapis.com/v1/projects/concordia-sense-lab-project/locations/us-central1-a/nodes/node-1?alt=json
+I0817 02:50:05.917843 139935678867264 transport.py:157] Attempting refresh to obtain initial access_token
+I0817 02:50:05.917949 139935678867264 client.py:777] Refreshing access_token
+I0817 02:50:06.026570 139935678867264 remote.py:177] Entering into master device scope: /job:worker/replica:0/task:0/device:CPU:0
+2021-08-17 02:50:06.027087: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-08-17 02:50:06.031521: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2249995000 Hz
+2021-08-17 02:50:06.032146: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x44fe700 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-08-17 02:50:06.032171: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-08-17 02:50:06.037300: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job worker -> {0 -> 10.116.237.58:8470}
+2021-08-17 02:50:06.037363: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:45626}
+2021-08-17 02:50:06.054326: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job worker -> {0 -> 10.116.237.58:8470}
+2021-08-17 02:50:06.054377: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:45626}
+2021-08-17 02:50:06.054795: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:390] Started server with target: grpc://localhost:45626
+INFO:tensorflow:Initializing the TPU system: node-1
+I0817 02:50:06.055608 139935678867264 tpu_strategy_util.py:72] Initializing the TPU system: node-1
+INFO:tensorflow:Clearing out eager caches
+I0817 02:50:06.185961 139935678867264 tpu_strategy_util.py:100] Clearing out eager caches
+INFO:tensorflow:Finished initializing TPU system.
+I0817 02:50:11.049623 139935678867264 tpu_strategy_util.py:123] Finished initializing TPU system.
+I0817 02:50:11.051124 139935678867264 discovery.py:280] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I0817 02:50:11.099254 139935678867264 discovery.py:911] URL being requested: GET https://tpu.googleapis.com/v1/projects/concordia-sense-lab-project/locations/us-central1-a/nodes/node-1?alt=json
+I0817 02:50:11.099599 139935678867264 transport.py:157] Attempting refresh to obtain initial access_token
+I0817 02:50:11.099744 139935678867264 client.py:777] Refreshing access_token
+I0817 02:50:11.185390 139935678867264 discovery.py:280] URL being requested: GET https://www.googleapis.com/discovery/v1/apis/tpu/v1/rest
+I0817 02:50:11.221978 139935678867264 discovery.py:911] URL being requested: GET https://tpu.googleapis.com/v1/projects/concordia-sense-lab-project/locations/us-central1-a/nodes/node-1?alt=json
+I0817 02:50:11.222292 139935678867264 transport.py:157] Attempting refresh to obtain initial access_token
+I0817 02:50:11.222441 139935678867264 client.py:777] Refreshing access_token
+INFO:tensorflow:Found TPU system:
+I0817 02:50:11.323609 139935678867264 tpu_system_metadata.py:140] Found TPU system:
+INFO:tensorflow:*** Num TPU Cores: 8
+I0817 02:50:11.323900 139935678867264 tpu_system_metadata.py:141] *** Num TPU Cores: 8
+INFO:tensorflow:*** Num TPU Workers: 1
+I0817 02:50:11.324058 139935678867264 tpu_system_metadata.py:142] *** Num TPU Workers: 1
+INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+I0817 02:50:11.324191 139935678867264 tpu_system_metadata.py:144] *** Num TPU Cores Per Worker: 8
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0817 02:50:11.324323 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0817 02:50:11.324571 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0817 02:50:11.324692 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+I0817 02:50:11.324824 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+I0817 02:50:11.324910 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+I0817 02:50:11.325046 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+I0817 02:50:11.325167 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+I0817 02:50:11.325283 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+I0817 02:50:11.325351 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+I0817 02:50:11.325412 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+I0817 02:50:11.325527 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+I0817 02:50:11.325599 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0817 02:50:11.325705 139935678867264 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0817 02:50:11.326253 139935678867264 main.py:135] Eval num_replicas_in_sync 8 num_workers 1 is_multi_host False
+I0817 02:50:41.588026 139935678867264 distributed_executor.py:607] Starting to evaluate.
+I0817 02:50:42.421007 139935678867264 distributed_executor.py:615] Checkpoint file gs://apiss/coco/Model/cocopy_func_new6/ctl_step_5000.ckpt-10 found and restoring from checkpoint
+WARNING:tensorflow:AutoGraph could not transform <function InputFn.__call__.<locals>.<lambda> at 0x7f44b1ff7f28> and will run it as-is.
+Cause: Unable to identify source code of lambda function <function InputFn.__call__.<locals>.<lambda> at 0x7f44b1ff7f28>. It was defined on this line: from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+map_func, which must contain a single lambda with matching signature. To avoid ambiguity, define each lambda in a separate expression.
+W0817 02:50:48.077408 139935678867264 ag_logging.py:146] AutoGraph could not transform <function InputFn.__call__.<locals>.<lambda> at 0x7f44b1ff7f28> and will run it as-is.
+Cause: Unable to identify source code of lambda function <function InputFn.__call__.<locals>.<lambda> at 0x7f44b1ff7f28>. It was defined on this line: from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+map_func, which must contain a single lambda with matching signature. To avoid ambiguity, define each lambda in a separate expression.
+I0817 02:50:54.895870 139935678867264 detection_executor.py:123] Running evaluation after step: 5000.
+I0817 02:53:42.432654 139935678867264 coco_evaluator.py:151] Using annotation file: gs://apiss/coco/instances_val2017.json
+I0817 02:54:07.411786 139935678867264 detection_executor.py:137] Step: [5000] Validation metric = {'AP': 0.24276659, 'AP50': 0.39860594, 'AP75': 0.25547984, 'APs': 0.10655692, 'APm': 0.30658782, 'APl': 0.37567732, 'ARmax1': 0.23198855, 'ARmax10': 0.37837395, 'ARmax100': 0.4017633, 'ARs': 0.16539797, 'ARm': 0.48732483, 'ARl': 0.56428355}
+2021-08-17 02:54:07.412242: W tensorflow/core/distributed_runtime/eager/remote_tensor_handle_data.cc:75] Unable to destroy remote tensor handles. If you are running a tf.function, it usually indicates some op in the graph gets an error: 5 root error(s) found.
+  (0) Cancelled: {{function_node __inference_test_step_89460}} Function was cancelled before it was started
+  (1) Cancelled: {{function_node __inference_test_step_89460}} Function was cancelled before it was started
+  (2) Cancelled: {{function_node __inference_test_step_89460}} Function was cancelled before it was started
+  (3) Out of range: {{function_node __inference_test_step_89460}} End of sequence
+	 [[{{node IteratorGetNext_6}}]]
+  (4) Out of range: {{function_node __inference_test_step_89460}} End of sequence
+	 [[{{node IteratorGetNext_3}}]]
+0 successful operations.
+4 derived errors ignored.
+I0817 02:54:07.418295 139935678867264 distributed_executor.py:622] Step: 5000 evalation metric = {'AP': 0.24276659, 'AP50': 0.39860594, 'AP75': 0.25547984, 'APs': 0.10655692, 'APm': 0.30658782, 'APl': 0.37567732, 'ARmax1': 0.23198855, 'ARmax10': 0.37837395, 'ARmax100': 0.4017633, 'ARs': 0.16539797, 'ARm': 0.48732483, 'ARl': 0.56428355}.
+I0817 02:54:08.234963 139935678867264 main.py:168] Final eval metric AP: 0.242767
+I0817 02:54:08.235254 139935678867264 main.py:168] Final eval metric AP50: 0.398606
+I0817 02:54:08.235377 139935678867264 main.py:168] Final eval metric AP75: 0.255480
+I0817 02:54:08.235476 139935678867264 main.py:168] Final eval metric APs: 0.106557
+I0817 02:54:08.235574 139935678867264 main.py:168] Final eval metric APm: 0.306588
+I0817 02:54:08.235670 139935678867264 main.py:168] Final eval metric APl: 0.375677
+I0817 02:54:08.235764 139935678867264 main.py:168] Final eval metric ARmax1: 0.231989
+I0817 02:54:08.235872 139935678867264 main.py:168] Final eval metric ARmax10: 0.378374
+I0817 02:54:08.235962 139935678867264 main.py:168] Final eval metric ARmax100: 0.401763
+I0817 02:54:08.236067 139935678867264 main.py:168] Final eval metric ARs: 0.165398
+I0817 02:54:08.236160 139935678867264 main.py:168] Final eval metric ARm: 0.487325
+I0817 02:54:08.236254 139935678867264 main.py:168] Final eval metric ARl: 0.564284
+loading annotations into memory...
+Done (t=0.48s)
+creating index...
+index created!
+creating index...
+index created!
+Running per image evaluation...
+Evaluate annotation type *bbox*
+DONE (t=18.50s).
+Accumulating evaluation results...
+DONE (t=1.94s).
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.243
+ Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=100 ] = 0.399
+ Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=100 ] = 0.255
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.107
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.307
+ Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.376
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=  1 ] = 0.232
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets= 10 ] = 0.378
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.402
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=100 ] = 0.165
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=100 ] = 0.487
+ Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=100 ] = 0.564
