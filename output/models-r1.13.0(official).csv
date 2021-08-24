@@ -1,0 +1,14 @@
+,0,1,2
+./models-r1.13.0/official/mnist/dataset.py,to_int32,,
+./models-r1.13.0/official/recommendation/data_preprocessing.py,load,,
+./models-r1.13.0/official/recommendation/data_pipeline.py,flatten,,
+./models-r1.13.0/official/transformer/utils/metrics.py,to_float,to_int32,
+./models-r1.13.0/official/transformer/transformer_main.py,to_float,,
+./models-r1.13.0/official/transformer/model/model_utils.py,to_float,,
+./models-r1.13.0/official/transformer/model/ffn_layer.py,to_int32,,
+./models-r1.13.0/official/transformer/model/embedding_layer.py,to_float,,
+./models-r1.13.0/official/transformer/model/beam_search.py,to_float,,
+./models-r1.13.0/official/transformer/data_download.py,tf_record_iterator,,
+./models-r1.13.0/official/resnet/keras/keras_cifar_main.py,sparse_to_dense,,
+./models-r1.13.0/official/resnet/resnet_model.py,max_pooling2d,dense,batch_normalization
+./models-r1.13.0/official/utils/testing/reference_data.py,flatten,test_session,

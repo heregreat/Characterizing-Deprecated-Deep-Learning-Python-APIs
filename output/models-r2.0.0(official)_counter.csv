@@ -1,0 +1,16 @@
+,0
+scalar,6
+make_one_shot_iterator,1
+load,8
+flatten,6
+apply,5
+to_float,3
+to_int32,2
+softmax_cross_entropy_with_logits,1
+tf_record_iterator,1
+sparse_to_dense,1
+max_pooling2d,1
+dense,1
+batch_normalization,1
+map_and_batch,1
+parallel_interleave,1

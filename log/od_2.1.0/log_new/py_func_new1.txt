@@ -1,0 +1,427 @@
+2021-06-27 18:46:37.444645: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer.so.6
+2021-06-27 18:46:37.446715: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libnvinfer_plugin.so.6
+/root/ModelGarden/models-r2.1.0/official/modeling/hyperparams/params_dict.py:402: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  params_dict = yaml.load(dict_or_string_or_yaml_file)
+I0627 18:46:38.796441 139715303352128 main.py:195] Model Parameters: {'anchor': {'anchor_size': 4.0,
+            'aspect_ratios': [1.0, 2.0, 0.5],
+            'max_level': 7,
+            'min_level': 3,
+            'num_scales': 3},
+ 'architecture': {'backbone': 'resnet',
+                  'multilevel_features': 'fpn',
+                  'parser': 'retinanet_parser',
+                  'use_bfloat16': False},
+ 'enable_summary': False,
+ 'eval': {'batch_size': 8,
+          'eval_file_pattern': 'gs://apiss/coco/val-*',
+          'eval_samples': 5000,
+          'eval_timeout': None,
+          'input_sharding': True,
+          'min_eval_interval': 180,
+          'type': 'box',
+          'val_json_file': 'gs://apiss/coco/instances_val2017.json'},
+ 'fpn': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                        'batch_norm_momentum': 0.997,
+                        'batch_norm_trainable': True},
+         'fpn_feat_dims': 256,
+         'max_level': 7,
+         'min_level': 3,
+         'use_separable_conv': False},
+ 'model_dir': 'gs://apiss/coco/Model/cocopy_func_new1',
+ 'nasfpn': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                           'batch_norm_momentum': 0.997,
+                           'batch_norm_trainable': True},
+            'dropblock': {'dropblock_keep_prob': None, 'dropblock_size': None},
+            'fpn_feat_dims': 256,
+            'max_level': 7,
+            'min_level': 3,
+            'num_repeats': 5,
+            'use_separable_conv': False},
+ 'postprocess': {'max_level': 7,
+                 'max_total_size': 100,
+                 'min_level': 3,
+                 'nms_iou_threshold': 0.5,
+                 'pre_nms_num_boxes': 5000,
+                 'score_threshold': 0.05,
+                 'use_batched_nms': False},
+ 'predict': {'predict_batch_size': 8},
+ 'resnet': {'batch_norm': {'batch_norm_epsilon': 0.0001,
+                           'batch_norm_momentum': 0.997,
+                           'batch_norm_trainable': True},
+            'dropblock': {'dropblock_keep_prob': None, 'dropblock_size': None},
+            'resnet_depth': 50},
+ 'retinanet_head': {'anchors_per_location': 9,
+                    'batch_norm': {'batch_norm_epsilon': 0.0001,
+                                   'batch_norm_momentum': 0.997,
+                                   'batch_norm_trainable': True},
+                    'max_level': 7,
+                    'min_level': 3,
+                    'num_classes': 91,
+                    'retinanet_head_num_convs': 4,
+                    'retinanet_head_num_filters': 256,
+                    'use_separable_conv': False},
+ 'retinanet_loss': {'box_loss_weight': 50,
+                    'focal_loss_alpha': 0.25,
+                    'focal_loss_gamma': 1.5,
+                    'huber_loss_delta': 0.1,
+                    'num_classes': 91},
+ 'retinanet_parser': {'aug_rand_hflip': True,
+                      'aug_scale_max': 1.0,
+                      'aug_scale_min': 1.0,
+                      'autoaugment_policy_name': 'v0',
+                      'match_threshold': 0.5,
+                      'max_num_instances': 100,
+                      'num_channels': 3,
+                      'output_size': [640, 640],
+                      'skip_crowd_during_training': True,
+                      'unmatched_threshold': 0.5,
+                      'use_autoaugment': False,
+                      'use_bfloat16': False},
+ 'strategy_config': {'all_reduce_alg': None,
+                     'num_gpus': 0,
+                     'num_packs': 1,
+                     'task_index': -1,
+                     'tpu': 'node-1',
+                     'worker_hosts': None},
+ 'strategy_type': 'tpu',
+ 'train': {'batch_size': 64,
+           'checkpoint': {'path': 'gs://cloud-tpu-checkpoints/retinanet/resnet50-checkpoint-2018-02-07',
+                          'prefix': 'resnet50/'},
+           'frozen_variable_prefix': '(resnet\\d+/)conv2d(|_([1-9]|10))\\/',
+           'input_sharding': False,
+           'iterations_per_loop': 500,
+           'l2_weight_decay': 0.0001,
+           'learning_rate': {'init_learning_rate': 0.08,
+                             'learning_rate_levels': [0.008, 0.0008],
+                             'learning_rate_steps': [15000, 20000],
+                             'type': 'step',
+                             'warmup_learning_rate': 0.0067,
+                             'warmup_steps': 500},
+           'optimizer': {'momentum': 0.9, 'nesterov': True, 'type': 'momentum'},
+           'total_steps': 5000,
+           'train_file_pattern': 'gs://apiss/coco/train-*',
+           'transpose_input': False},
+ 'type': 'retinanet',
+ 'use_tpu': True}
+I0627 18:46:38.966054 139715303352128 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 18:46:38.966333 139715303352128 client.py:777] Refreshing access_token
+I0627 18:46:39.089345 139715303352128 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 18:46:39.089561 139715303352128 client.py:777] Refreshing access_token
+2021-06-27 18:46:39.225774: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-06-27 18:46:39.225830: E tensorflow/stream_executor/cuda/cuda_driver.cc:351] failed call to cuInit: UNKNOWN ERROR (-1)
+2021-06-27 18:46:39.225852: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (4772c6b3998a): /proc/driver/nvidia/version does not exist
+I0627 18:46:39.229718 139715303352128 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 18:46:39.229941 139715303352128 client.py:777] Refreshing access_token
+I0627 18:46:39.348025 139715303352128 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 18:46:39.348296 139715303352128 client.py:777] Refreshing access_token
+I0627 18:46:39.442300 139715303352128 remote.py:177] Entering into master device scope: /job:worker/replica:0/task:0/device:CPU:0
+2021-06-27 18:46:39.442726: I tensorflow/core/platform/cpu_feature_guard.cc:142] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-06-27 18:46:39.450600: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2299995000 Hz
+2021-06-27 18:46:39.451522: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x604e700 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-06-27 18:46:39.451567: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-06-27 18:46:39.461973: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job worker -> {0 -> 10.111.230.146:8470}
+2021-06-27 18:46:39.462012: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:33789}
+2021-06-27 18:46:39.477105: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job worker -> {0 -> 10.111.230.146:8470}
+2021-06-27 18:46:39.477151: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:300] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:33789}
+2021-06-27 18:46:39.477905: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:390] Started server with target: grpc://localhost:33789
+INFO:tensorflow:Initializing the TPU system: node-1
+I0627 18:46:39.479056 139715303352128 tpu_strategy_util.py:72] Initializing the TPU system: node-1
+INFO:tensorflow:Clearing out eager caches
+I0627 18:46:39.635391 139715303352128 tpu_strategy_util.py:100] Clearing out eager caches
+INFO:tensorflow:Finished initializing TPU system.
+I0627 18:46:44.368989 139715303352128 tpu_strategy_util.py:123] Finished initializing TPU system.
+I0627 18:46:44.373388 139715303352128 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 18:46:44.373589 139715303352128 client.py:777] Refreshing access_token
+I0627 18:46:44.474869 139715303352128 transport.py:157] Attempting refresh to obtain initial access_token
+I0627 18:46:44.475117 139715303352128 client.py:777] Refreshing access_token
+INFO:tensorflow:Found TPU system:
+I0627 18:46:44.582332 139715303352128 tpu_system_metadata.py:140] Found TPU system:
+INFO:tensorflow:*** Num TPU Cores: 8
+I0627 18:46:44.582556 139715303352128 tpu_system_metadata.py:141] *** Num TPU Cores: 8
+INFO:tensorflow:*** Num TPU Workers: 1
+I0627 18:46:44.582674 139715303352128 tpu_system_metadata.py:142] *** Num TPU Workers: 1
+INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+I0627 18:46:44.582793 139715303352128 tpu_system_metadata.py:144] *** Num TPU Cores Per Worker: 8
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0627 18:46:44.582891 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0627 18:46:44.583900 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0627 18:46:44.584029 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+I0627 18:46:44.584156 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+I0627 18:46:44.584287 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+I0627 18:46:44.584411 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+I0627 18:46:44.584520 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+I0627 18:46:44.584628 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+I0627 18:46:44.584752 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+I0627 18:46:44.584887 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+I0627 18:46:44.585003 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+I0627 18:46:44.585125 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0627 18:46:44.585243 139715303352128 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0627 18:46:44.588213 139715303352128 main.py:93] Train num_replicas_in_sync 8 num_workers 1 is_multi_host False
+I0627 18:46:44.588385 139715303352128 distributed_executor.py:145] Save config to model_dir gs://apiss/coco/Model/cocopy_func_new1.
+WARNING:tensorflow:AutoGraph could not transform <function InputFn.__call__.<locals>.<lambda> at 0x7f11545de048> and will run it as-is.
+Cause: Unable to identify source code of lambda function <function InputFn.__call__.<locals>.<lambda> at 0x7f11545de048>. It was defined on this line: from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+map_func, which must contain a single lambda with matching signature. To avoid ambiguity, define each lambda in a separate expression.
+W0627 18:46:46.451675 139715303352128 ag_logging.py:146] AutoGraph could not transform <function InputFn.__call__.<locals>.<lambda> at 0x7f11545de048> and will run it as-is.
+Cause: Unable to identify source code of lambda function <function InputFn.__call__.<locals>.<lambda> at 0x7f11545de048>. It was defined on this line: from __future__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+map_func, which must contain a single lambda with matching signature. To avoid ambiguity, define each lambda in a separate expression.
+I0627 18:47:24.753586 139715303352128 distributed_executor.py:388] Restoring from init checkpoint function
+I0627 18:47:25.315102 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/l5/kernel
+I0627 18:47:25.315347 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/l5/bias
+I0627 18:47:25.315450 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/l4/kernel
+I0627 18:47:25.315553 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/l4/bias
+I0627 18:47:25.315657 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/post_hoc_d5/kernel
+I0627 18:47:25.315765 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/post_hoc_d5/bias
+I0627 18:47:25.315870 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/l3/kernel
+I0627 18:47:25.315960 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/l3/bias
+I0627 18:47:25.316045 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p6/kernel
+I0627 18:47:25.316128 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p6/bias
+I0627 18:47:25.316227 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/post_hoc_d3/kernel
+I0627 18:47:25.316318 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/post_hoc_d3/bias
+I0627 18:47:25.316415 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/post_hoc_d4/kernel
+I0627 18:47:25.316506 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/post_hoc_d4/bias
+I0627 18:47:25.316585 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p7/kernel
+I0627 18:47:25.316657 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p7/bias
+I0627 18:47:25.316749 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p3-bn/gamma
+I0627 18:47:25.316843 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p3-bn/beta
+I0627 18:47:25.316927 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p3-bn/moving_mean
+I0627 18:47:25.317003 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p3-bn/moving_variance
+I0627 18:47:25.317079 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p4-bn/gamma
+I0627 18:47:25.317165 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p4-bn/beta
+I0627 18:47:25.317253 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p4-bn/moving_mean
+I0627 18:47:25.317326 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p4-bn/moving_variance
+I0627 18:47:25.317411 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p5-bn/gamma
+I0627 18:47:25.317489 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p5-bn/beta
+I0627 18:47:25.317570 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p5-bn/moving_mean
+I0627 18:47:25.317647 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p5-bn/moving_variance
+I0627 18:47:25.317723 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p6-bn/gamma
+I0627 18:47:25.317795 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p6-bn/beta
+I0627 18:47:25.317867 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p6-bn/moving_mean
+I0627 18:47:25.317937 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p6-bn/moving_variance
+I0627 18:47:25.318006 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p7-bn/gamma
+I0627 18:47:25.318082 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p7-bn/beta
+I0627 18:47:25.318156 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p7-bn/moving_mean
+I0627 18:47:25.318236 139715303352128 checkpoint_utils.py:82] Error not found var name: fpn/p7-bn/moving_variance
+I0627 18:47:25.318326 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0/kernel
+I0627 18:47:25.318421 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0/bias
+I0627 18:47:25.318522 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0/kernel
+I0627 18:47:25.318606 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0/bias
+I0627 18:47:25.318693 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-3/gamma
+I0627 18:47:25.318793 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-3/beta
+I0627 18:47:25.318883 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-3/moving_mean
+I0627 18:47:25.318959 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-3/moving_variance
+I0627 18:47:25.319038 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-4/gamma
+I0627 18:47:25.319125 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-4/beta
+I0627 18:47:25.319242 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-4/moving_mean
+I0627 18:47:25.319354 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-4/moving_variance
+I0627 18:47:25.319444 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-5/gamma
+I0627 18:47:25.319534 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-5/beta
+I0627 18:47:25.319628 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-5/moving_mean
+I0627 18:47:25.319715 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-5/moving_variance
+I0627 18:47:25.319821 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-6/gamma
+I0627 18:47:25.319921 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-6/beta
+I0627 18:47:25.320016 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-6/moving_mean
+I0627 18:47:25.320105 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-6/moving_variance
+I0627 18:47:25.320190 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-7/gamma
+I0627 18:47:25.320290 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-7/beta
+I0627 18:47:25.320367 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-7/moving_mean
+I0627 18:47:25.320441 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-0-7/moving_variance
+I0627 18:47:25.320513 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-3/gamma
+I0627 18:47:25.320586 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-3/beta
+I0627 18:47:25.320660 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-3/moving_mean
+I0627 18:47:25.320743 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-3/moving_variance
+I0627 18:47:25.320820 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-4/gamma
+I0627 18:47:25.320899 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-4/beta
+I0627 18:47:25.320983 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-4/moving_mean
+I0627 18:47:25.321064 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-4/moving_variance
+I0627 18:47:25.321146 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-5/gamma
+I0627 18:47:25.321229 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-5/beta
+I0627 18:47:25.321311 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-5/moving_mean
+I0627 18:47:25.321391 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-5/moving_variance
+I0627 18:47:25.321461 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-6/gamma
+I0627 18:47:25.321534 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-6/beta
+I0627 18:47:25.321625 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-6/moving_mean
+I0627 18:47:25.321710 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-6/moving_variance
+I0627 18:47:25.321793 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-7/gamma
+I0627 18:47:25.321872 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-7/beta
+I0627 18:47:25.321946 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-7/moving_mean
+I0627 18:47:25.322020 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-0-7/moving_variance
+I0627 18:47:25.322099 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1/kernel
+I0627 18:47:25.322180 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1/bias
+I0627 18:47:25.322266 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1/kernel
+I0627 18:47:25.322343 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1/bias
+I0627 18:47:25.322419 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-3/gamma
+I0627 18:47:25.322492 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-3/beta
+I0627 18:47:25.322565 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-3/moving_mean
+I0627 18:47:25.322640 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-3/moving_variance
+I0627 18:47:25.322716 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-4/gamma
+I0627 18:47:25.322800 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-4/beta
+I0627 18:47:25.322876 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-4/moving_mean
+I0627 18:47:25.322955 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-4/moving_variance
+I0627 18:47:25.323029 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-5/gamma
+I0627 18:47:25.323104 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-5/beta
+I0627 18:47:25.323187 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-5/moving_mean
+I0627 18:47:25.323275 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-5/moving_variance
+I0627 18:47:25.323344 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-6/gamma
+I0627 18:47:25.323420 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-6/beta
+I0627 18:47:25.323501 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-6/moving_mean
+I0627 18:47:25.323580 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-6/moving_variance
+I0627 18:47:25.323672 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-7/gamma
+I0627 18:47:25.323765 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-7/beta
+I0627 18:47:25.323859 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-7/moving_mean
+I0627 18:47:25.323964 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-1-7/moving_variance
+I0627 18:47:25.324073 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-3/gamma
+I0627 18:47:25.324174 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-3/beta
+I0627 18:47:25.324279 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-3/moving_mean
+I0627 18:47:25.324363 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-3/moving_variance
+I0627 18:47:25.324445 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-4/gamma
+I0627 18:47:25.324526 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-4/beta
+I0627 18:47:25.324602 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-4/moving_mean
+I0627 18:47:25.324680 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-4/moving_variance
+I0627 18:47:25.324755 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-5/gamma
+I0627 18:47:25.324836 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-5/beta
+I0627 18:47:25.324905 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-5/moving_mean
+I0627 18:47:25.324968 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-5/moving_variance
+I0627 18:47:25.325030 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-6/gamma
+I0627 18:47:25.325091 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-6/beta
+I0627 18:47:25.325157 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-6/moving_mean
+I0627 18:47:25.325238 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-6/moving_variance
+I0627 18:47:25.325305 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-7/gamma
+I0627 18:47:25.325367 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-7/beta
+I0627 18:47:25.325438 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-7/moving_mean
+I0627 18:47:25.325503 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-1-7/moving_variance
+I0627 18:47:25.325565 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2/kernel
+I0627 18:47:25.325633 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2/bias
+I0627 18:47:25.325703 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2/kernel
+I0627 18:47:25.325770 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2/bias
+I0627 18:47:25.325840 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-3/gamma
+I0627 18:47:25.325909 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-3/beta
+I0627 18:47:25.325971 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-3/moving_mean
+I0627 18:47:25.326035 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-3/moving_variance
+I0627 18:47:25.326108 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-4/gamma
+I0627 18:47:25.326178 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-4/beta
+I0627 18:47:25.326258 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-4/moving_mean
+I0627 18:47:25.326331 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-4/moving_variance
+I0627 18:47:25.326406 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-5/gamma
+I0627 18:47:25.326483 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-5/beta
+I0627 18:47:25.326553 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-5/moving_mean
+I0627 18:47:25.326639 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-5/moving_variance
+I0627 18:47:25.326719 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-6/gamma
+I0627 18:47:25.326799 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-6/beta
+I0627 18:47:25.326886 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-6/moving_mean
+I0627 18:47:25.326966 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-6/moving_variance
+I0627 18:47:25.327040 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-7/gamma
+I0627 18:47:25.327119 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-7/beta
+I0627 18:47:25.327199 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-7/moving_mean
+I0627 18:47:25.327289 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-2-7/moving_variance
+I0627 18:47:25.327368 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-3/gamma
+I0627 18:47:25.327493 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-3/beta
+I0627 18:47:25.327594 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-3/moving_mean
+I0627 18:47:25.327689 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-3/moving_variance
+I0627 18:47:25.327813 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-4/gamma
+I0627 18:47:25.327912 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-4/beta
+I0627 18:47:25.328022 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-4/moving_mean
+I0627 18:47:25.328118 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-4/moving_variance
+I0627 18:47:25.328230 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-5/gamma
+I0627 18:47:25.328333 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-5/beta
+I0627 18:47:25.328417 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-5/moving_mean
+I0627 18:47:25.328529 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-5/moving_variance
+I0627 18:47:25.328613 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-6/gamma
+I0627 18:47:25.328712 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-6/beta
+I0627 18:47:25.328798 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-6/moving_mean
+I0627 18:47:25.328871 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-6/moving_variance
+I0627 18:47:25.328960 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-7/gamma
+I0627 18:47:25.329048 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-7/beta
+I0627 18:47:25.329152 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-7/moving_mean
+I0627 18:47:25.329254 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-2-7/moving_variance
+I0627 18:47:25.329365 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3/kernel
+I0627 18:47:25.329465 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3/bias
+I0627 18:47:25.329559 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3/kernel
+I0627 18:47:25.329641 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3/bias
+I0627 18:47:25.329729 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-3/gamma
+I0627 18:47:25.329815 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-3/beta
+I0627 18:47:25.329898 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-3/moving_mean
+I0627 18:47:25.329978 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-3/moving_variance
+I0627 18:47:25.330055 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-4/gamma
+I0627 18:47:25.330133 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-4/beta
+I0627 18:47:25.330211 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-4/moving_mean
+I0627 18:47:25.330327 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-4/moving_variance
+I0627 18:47:25.330393 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-5/gamma
+I0627 18:47:25.330459 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-5/beta
+I0627 18:47:25.330543 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-5/moving_mean
+I0627 18:47:25.330615 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-5/moving_variance
+I0627 18:47:25.330703 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-6/gamma
+I0627 18:47:25.330790 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-6/beta
+I0627 18:47:25.330889 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-6/moving_mean
+I0627 18:47:25.330979 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-6/moving_variance
+I0627 18:47:25.331075 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-7/gamma
+I0627 18:47:25.331157 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-7/beta
+I0627 18:47:25.331249 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-7/moving_mean
+I0627 18:47:25.331327 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-3-7/moving_variance
+I0627 18:47:25.331406 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-3/gamma
+I0627 18:47:25.331485 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-3/beta
+I0627 18:47:25.331564 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-3/moving_mean
+I0627 18:47:25.331641 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-3/moving_variance
+I0627 18:47:25.331720 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-4/gamma
+I0627 18:47:25.331815 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-4/beta
+I0627 18:47:25.331890 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-4/moving_mean
+I0627 18:47:25.331970 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-4/moving_variance
+I0627 18:47:25.332041 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-5/gamma
+I0627 18:47:25.332113 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-5/beta
+I0627 18:47:25.332187 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-5/moving_mean
+I0627 18:47:25.332268 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-5/moving_variance
+I0627 18:47:25.332341 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-6/gamma
+I0627 18:47:25.332415 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-6/beta
+I0627 18:47:25.332492 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-6/moving_mean
+I0627 18:47:25.332562 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-6/moving_variance
+I0627 18:47:25.332640 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-7/gamma
+I0627 18:47:25.332717 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-7/beta
+I0627 18:47:25.332799 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-7/moving_mean
+I0627 18:47:25.332872 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-3-7/moving_variance
+I0627 18:47:25.332964 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-predict/kernel
+I0627 18:47:25.333046 139715303352128 checkpoint_utils.py:82] Error not found var name: box_net/box-predict/bias
+I0627 18:47:25.333135 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-predict/kernel
+I0627 18:47:25.333232 139715303352128 checkpoint_utils.py:82] Error not found var name: class_net/class-predict/bias
+I0627 18:47:25.333326 139715303352128 checkpoint_utils.py:87] Found variable in checkpoint: 265
+I0627 18:47:26.724949 139715303352128 distributed_executor.py:390] Loading from init checkpoint file completed
+I0627 18:47:26.776942 139715303352128 detection_executor.py:60] Filter trainable variables from 285 to 274
+E0627 18:47:26.777138 139715303352128 detection_executor.py:66] Detection: train metric is not an instance of tf.keras.metrics.Metric.
+I0627 18:47:26.777531 139715303352128 distributed_executor.py:411] Training started
+I0627 18:51:19.536919 139715303352128 distributed_executor.py:446] Train Step: 500/5000  / loss = {'total_loss': 0.23483479022979736, 'model_loss': 0.11421765387058258, 'l2_regularization_loss': 0.12061715126037598, 'box_loss': 0.0007507111877202988, 'cls_loss': 0.07668209820985794, 'learning_rate': 0.08} / training metric = {'total_loss': 0.23483479022979736, 'model_loss': 0.11421765387058258, 'l2_regularization_loss': 0.12061715126037598, 'box_loss': 0.0007507111877202988, 'cls_loss': 0.07668209820985794, 'learning_rate': 0.08}
+I0627 18:51:29.077400 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_500.ckpt-1
+I0627 18:53:17.229755 139715303352128 distributed_executor.py:446] Train Step: 1000/5000  / loss = {'total_loss': 0.21164825558662415, 'model_loss': 0.09873081743717194, 'l2_regularization_loss': 0.11291743814945221, 'box_loss': 0.0006662129890173674, 'cls_loss': 0.06542015820741653, 'learning_rate': 0.08} / training metric = {'total_loss': 0.21164825558662415, 'model_loss': 0.09873081743717194, 'l2_regularization_loss': 0.11291743814945221, 'box_loss': 0.0006662129890173674, 'cls_loss': 0.06542015820741653, 'learning_rate': 0.08}
+I0627 18:53:26.150556 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_1000.ckpt-2
+I0627 18:55:14.339464 139715303352128 distributed_executor.py:446] Train Step: 1500/5000  / loss = {'total_loss': 0.19985419511795044, 'model_loss': 0.09417188912630081, 'l2_regularization_loss': 0.10568232089281082, 'box_loss': 0.0006526016513817012, 'cls_loss': 0.06154179573059082, 'learning_rate': 0.08} / training metric = {'total_loss': 0.19985419511795044, 'model_loss': 0.09417188912630081, 'l2_regularization_loss': 0.10568232089281082, 'box_loss': 0.0006526016513817012, 'cls_loss': 0.06154179573059082, 'learning_rate': 0.08}
+I0627 18:55:23.395995 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_1500.ckpt-3
+I0627 18:57:10.656263 139715303352128 distributed_executor.py:446] Train Step: 2000/5000  / loss = {'total_loss': 0.19091784954071045, 'model_loss': 0.09191417694091797, 'l2_regularization_loss': 0.09900368005037308, 'box_loss': 0.0006224535754881799, 'cls_loss': 0.0607914961874485, 'learning_rate': 0.08} / training metric = {'total_loss': 0.19091784954071045, 'model_loss': 0.09191417694091797, 'l2_regularization_loss': 0.09900368005037308, 'box_loss': 0.0006224535754881799, 'cls_loss': 0.0607914961874485, 'learning_rate': 0.08}
+I0627 18:57:19.916196 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_2000.ckpt-4
+I0627 18:59:07.635084 139715303352128 distributed_executor.py:446] Train Step: 2500/5000  / loss = {'total_loss': 0.17922520637512207, 'model_loss': 0.08633710443973541, 'l2_regularization_loss': 0.09288810938596725, 'box_loss': 0.0005820380756631494, 'cls_loss': 0.05723519250750542, 'learning_rate': 0.08} / training metric = {'total_loss': 0.17922520637512207, 'model_loss': 0.08633710443973541, 'l2_regularization_loss': 0.09288810938596725, 'box_loss': 0.0005820380756631494, 'cls_loss': 0.05723519250750542, 'learning_rate': 0.08}
+I0627 18:59:17.118950 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_2500.ckpt-5
+I0627 19:01:04.319393 139715303352128 distributed_executor.py:446] Train Step: 3000/5000  / loss = {'total_loss': 0.17136113345623016, 'model_loss': 0.08411828428506851, 'l2_regularization_loss': 0.08724284917116165, 'box_loss': 0.0005144483875483274, 'cls_loss': 0.0583958700299263, 'learning_rate': 0.08} / training metric = {'total_loss': 0.17136113345623016, 'model_loss': 0.08411828428506851, 'l2_regularization_loss': 0.08724284917116165, 'box_loss': 0.0005144483875483274, 'cls_loss': 0.0583958700299263, 'learning_rate': 0.08}
+I0627 19:01:13.584724 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_3000.ckpt-6
+I0627 19:03:01.071513 139715303352128 distributed_executor.py:446] Train Step: 3500/5000  / loss = {'total_loss': 0.16025720536708832, 'model_loss': 0.07822144776582718, 'l2_regularization_loss': 0.08203574270009995, 'box_loss': 0.0005132003570906818, 'cls_loss': 0.0525614358484745, 'learning_rate': 0.08} / training metric = {'total_loss': 0.16025720536708832, 'model_loss': 0.07822144776582718, 'l2_regularization_loss': 0.08203574270009995, 'box_loss': 0.0005132003570906818, 'cls_loss': 0.0525614358484745, 'learning_rate': 0.08}
+I0627 19:03:10.143095 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_3500.ckpt-7
+I0627 19:04:58.315897 139715303352128 distributed_executor.py:446] Train Step: 4000/5000  / loss = {'total_loss': 0.15747112035751343, 'model_loss': 0.08020282536745071, 'l2_regularization_loss': 0.07726830244064331, 'box_loss': 0.0005384579999372363, 'cls_loss': 0.053279925137758255, 'learning_rate': 0.08} / training metric = {'total_loss': 0.15747112035751343, 'model_loss': 0.08020282536745071, 'l2_regularization_loss': 0.07726830244064331, 'box_loss': 0.0005384579999372363, 'cls_loss': 0.053279925137758255, 'learning_rate': 0.08}
+I0627 19:05:08.966689 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_4000.ckpt-8
+I0627 19:06:57.035420 139715303352128 distributed_executor.py:446] Train Step: 4500/5000  / loss = {'total_loss': 0.15509623289108276, 'model_loss': 0.08212688565254211, 'l2_regularization_loss': 0.07296932488679886, 'box_loss': 0.0005598331335932016, 'cls_loss': 0.05413523316383362, 'learning_rate': 0.08} / training metric = {'total_loss': 0.15509623289108276, 'model_loss': 0.08212688565254211, 'l2_regularization_loss': 0.07296932488679886, 'box_loss': 0.0005598331335932016, 'cls_loss': 0.05413523316383362, 'learning_rate': 0.08}
+I0627 19:07:06.849249 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_4500.ckpt-9
+I0627 19:08:54.298658 139715303352128 distributed_executor.py:446] Train Step: 5000/5000  / loss = {'total_loss': 0.14860880374908447, 'model_loss': 0.0796600729227066, 'l2_regularization_loss': 0.06894873827695847, 'box_loss': 0.0004996083443984389, 'cls_loss': 0.05467965826392174, 'learning_rate': 0.08} / training metric = {'total_loss': 0.14860880374908447, 'model_loss': 0.0796600729227066, 'l2_regularization_loss': 0.06894873827695847, 'box_loss': 0.0004996083443984389, 'cls_loss': 0.05467965826392174, 'learning_rate': 0.08}
+I0627 19:09:03.534233 139715303352128 distributed_executor.py:49] Saving model as TF checkpoint: gs://apiss/coco/Model/cocopy_func_new1/ctl_step_5000.ckpt-10
+2021-06-27 19:09:06.367913: W ./tensorflow/core/distributed_runtime/eager/destroy_tensor_handle_node.h:79] Ignoring an error encountered when deleting remote tensors handles: Invalid argument: Unable to find a context_id matching the specified one (13538428616508908502). Perhaps the worker was restarted, or the context was GC'd?
+Additional GRPC error information:
+{"created":"@1624835346.367449596","description":"Error received from peer","file":"external/grpc/src/core/lib/surface/call.cc","file_line":1039,"grpc_message":"Unable to find a context_id matching the specified one (13538428616508908502). Perhaps the worker was restarted, or the context was GC'd?","grpc_status":3}

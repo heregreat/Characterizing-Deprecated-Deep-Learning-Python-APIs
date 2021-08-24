@@ -1,0 +1,1263 @@
+2021-05-30 22:31:54.034401: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2021-05-30 22:31:54.669081: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.669972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:00:04.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-05-30 22:31:54.670399: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-30 22:31:54.673525: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-30 22:31:54.676101: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-05-30 22:31:54.676652: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-05-30 22:31:54.679135: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-05-30 22:31:54.680861: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-05-30 22:31:54.686783: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-30 22:31:54.686963: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.687797: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.688522: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2021-05-30 22:31:54.689066: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-05-30 22:31:54.695906: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2299995000 Hz
+2021-05-30 22:31:54.696326: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f0bc8000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-05-30 22:31:54.696367: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-05-30 22:31:54.783306: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.784249: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x551f0a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2021-05-30 22:31:54.784283: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2021-05-30 22:31:54.785567: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.786458: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:00:04.0 name: Tesla V100-SXM2-16GB computeCapability: 7.0
+coreClock: 1.53GHz coreCount: 80 deviceMemorySize: 15.78GiB deviceMemoryBandwidth: 836.37GiB/s
+2021-05-30 22:31:54.786614: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-30 22:31:54.786656: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2021-05-30 22:31:54.786682: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2021-05-30 22:31:54.786711: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2021-05-30 22:31:54.786732: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2021-05-30 22:31:54.786752: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2021-05-30 22:31:54.786775: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2021-05-30 22:31:54.786921: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.787721: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.788428: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2021-05-30 22:31:54.788565: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2021-05-30 22:31:54.789857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-05-30 22:31:54.789905: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2021-05-30 22:31:54.789915: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2021-05-30 22:31:54.790101: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.790956: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-05-30 22:31:54.791700: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 14901 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+INFO:tensorflow:Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+I0530 22:31:54.794694 139692772566848 mirrored_strategy.py:500] Using MirroredStrategy with devices ('/job:localhost/replica:0/task:0/device:GPU:0',)
+I0530 22:31:54.795391 139692772566848 transformer_main.py:175] Running transformer with num_gpus = 1
+I0530 22:31:54.795534 139692772566848 transformer_main.py:179] For training, using distribution strategy: <tensorflow.python.distribute.mirrored_strategy.MirroredStrategy object at 0x7f0c455ffe48>
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+inputs (InputLayer)             [(None, None)]       0                                            
+__________________________________________________________________________________________________
+targets (InputLayer)            [(None, None)]       0                                            
+__________________________________________________________________________________________________
+transformer_v2 (Transformer)    (None, None, 33708)  210804736   inputs[0][0]                     
+                                                                 targets[0][0]                    
+__________________________________________________________________________________________________
+logits (Lambda)                 (None, None, 33708)  0           transformer_v2[0][0]             
+__________________________________________________________________________________________________
+tf_op_layer_Shape (TensorFlowOp [(3,)]               0           logits[0][0]                     
+__________________________________________________________________________________________________
+tf_op_layer_Shape_1 (TensorFlow [(2,)]               0           targets[0][0]                    
+__________________________________________________________________________________________________
+tf_op_layer_strided_slice (Tens [()]                 0           tf_op_layer_Shape[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_strided_slice_1 (Te [()]                 0           tf_op_layer_Shape_1[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Maximum (TensorFlow [()]                 0           tf_op_layer_strided_slice[0][0]  
+                                                                 tf_op_layer_strided_slice_1[0][0]
+__________________________________________________________________________________________________
+tf_op_layer_Sub_1 (TensorFlowOp [()]                 0           tf_op_layer_Maximum[0][0]        
+                                                                 tf_op_layer_strided_slice_1[0][0]
+__________________________________________________________________________________________________
+tf_op_layer_Pad_1/paddings/1 (T [(2,)]               0           tf_op_layer_Sub_1[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_Sub (TensorFlowOpLa [()]                 0           tf_op_layer_Maximum[0][0]        
+                                                                 tf_op_layer_strided_slice[0][0]  
+__________________________________________________________________________________________________
+tf_op_layer_Pad_1/paddings (Ten [(2, 2)]             0           tf_op_layer_Pad_1/paddings/1[0][0
+__________________________________________________________________________________________________
+tf_op_layer_Pad/paddings/1 (Ten [(2,)]               0           tf_op_layer_Sub[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_Pad_1 (TensorFlowOp [(None, None)]       0           targets[0][0]                    
+                                                                 tf_op_layer_Pad_1/paddings[0][0] 
+__________________________________________________________________________________________________
+tf_op_layer_Pad/paddings (Tenso [(3, 2)]             0           tf_op_layer_Pad/paddings/1[0][0] 
+__________________________________________________________________________________________________
+tf_op_layer_Cast (TensorFlowOpL [(None, None)]       0           tf_op_layer_Pad_1[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_Pad (TensorFlowOpLa [(None, None, None)] 0           logits[0][0]                     
+                                                                 tf_op_layer_Pad/paddings[0][0]   
+__________________________________________________________________________________________________
+tf_op_layer_OneHot (TensorFlowO [(None, None, 33708) 0           tf_op_layer_Cast[0][0]           
+__________________________________________________________________________________________________
+tf_op_layer_Shape_3 (TensorFlow [(3,)]               0           tf_op_layer_Pad[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_Shape_4 (TensorFlow [(3,)]               0           tf_op_layer_OneHot[0][0]         
+__________________________________________________________________________________________________
+tf_op_layer_Slice (TensorFlowOp [(1,)]               0           tf_op_layer_Shape_3[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Slice_1 (TensorFlow [(1,)]               0           tf_op_layer_Shape_4[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_concat (TensorFlowO [(2,)]               0           tf_op_layer_Slice[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_concat_1 (TensorFlo [(2,)]               0           tf_op_layer_Slice_1[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Reshape (TensorFlow [(None, None)]       0           tf_op_layer_Pad[0][0]            
+                                                                 tf_op_layer_concat[0][0]         
+__________________________________________________________________________________________________
+tf_op_layer_Reshape_1 (TensorFl [(None, None)]       0           tf_op_layer_OneHot[0][0]         
+                                                                 tf_op_layer_concat_1[0][0]       
+__________________________________________________________________________________________________
+tf_op_layer_Shape_2 (TensorFlow [(3,)]               0           tf_op_layer_Pad[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_SoftmaxCrossEntropy [(None,), (None, Non 0           tf_op_layer_Reshape[0][0]        
+                                                                 tf_op_layer_Reshape_1[0][0]      
+__________________________________________________________________________________________________
+tf_op_layer_Slice_2 (TensorFlow [(2,)]               0           tf_op_layer_Shape_2[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Reshape_2 (TensorFl [(None, None)]       0           tf_op_layer_SoftmaxCrossEntropyWi
+                                                                 tf_op_layer_Slice_2[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_NotEqual (TensorFlo [(None, None)]       0           tf_op_layer_Pad_1[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_Sub_2 (TensorFlowOp [(None, None)]       0           tf_op_layer_Reshape_2[0][0]      
+__________________________________________________________________________________________________
+tf_op_layer_Cast_1 (TensorFlowO [(None, None)]       0           tf_op_layer_NotEqual[0][0]       
+__________________________________________________________________________________________________
+tf_op_layer_Mul (TensorFlowOpLa [(None, None)]       0           tf_op_layer_Sub_2[0][0]          
+                                                                 tf_op_layer_Cast_1[0][0]         I0530 22:32:01.672219 139692772566848 transformer_main.py:296] Start train iteration at global step:0
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0530 22:32:06.009088 139692772566848 cross_device_ops.py:440] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0530 22:32:06.011410 139692772566848 cross_device_ops.py:440] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0530 22:32:11.286023 139692772566848 cross_device_ops.py:440] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+INFO:tensorflow:Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+I0530 22:32:11.287996 139692772566848 cross_device_ops.py:440] Reduce to /job:localhost/replica:0/task:0/device:CPU:0 then broadcast to ('/job:localhost/replica:0/task:0/device:CPU:0',).
+2021-05-30 22:32:16.046343: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+I0530 22:32:31.070470 139692772566848 keras_utils.py:122] TimeHistory: 29.32 seconds, 3492.21 examples/second between steps 0 and 100
+I0530 22:32:45.718221 139692772566848 keras_utils.py:122] TimeHistory: 14.65 seconds, 6991.13 examples/second between steps 100 and 200
+I0530 22:33:00.320977 139692772566848 keras_utils.py:122] TimeHistory: 14.60 seconds, 7012.64 examples/second between steps 200 and 300
+I0530 22:33:15.012223 139692772566848 keras_utils.py:122] TimeHistory: 14.69 seconds, 6970.40 examples/second between steps 300 and 400
+I0530 22:33:29.725829 139692772566848 keras_utils.py:122] TimeHistory: 14.71 seconds, 6959.81 examples/second between steps 400 and 500
+I0530 22:33:44.444656 139692772566848 keras_utils.py:122] TimeHistory: 14.72 seconds, 6957.36 examples/second between steps 500 and 600
+I0530 22:33:59.146449 139692772566848 keras_utils.py:122] TimeHistory: 14.70 seconds, 6965.40 examples/second between steps 600 and 700
+I0530 22:34:13.884603 139692772566848 keras_utils.py:122] TimeHistory: 14.74 seconds, 6948.20 examples/second between steps 700 and 800
+I0530 22:34:28.604530 139692772566848 keras_utils.py:122] TimeHistory: 14.72 seconds, 6956.83 examples/second between steps 800 and 900
+I0530 22:34:43.337812 139692772566848 keras_utils.py:122] TimeHistory: 14.73 seconds, 6950.49 examples/second between steps 900 and 1000
+I0530 22:34:58.135745 139692772566848 keras_utils.py:122] TimeHistory: 14.80 seconds, 6920.14 examples/second between steps 1000 and 1100
+I0530 22:35:12.864930 139692772566848 keras_utils.py:122] TimeHistory: 14.73 seconds, 6952.42 examples/second between steps 1100 and 1200
+I0530 22:35:27.690019 139692772566848 keras_utils.py:122] TimeHistory: 14.82 seconds, 6907.48 examples/second between steps 1200 and 1300
+I0530 22:35:42.499498 139692772566848 keras_utils.py:122] TimeHistory: 14.81 seconds, 6914.74 examples/second between steps 1300 and 1400
+I0530 22:35:57.253612 139692772566848 keras_utils.py:122] TimeHistory: 14.75 seconds, 6940.70 examples/second between steps 1400 and 1500
+I0530 22:36:11.996081 139692772566848 keras_utils.py:122] TimeHistory: 14.74 seconds, 6946.15 examples/second between steps 1500 and 1600
+I0530 22:36:26.764806 139692772566848 keras_utils.py:122] TimeHistory: 14.77 seconds, 6933.80 examples/second between steps 1600 and 1700
+I0530 22:36:41.492972 139692772566848 keras_utils.py:122] TimeHistory: 14.73 seconds, 6952.90 examples/second between steps 1700 and 1800
+I0530 22:36:56.247967 139692772566848 keras_utils.py:122] TimeHistory: 14.75 seconds, 6940.27 examples/second between steps 1800 and 1900
+I0530 22:37:11.028959 139692772566848 keras_utils.py:122] TimeHistory: 14.78 seconds, 6928.06 examples/second between steps 1900 and 2000
+I0530 22:37:25.770812 139692772566848 keras_utils.py:122] TimeHistory: 14.74 seconds, 6946.46 examples/second between steps 2000 and 2100
+I0530 22:37:40.538082 139692772566848 keras_utils.py:122] TimeHistory: 14.77 seconds, 6934.51 examples/second between steps 2100 and 2200
+I0530 22:37:55.258717 139692772566848 keras_utils.py:122] TimeHistory: 14.72 seconds, 6956.50 examples/second between steps 2200 and 2300
+I0530 22:38:09.995379 139692772566848 keras_utils.py:122] TimeHistory: 14.74 seconds, 6948.90 examples/second between steps 2300 and 2400
+I0530 22:38:24.728764 139692772566848 keras_utils.py:122] TimeHistory: 14.73 seconds, 6950.47 examples/second between steps 2400 and 2500
+I0530 22:38:39.485951 139692772566848 keras_utils.py:122] TimeHistory: 14.76 seconds, 6939.23 examples/second between steps 2500 and 2600
+I0530 22:38:54.208908 139692772566848 keras_utils.py:122] TimeHistory: 14.72 seconds, 6955.38 examples/second between steps 2600 and 2700
+I0530 22:39:08.954622 139692772566848 keras_utils.py:122] TimeHistory: 14.75 seconds, 6944.64 examples/second between steps 2700 and 2800
+I0530 22:39:23.717416 139692772566848 keras_utils.py:122] TimeHistory: 14.76 seconds, 6936.60 examples/second between steps 2800 and 2900
+I0530 22:39:38.459449 139692772566848 keras_utils.py:122] TimeHistory: 14.74 seconds, 6946.38 examples/second between steps 2900 and 3000
+I0530 22:39:53.188813 139692772566848 keras_utils.py:122] TimeHistory: 14.73 seconds, 6952.34 examples/second between steps 3000 and 3100
+I0530 22:40:07.942175 139692772566848 keras_utils.py:122] TimeHistory: 14.75 seconds, 6941.05 examples/second between steps 3100 and 3200
+I0530 22:40:22.678424 139692772566848 keras_utils.py:122] TimeHistory: 14.74 seconds, 6949.07 examples/second between steps 3200 and 3300
+I0530 22:40:37.424266 139692772566848 keras_utils.py:122] TimeHistory: 14.75 seconds, 6944.57 examples/second between steps 3300 and 3400
+I0530 22:40:52.127793 139692772566848 keras_utils.py:122] TimeHistory: 14.70 seconds, 6964.56 examples/second between steps 3400 and 3500
+I0530 22:41:06.904107 139692772566848 keras_utils.py:122] TimeHistory: 14.78 seconds, 6930.24 examples/second between steps 3500 and 3600
+I0530 22:41:21.621467 139692772566848 keras_utils.py:122] TimeHistory: 14.72 seconds, 6958.04 examples/second between steps 3600 and 3700
+I0530 22:41:36.349858 139692772566848 keras_utils.py:122] TimeHistory: 14.73 seconds, 6952.81 examples/second between steps 3700 and 3800
+I0530 22:41:51.080305 139692772566848 keras_utils.py:122] TimeHistory: 14.73 seconds, 6951.83 examples/second between steps 3800 and 3900
+I0530 22:42:05.772868 139692772566848 keras_utils.py:122] TimeHistory: 14.69 seconds, 6969.75 examples/second between steps 3900 and 4000
+I0530 22:42:20.514345 139692772566848 keras_utils.py:122] TimeHistory: 14.74 seconds, 6946.61 examples/second between steps 4000 and 4100
+I0530 22:42:35.260660 139692772566848 keras_utils.py:122] TimeHistory: 14.75 seconds, 6944.35 examples/second between steps 4100 and 4200
+I0530 22:42:49.958188 139692772566848 keras_utils.py:122] TimeHistory: 14.70 seconds, 6967.41 examples/second between steps 4200 and 4300
+I0530 22:43:04.657634 139692772566848 keras_utils.py:122] TimeHistory: 14.70 seconds, 6966.51 examples/second between steps 4300 and 4400
+I0530 22:43:19.362598 139692772566848 keras_utils.py:122] TimeHistory: 14.70 seconds, 6963.90 examples/second between steps 4400 and 4500
+I0530 22:43:34.061304 139692772566848 keras_utils.py:122] TimeHistory: 14.70 seconds, 6966.88 examples/second between steps 4500 and 4600
+I0530 22:43:48.745205 139692772566848 keras_utils.py:122] TimeHistory: 14.68 seconds, 6973.87 examples/second between steps 4600 and 4700
+I0530 22:44:03.453929 139692772566848 keras_utils.py:122] TimeHistory: 14.71 seconds, 6962.09 examples/second between steps 4700 and 4800
+I0530 22:44:18.159736 139692772566848 keras_utils.py:122] TimeHistory: 14.71 seconds, 6963.46 examples/second between steps 4800 and 4900
+I0530 22:44:32.874934 139692772566848 keras_utils.py:122] TimeHistory: 14.71 seconds, 6959.06 examples/second between steps 4900 and 5000
+2021-05-30 22:44:33.081820: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 138067968 exceeds 10% of free system memory.
+2021-05-30 22:44:33.766713: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 138067968 exceeds 10% of free system memory.
+2021-05-30 22:44:34.450758: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 138067968 exceeds 10% of free system memory.
+
+__________________________________________________________________________________________________
+tf_op_layer_Sum (TensorFlowOpLa [()]                 0           tf_op_layer_Mul[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_Sum_1 (TensorFlowOp [()]                 0           tf_op_layer_Cast_1[0][0]         
+__________________________________________________________________________________________________
+tf_op_layer_RealDiv (TensorFlow [()]                 0           tf_op_layer_Sum[0][0]            
+                                                                 tf_op_layer_Sum_1[0][0]          
+__________________________________________________________________________________________________
+add_loss (AddLoss)              ()                   0           tf_op_layer_RealDiv[0][0]        
+==================================================================================================
+Total params: 210,804,736
+Trainable params: 210,804,736
+Non-trainable params: 0
+__________________________________________________________________________________________________
+5000/5000 - 742s - loss: 4.5836 - lr: 1.5441e-04 - steps: 5000.0000
+I0530 22:44:38.500589 139692772566848 transformer_main.py:337] Train history: {'loss': [4.583600997924805], 'lr': [0.00015440809], 'steps': [5000.0]}
+I0530 22:44:38.500774 139692772566848 transformer_main.py:339] End train iteration at global step:5000
+I0530 22:44:43.261249 139692772566848 transformer_main.py:413] Load weights: /root/transformer/model_v2.nn.soft/model_big/cp-0001.ckpt
+2021-05-30 22:44:43.535749: W tensorflow/core/framework/cpu_allocator_impl.cc:81] Allocation of 138067968 exceeds 10% of free system memory.
+INFO:tensorflow:Initializing Subtokenizer from file /root/transformer/data/vocab.ende.32768.
+I0530 22:44:44.145330 139692772566848 tokenizer.py:67] Initializing Subtokenizer from file /root/transformer/data/vocab.ende.32768.
+INFO:tensorflow:Decoding batch 0 out of 94.
+I0530 22:44:44.346159 139692772566848 translate.py:121] Decoding batch 0 out of 94.
+INFO:tensorflow:Decoding batch 1 out of 94.
+I0530 22:44:49.357789 139692772566848 translate.py:121] Decoding batch 1 out of 94.
+INFO:tensorflow:Decoding batch 2 out of 94.
+I0530 22:44:51.452241 139692772566848 translate.py:121] Decoding batch 2 out of 94.
+INFO:tensorflow:Decoding batch 3 out of 94.
+I0530 22:44:53.535101 139692772566848 translate.py:121] Decoding batch 3 out of 94.
+INFO:tensorflow:Decoding batch 4 out of 94.
+I0530 22:44:56.748793 139692772566848 translate.py:121] Decoding batch 4 out of 94.
+INFO:tensorflow:Decoding batch 5 out of 94.
+I0530 22:45:01.020246 139692772566848 translate.py:121] Decoding batch 5 out of 94.
+INFO:tensorflow:Decoding batch 6 out of 94.
+I0530 22:45:03.835259 139692772566848 translate.py:121] Decoding batch 6 out of 94.
+INFO:tensorflow:Decoding batch 7 out of 94.
+I0530 22:45:06.244595 139692772566848 translate.py:121] Decoding batch 7 out of 94.
+INFO:tensorflow:Decoding batch 8 out of 94.
+I0530 22:45:08.613897 139692772566848 translate.py:121] Decoding batch 8 out of 94.
+INFO:tensorflow:Decoding batch 9 out of 94.
+I0530 22:45:10.979707 139692772566848 translate.py:121] Decoding batch 9 out of 94.
+INFO:tensorflow:Decoding batch 10 out of 94.
+I0530 22:45:13.173284 139692772566848 translate.py:121] Decoding batch 10 out of 94.
+INFO:tensorflow:Decoding batch 11 out of 94.
+I0530 22:45:15.428480 139692772566848 translate.py:121] Decoding batch 11 out of 94.
+INFO:tensorflow:Decoding batch 12 out of 94.
+I0530 22:45:17.551634 139692772566848 translate.py:121] Decoding batch 12 out of 94.
+INFO:tensorflow:Decoding batch 13 out of 94.
+I0530 22:45:19.932197 139692772566848 translate.py:121] Decoding batch 13 out of 94.
+INFO:tensorflow:Decoding batch 14 out of 94.
+I0530 22:45:22.342212 139692772566848 translate.py:121] Decoding batch 14 out of 94.
+INFO:tensorflow:Decoding batch 15 out of 94.
+I0530 22:45:24.633200 139692772566848 translate.py:121] Decoding batch 15 out of 94.
+INFO:tensorflow:Decoding batch 16 out of 94.
+I0530 22:45:26.971967 139692772566848 translate.py:121] Decoding batch 16 out of 94.
+INFO:tensorflow:Decoding batch 17 out of 94.
+I0530 22:45:29.584490 139692772566848 translate.py:121] Decoding batch 17 out of 94.
+INFO:tensorflow:Decoding batch 18 out of 94.
+I0530 22:45:32.598936 139692772566848 translate.py:121] Decoding batch 18 out of 94.
+INFO:tensorflow:Decoding batch 19 out of 94.
+I0530 22:45:34.619281 139692772566848 translate.py:121] Decoding batch 19 out of 94.
+INFO:tensorflow:Decoding batch 20 out of 94.
+I0530 22:45:36.900760 139692772566848 translate.py:121] Decoding batch 20 out of 94.
+INFO:tensorflow:Decoding batch 21 out of 94.
+I0530 22:45:39.516360 139692772566848 translate.py:121] Decoding batch 21 out of 94.
+INFO:tensorflow:Decoding batch 22 out of 94.
+I0530 22:45:41.525229 139692772566848 translate.py:121] Decoding batch 22 out of 94.
+INFO:tensorflow:Decoding batch 23 out of 94.
+I0530 22:45:43.608274 139692772566848 translate.py:121] Decoding batch 23 out of 94.
+INFO:tensorflow:Decoding batch 24 out of 94.
+I0530 22:45:47.176473 139692772566848 translate.py:121] Decoding batch 24 out of 94.
+INFO:tensorflow:Decoding batch 25 out of 94.
+I0530 22:45:49.338932 139692772566848 translate.py:121] Decoding batch 25 out of 94.
+INFO:tensorflow:Decoding batch 26 out of 94.
+I0530 22:45:51.432467 139692772566848 translate.py:121] Decoding batch 26 out of 94.
+INFO:tensorflow:Decoding batch 27 out of 94.
+I0530 22:45:54.055474 139692772566848 translate.py:121] Decoding batch 27 out of 94.
+INFO:tensorflow:Decoding batch 28 out of 94.
+I0530 22:45:56.021981 139692772566848 translate.py:121] Decoding batch 28 out of 94.
+INFO:tensorflow:Decoding batch 29 out of 94.
+I0530 22:45:58.158129 139692772566848 translate.py:121] Decoding batch 29 out of 94.
+INFO:tensorflow:Decoding batch 30 out of 94.
+I0530 22:46:00.765578 139692772566848 translate.py:121] Decoding batch 30 out of 94.
+INFO:tensorflow:Decoding batch 31 out of 94.
+I0530 22:46:03.081125 139692772566848 translate.py:121] Decoding batch 31 out of 94.
+INFO:tensorflow:Decoding batch 32 out of 94.
+I0530 22:46:05.282258 139692772566848 translate.py:121] Decoding batch 32 out of 94.
+INFO:tensorflow:Decoding batch 33 out of 94.
+I0530 22:46:08.625852 139692772566848 translate.py:121] Decoding batch 33 out of 94.
+INFO:tensorflow:Decoding batch 34 out of 94.
+I0530 22:46:10.991549 139692772566848 translate.py:121] Decoding batch 34 out of 94.
+INFO:tensorflow:Decoding batch 35 out of 94.
+I0530 22:46:13.159356 139692772566848 translate.py:121] Decoding batch 35 out of 94.
+INFO:tensorflow:Decoding batch 36 out of 94.
+I0530 22:46:15.669446 139692772566848 translate.py:121] Decoding batch 36 out of 94.
+INFO:tensorflow:Decoding batch 37 out of 94.
+I0530 22:46:18.212342 139692772566848 translate.py:121] Decoding batch 37 out of 94.
+INFO:tensorflow:Decoding batch 38 out of 94.
+I0530 22:46:20.386992 139692772566848 translate.py:121] Decoding batch 38 out of 94.
+INFO:tensorflow:Decoding batch 39 out of 94.
+I0530 22:46:22.380594 139692772566848 translate.py:121] Decoding batch 39 out of 94.
+INFO:tensorflow:Decoding batch 40 out of 94.
+I0530 22:46:25.920446 139692772566848 translate.py:121] Decoding batch 40 out of 94.
+INFO:tensorflow:Decoding batch 41 out of 94.
+I0530 22:46:28.739251 139692772566848 translate.py:121] Decoding batch 41 out of 94.
+INFO:tensorflow:Decoding batch 42 out of 94.
+I0530 22:46:32.721900 139692772566848 translate.py:121] Decoding batch 42 out of 94.
+INFO:tensorflow:Decoding batch 43 out of 94.
+I0530 22:46:34.979667 139692772566848 translate.py:121] Decoding batch 43 out of 94.
+INFO:tensorflow:Decoding batch 44 out of 94.
+I0530 22:46:37.389502 139692772566848 translate.py:121] Decoding batch 44 out of 94.
+INFO:tensorflow:Decoding batch 45 out of 94.
+I0530 22:46:39.850771 139692772566848 translate.py:121] Decoding batch 45 out of 94.
+INFO:tensorflow:Decoding batch 46 out of 94.
+I0530 22:46:42.104474 139692772566848 translate.py:121] Decoding batch 46 out of 94.
+INFO:tensorflow:Decoding batch 47 out of 94.
+I0530 22:46:44.783892 139692772566848 translate.py:121] Decoding batch 47 out of 94.
+INFO:tensorflow:Decoding batch 48 out of 94.
+I0530 22:46:46.817830 139692772566848 translate.py:121] Decoding batch 48 out of 94.
+INFO:tensorflow:Decoding batch 49 out of 94.
+I0530 22:46:49.285997 139692772566848 translate.py:121] Decoding batch 49 out of 94.
+INFO:tensorflow:Decoding batch 50 out of 94.
+I0530 22:46:51.668756 139692772566848 translate.py:121] Decoding batch 50 out of 94.
+INFO:tensorflow:Decoding batch 51 out of 94.
+I0530 22:46:53.963263 139692772566848 translate.py:121] Decoding batch 51 out of 94.
+INFO:tensorflow:Decoding batch 52 out of 94.
+I0530 22:46:56.103786 139692772566848 translate.py:121] Decoding batch 52 out of 94.
+INFO:tensorflow:Decoding batch 53 out of 94.
+I0530 22:46:58.518471 139692772566848 translate.py:121] Decoding batch 53 out of 94.
+INFO:tensorflow:Decoding batch 54 out of 94.
+I0530 22:47:00.419499 139692772566848 translate.py:121] Decoding batch 54 out of 94.
+INFO:tensorflow:Decoding batch 55 out of 94.
+I0530 22:47:03.147985 139692772566848 translate.py:121] Decoding batch 55 out of 94.
+INFO:tensorflow:Decoding batch 56 out of 94.
+I0530 22:47:05.300562 139692772566848 translate.py:121] Decoding batch 56 out of 94.
+INFO:tensorflow:Decoding batch 57 out of 94.
+I0530 22:47:09.324328 139692772566848 translate.py:121] Decoding batch 57 out of 94.
+INFO:tensorflow:Decoding batch 58 out of 94.
+I0530 22:47:11.661783 139692772566848 translate.py:121] Decoding batch 58 out of 94.
+INFO:tensorflow:Decoding batch 59 out of 94.
+I0530 22:47:13.601224 139692772566848 translate.py:121] Decoding batch 59 out of 94.
+INFO:tensorflow:Decoding batch 60 out of 94.
+I0530 22:47:16.863941 139692772566848 translate.py:121] Decoding batch 60 out of 94.
+INFO:tensorflow:Decoding batch 61 out of 94.
+I0530 22:47:19.191380 139692772566848 translate.py:121] Decoding batch 61 out of 94.
+INFO:tensorflow:Decoding batch 62 out of 94.
+I0530 22:47:21.661816 139692772566848 translate.py:121] Decoding batch 62 out of 94.
+INFO:tensorflow:Decoding batch 63 out of 94.
+I0530 22:47:23.666927 139692772566848 translate.py:121] Decoding batch 63 out of 94.
+INFO:tensorflow:Decoding batch 64 out of 94.
+I0530 22:47:25.750378 139692772566848 translate.py:121] Decoding batch 64 out of 94.
+INFO:tensorflow:Decoding batch 65 out of 94.
+I0530 22:47:28.135612 139692772566848 translate.py:121] Decoding batch 65 out of 94.
+INFO:tensorflow:Decoding batch 66 out of 94.
+I0530 22:47:30.059316 139692772566848 translate.py:121] Decoding batch 66 out of 94.
+INFO:tensorflow:Decoding batch 67 out of 94.
+I0530 22:47:32.390717 139692772566848 translate.py:121] Decoding batch 67 out of 94.
+INFO:tensorflow:Decoding batch 68 out of 94.
+I0530 22:47:35.784054 139692772566848 translate.py:121] Decoding batch 68 out of 94.
+INFO:tensorflow:Decoding batch 69 out of 94.
+I0530 22:47:38.113133 139692772566848 translate.py:121] Decoding batch 69 out of 94.
+INFO:tensorflow:Decoding batch 70 out of 94.
+I0530 22:47:41.068301 139692772566848 translate.py:121] Decoding batch 70 out of 94.
+INFO:tensorflow:Decoding batch 71 out of 94.
+I0530 22:47:43.228644 139692772566848 translate.py:121] Decoding batch 71 out of 94.
+INFO:tensorflow:Decoding batch 72 out of 94.
+I0530 22:47:45.139890 139692772566848 translate.py:121] Decoding batch 72 out of 94.
+INFO:tensorflow:Decoding batch 73 out of 94.
+I0530 22:47:47.613178 139692772566848 translate.py:121] Decoding batch 73 out of 94.
+INFO:tensorflow:Decoding batch 74 out of 94.
+I0530 22:47:51.646062 139692772566848 translate.py:121] Decoding batch 74 out of 94.
+INFO:tensorflow:Decoding batch 75 out of 94.
+I0530 22:47:53.723142 139692772566848 translate.py:121] Decoding batch 75 out of 94.
+INFO:tensorflow:Decoding batch 76 out of 94.
+I0530 22:47:57.546824 139692772566848 translate.py:121] Decoding batch 76 out of 94.
+INFO:tensorflow:Decoding batch 77 out of 94.
+I0530 22:48:00.115209 139692772566848 translate.py:121] Decoding batch 77 out of 94.
+INFO:tensorflow:Decoding batch 78 out of 94.
+I0530 22:48:02.596770 139692772566848 translate.py:121] Decoding batch 78 out of 94.
+INFO:tensorflow:Decoding batch 79 out of 94.
+I0530 22:48:04.606945 139692772566848 translate.py:121] Decoding batch 79 out of 94.
+INFO:tensorflow:Decoding batch 80 out of 94.
+I0530 22:48:06.848146 139692772566848 translate.py:121] Decoding batch 80 out of 94.
+INFO:tensorflow:Decoding batch 81 out of 94.
+I0530 22:48:09.346399 139692772566848 translate.py:121] Decoding batch 81 out of 94.
+INFO:tensorflow:Decoding batch 82 out of 94.
+I0530 22:48:11.433625 139692772566848 translate.py:121] Decoding batch 82 out of 94.
+INFO:tensorflow:Decoding batch 83 out of 94.
+I0530 22:48:13.520969 139692772566848 translate.py:121] Decoding batch 83 out of 94.
+INFO:tensorflow:Decoding batch 84 out of 94.
+I0530 22:48:15.564843 139692772566848 translate.py:121] Decoding batch 84 out of 94.
+INFO:tensorflow:Decoding batch 85 out of 94.
+I0530 22:48:17.516599 139692772566848 translate.py:121] Decoding batch 85 out of 94.
+INFO:tensorflow:Decoding batch 86 out of 94.
+I0530 22:48:19.422146 139692772566848 translate.py:121] Decoding batch 86 out of 94.
+INFO:tensorflow:Decoding batch 87 out of 94.
+I0530 22:48:21.291657 139692772566848 translate.py:121] Decoding batch 87 out of 94.
+INFO:tensorflow:Decoding batch 88 out of 94.
+I0530 22:48:23.375130 139692772566848 translate.py:121] Decoding batch 88 out of 94.
+INFO:tensorflow:Decoding batch 89 out of 94.
+I0530 22:48:25.090539 139692772566848 translate.py:121] Decoding batch 89 out of 94.
+INFO:tensorflow:Decoding batch 90 out of 94.
+I0530 22:48:26.679305 139692772566848 translate.py:121] Decoding batch 90 out of 94.
+INFO:tensorflow:Decoding batch 91 out of 94.
+I0530 22:48:28.387514 139692772566848 translate.py:121] Decoding batch 91 out of 94.
+INFO:tensorflow:Decoding batch 92 out of 94.
+I0530 22:48:29.856056 139692772566848 translate.py:121] Decoding batch 92 out of 94.
+INFO:tensorflow:Decoding batch 93 out of 94.
+I0530 22:48:31.243883 139692772566848 translate.py:121] Decoding batch 93 out of 94.
+INFO:tensorflow:Writing to file /tmp/tmprm1_b0im
+I0530 22:48:34.978816 139692772566848 translate.py:184] Writing to file /tmp/tmprm1_b0im
+I0530 22:48:41.150713 139692772566848 transformer_main.py:119] Bleu score (uncased): 1.7509916797280312
+I0530 22:48:41.151526 139692772566848 transformer_main.py:120] Bleu score (cased): 1.6747800633311272
+Model: "model_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+inputs (InputLayer)          [(None, None)]            0         
+_________________________________________________________________
+transformer_v2 (Transformer) {'outputs': (None, None), 210804736 
+=================================================================
+Total params: 210,804,736
+Trainable params: 210,804,736
+Non-trainable params: 0
+_________________________________________________________________
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-3
+W0530 22:48:41.551446 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-3
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-4
+W0530 22:48:41.551651 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-4
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-5
+W0530 22:48:41.551704 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-5
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-6
+W0530 22:48:41.551751 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-6
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-7
+W0530 22:48:41.551851 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-7
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-8
+W0530 22:48:41.551941 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-8
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-9
+W0530 22:48:41.552113 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-9
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-10
+W0530 22:48:41.552284 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-10
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-11
+W0530 22:48:41.552433 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-11
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-12
+W0530 22:48:41.552563 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-12
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-13
+W0530 22:48:41.552661 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-13
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-14
+W0530 22:48:41.552798 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-14
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-15
+W0530 22:48:41.552891 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-15
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-16
+W0530 22:48:41.553084 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-16
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-17
+W0530 22:48:41.553246 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-17
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-18
+W0530 22:48:41.553358 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-18
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-19
+W0530 22:48:41.553494 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-19
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-20
+W0530 22:48:41.553668 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-20
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-21
+W0530 22:48:41.553816 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-21
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-22
+W0530 22:48:41.553959 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-22
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-23
+W0530 22:48:41.554152 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-23
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-24
+W0530 22:48:41.554276 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-24
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-25
+W0530 22:48:41.554403 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-25
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-26
+W0530 22:48:41.554542 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-26
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-27
+W0530 22:48:41.554635 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-27
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-28
+W0530 22:48:41.554755 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-28
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-29
+W0530 22:48:41.554889 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-29
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-30
+W0530 22:48:41.554992 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-30
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-31
+W0530 22:48:41.555069 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-31
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-32
+W0530 22:48:41.555143 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-32
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-33
+W0530 22:48:41.555262 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-33
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-34
+W0530 22:48:41.555423 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-34
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-35
+W0530 22:48:41.555565 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-35
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-36
+W0530 22:48:41.555653 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-36
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-37
+W0530 22:48:41.555807 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-37
+WARNING:tensorflow:Unresolved object in checkpoint: (root).layer-38
+W0530 22:48:41.555908 139692772566848 util.py:144] Unresolved object in checkpoint: (root).layer-38
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer
+W0530 22:48:41.555988 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer
+WARNING:tensorflow:Unresolved object in checkpoint: (root).loss
+W0530 22:48:41.556113 139692772566848 util.py:144] Unresolved object in checkpoint: (root).loss
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_1
+W0530 22:48:41.556191 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer.beta_1
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.beta_2
+W0530 22:48:41.556260 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer.beta_2
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.decay
+W0530 22:48:41.556330 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer.decay
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.learning_rate
+W0530 22:48:41.556400 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer.learning_rate
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer.iter
+W0530 22:48:41.556471 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer.iter
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.embedding_softmax_layer.weights
+W0530 22:48:41.556593 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.embedding_softmax_layer.weights
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.output_normalization.gamma
+W0530 22:48:41.556662 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.output_normalization.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.output_normalization.beta
+W0530 22:48:41.556731 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.output_normalization.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.output_normalization.gamma
+W0530 22:48:41.556799 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.output_normalization.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.output_normalization.beta
+W0530 22:48:41.556870 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.output_normalization.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.gamma
+W0530 22:48:41.556950 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.beta
+W0530 22:48:41.557021 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.gamma
+W0530 22:48:41.557088 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.beta
+W0530 22:48:41.557155 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.gamma
+W0530 22:48:41.557250 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.beta
+W0530 22:48:41.557320 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.gamma
+W0530 22:48:41.557391 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.beta
+W0530 22:48:41.557462 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.gamma
+W0530 22:48:41.557540 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.beta
+W0530 22:48:41.557613 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.gamma
+W0530 22:48:41.557684 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.beta
+W0530 22:48:41.557752 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.gamma
+W0530 22:48:41.557821 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.beta
+W0530 22:48:41.557889 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.gamma
+W0530 22:48:41.557968 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.beta
+W0530 22:48:41.558036 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.gamma
+W0530 22:48:41.558106 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.beta
+W0530 22:48:41.558187 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.gamma
+W0530 22:48:41.558252 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.beta
+W0530 22:48:41.558317 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.gamma
+W0530 22:48:41.558382 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.beta
+W0530 22:48:41.558446 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.gamma
+W0530 22:48:41.558522 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.beta
+W0530 22:48:41.558589 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.gamma
+W0530 22:48:41.558663 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.beta
+W0530 22:48:41.558731 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.gamma
+W0530 22:48:41.558798 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.beta
+W0530 22:48:41.558864 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.gamma
+W0530 22:48:41.558953 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.beta
+W0530 22:48:41.559031 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.gamma
+W0530 22:48:41.559106 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.beta
+W0530 22:48:41.559183 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.gamma
+W0530 22:48:41.559253 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.beta
+W0530 22:48:41.559325 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.gamma
+W0530 22:48:41.559401 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.beta
+W0530 22:48:41.559474 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.gamma
+W0530 22:48:41.559542 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.beta
+W0530 22:48:41.559614 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.gamma
+W0530 22:48:41.559689 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.beta
+W0530 22:48:41.559785 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.gamma
+W0530 22:48:41.559875 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.beta
+W0530 22:48:41.559952 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.gamma
+W0530 22:48:41.560020 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.beta
+W0530 22:48:41.560091 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.gamma
+W0530 22:48:41.560158 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.beta
+W0530 22:48:41.560234 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.gamma
+W0530 22:48:41.560302 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.beta
+W0530 22:48:41.560375 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.gamma
+W0530 22:48:41.560443 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.beta
+W0530 22:48:41.560510 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.gamma
+W0530 22:48:41.560579 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.beta
+W0530 22:48:41.560647 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.gamma
+W0530 22:48:41.560715 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.beta
+W0530 22:48:41.560783 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.gamma
+W0530 22:48:41.560852 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.beta
+W0530 22:48:41.560948 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.gamma
+W0530 22:48:41.561019 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.beta
+W0530 22:48:41.561087 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.gamma
+W0530 22:48:41.561155 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.beta
+W0530 22:48:41.561225 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.query_dense_layer.kernel
+W0530 22:48:41.561293 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.key_dense_layer.kernel
+W0530 22:48:41.561362 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.value_dense_layer.kernel
+W0530 22:48:41.561433 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.output_dense_layer.kernel
+W0530 22:48:41.561502 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.561571 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.bias
+W0530 22:48:41.561640 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.kernel
+W0530 22:48:41.561706 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.bias
+W0530 22:48:41.561774 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.query_dense_layer.kernel
+W0530 22:48:41.561844 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.key_dense_layer.kernel
+W0530 22:48:41.561922 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.value_dense_layer.kernel
+W0530 22:48:41.561995 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.output_dense_layer.kernel
+W0530 22:48:41.562073 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.562146 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.bias
+W0530 22:48:41.562218 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.kernel
+W0530 22:48:41.562288 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.bias
+W0530 22:48:41.562381 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.query_dense_layer.kernel
+W0530 22:48:41.562460 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.key_dense_layer.kernel
+W0530 22:48:41.562544 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.value_dense_layer.kernel
+W0530 22:48:41.562615 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.output_dense_layer.kernel
+W0530 22:48:41.562684 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.562768 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.bias
+W0530 22:48:41.562868 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.kernel
+W0530 22:48:41.562972 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.bias
+W0530 22:48:41.563066 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.query_dense_layer.kernel
+W0530 22:48:41.563160 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.key_dense_layer.kernel
+W0530 22:48:41.563260 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.value_dense_layer.kernel
+W0530 22:48:41.563335 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.output_dense_layer.kernel
+W0530 22:48:41.563407 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.563474 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.bias
+W0530 22:48:41.563542 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.kernel
+W0530 22:48:41.563614 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.bias
+W0530 22:48:41.563688 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.query_dense_layer.kernel
+W0530 22:48:41.563763 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.key_dense_layer.kernel
+W0530 22:48:41.563833 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.value_dense_layer.kernel
+W0530 22:48:41.563908 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.output_dense_layer.kernel
+W0530 22:48:41.563983 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.564054 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.bias
+W0530 22:48:41.564124 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.kernel
+W0530 22:48:41.564188 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.bias
+W0530 22:48:41.564251 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.query_dense_layer.kernel
+W0530 22:48:41.564318 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.key_dense_layer.kernel
+W0530 22:48:41.564386 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.value_dense_layer.kernel
+W0530 22:48:41.564454 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.output_dense_layer.kernel
+W0530 22:48:41.564526 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.564599 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.bias
+W0530 22:48:41.564666 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.kernel
+W0530 22:48:41.564731 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.bias
+W0530 22:48:41.564799 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.query_dense_layer.kernel
+W0530 22:48:41.564867 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.key_dense_layer.kernel
+W0530 22:48:41.564939 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.value_dense_layer.kernel
+W0530 22:48:41.565009 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.output_dense_layer.kernel
+W0530 22:48:41.565078 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.query_dense_layer.kernel
+W0530 22:48:41.565146 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.key_dense_layer.kernel
+W0530 22:48:41.565211 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.value_dense_layer.kernel
+W0530 22:48:41.565278 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.output_dense_layer.kernel
+W0530 22:48:41.565341 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.565402 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.bias
+W0530 22:48:41.565466 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.kernel
+W0530 22:48:41.565532 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.bias
+W0530 22:48:41.565602 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.query_dense_layer.kernel
+W0530 22:48:41.565674 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.key_dense_layer.kernel
+W0530 22:48:41.565754 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.value_dense_layer.kernel
+W0530 22:48:41.565821 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.output_dense_layer.kernel
+W0530 22:48:41.565885 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.query_dense_layer.kernel
+W0530 22:48:41.565959 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.key_dense_layer.kernel
+W0530 22:48:41.566024 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.value_dense_layer.kernel
+W0530 22:48:41.566093 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.output_dense_layer.kernel
+W0530 22:48:41.566156 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.566224 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.bias
+W0530 22:48:41.566300 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.kernel
+W0530 22:48:41.566368 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.bias
+W0530 22:48:41.566439 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.query_dense_layer.kernel
+W0530 22:48:41.566519 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.key_dense_layer.kernel
+W0530 22:48:41.566582 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.value_dense_layer.kernel
+W0530 22:48:41.566650 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.output_dense_layer.kernel
+W0530 22:48:41.566712 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.query_dense_layer.kernel
+W0530 22:48:41.566778 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.key_dense_layer.kernel
+W0530 22:48:41.566842 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.value_dense_layer.kernel
+W0530 22:48:41.566914 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.output_dense_layer.kernel
+W0530 22:48:41.566979 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.567044 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.bias
+W0530 22:48:41.567119 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.kernel
+W0530 22:48:41.567180 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.bias
+W0530 22:48:41.567242 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.query_dense_layer.kernel
+W0530 22:48:41.567304 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.key_dense_layer.kernel
+W0530 22:48:41.567367 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.value_dense_layer.kernel
+W0530 22:48:41.567431 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.output_dense_layer.kernel
+W0530 22:48:41.567497 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.query_dense_layer.kernel
+W0530 22:48:41.567560 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.key_dense_layer.kernel
+W0530 22:48:41.567618 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.value_dense_layer.kernel
+W0530 22:48:41.567670 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.output_dense_layer.kernel
+W0530 22:48:41.567734 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.567795 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.bias
+W0530 22:48:41.567862 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.kernel
+W0530 22:48:41.567931 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.bias
+W0530 22:48:41.567998 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.query_dense_layer.kernel
+W0530 22:48:41.568064 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.key_dense_layer.kernel
+W0530 22:48:41.568126 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.value_dense_layer.kernel
+W0530 22:48:41.568191 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.output_dense_layer.kernel
+W0530 22:48:41.568258 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.query_dense_layer.kernel
+W0530 22:48:41.568326 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.key_dense_layer.kernel
+W0530 22:48:41.568394 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.value_dense_layer.kernel
+W0530 22:48:41.568481 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.output_dense_layer.kernel
+W0530 22:48:41.568554 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.568625 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.bias
+W0530 22:48:41.568695 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.kernel
+W0530 22:48:41.568768 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.bias
+W0530 22:48:41.568840 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.query_dense_layer.kernel
+W0530 22:48:41.569063 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.key_dense_layer.kernel
+W0530 22:48:41.569205 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.value_dense_layer.kernel
+W0530 22:48:41.569289 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.output_dense_layer.kernel
+W0530 22:48:41.569364 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.query_dense_layer.kernel
+W0530 22:48:41.569481 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.key_dense_layer.kernel
+W0530 22:48:41.569552 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.value_dense_layer.kernel
+W0530 22:48:41.569620 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.output_dense_layer.kernel
+W0530 22:48:41.569686 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.569749 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.bias
+W0530 22:48:41.569819 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.kernel
+W0530 22:48:41.569917 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.bias
+W0530 22:48:41.569994 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'm' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.embedding_softmax_layer.weights
+W0530 22:48:41.570072 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.embedding_softmax_layer.weights
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.output_normalization.gamma
+W0530 22:48:41.570150 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.output_normalization.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.output_normalization.beta
+W0530 22:48:41.570227 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.output_normalization.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.output_normalization.gamma
+W0530 22:48:41.570302 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.output_normalization.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.output_normalization.beta
+W0530 22:48:41.570389 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.output_normalization.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.gamma
+W0530 22:48:41.570468 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.beta
+W0530 22:48:41.570561 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.gamma
+W0530 22:48:41.570650 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.beta
+W0530 22:48:41.570721 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.gamma
+W0530 22:48:41.570793 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.beta
+W0530 22:48:41.570864 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.gamma
+W0530 22:48:41.570937 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.beta
+W0530 22:48:41.571019 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.gamma
+W0530 22:48:41.571087 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.beta
+W0530 22:48:41.571154 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.gamma
+W0530 22:48:41.571221 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.beta
+W0530 22:48:41.571287 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.gamma
+W0530 22:48:41.571384 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.beta
+W0530 22:48:41.571459 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.gamma
+W0530 22:48:41.571537 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.beta
+W0530 22:48:41.571605 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.gamma
+W0530 22:48:41.571681 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.beta
+W0530 22:48:41.571748 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.gamma
+W0530 22:48:41.571831 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.beta
+W0530 22:48:41.571911 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.gamma
+W0530 22:48:41.571983 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.beta
+W0530 22:48:41.572055 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.gamma
+W0530 22:48:41.572133 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.beta
+W0530 22:48:41.572209 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.gamma
+W0530 22:48:41.572278 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.beta
+W0530 22:48:41.572348 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.gamma
+W0530 22:48:41.572424 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.beta
+W0530 22:48:41.572493 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.gamma
+W0530 22:48:41.572562 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.beta
+W0530 22:48:41.572664 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.gamma
+W0530 22:48:41.572761 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.beta
+W0530 22:48:41.572841 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.gamma
+W0530 22:48:41.572933 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.beta
+W0530 22:48:41.573021 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.gamma
+W0530 22:48:41.573096 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.beta
+W0530 22:48:41.573168 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.gamma
+W0530 22:48:41.573248 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.beta
+W0530 22:48:41.573325 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.gamma
+W0530 22:48:41.573421 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.beta
+W0530 22:48:41.573507 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.gamma
+W0530 22:48:41.573575 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.beta
+W0530 22:48:41.573660 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.gamma
+W0530 22:48:41.573738 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.beta
+W0530 22:48:41.573805 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.gamma
+W0530 22:48:41.573895 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.beta
+W0530 22:48:41.573976 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.gamma
+W0530 22:48:41.574059 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.beta
+W0530 22:48:41.574128 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.gamma
+W0530 22:48:41.574211 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.beta
+W0530 22:48:41.574284 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.gamma
+W0530 22:48:41.574361 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.beta
+W0530 22:48:41.574435 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.gamma
+W0530 22:48:41.574514 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.beta
+W0530 22:48:41.574582 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.gamma
+W0530 22:48:41.574643 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.beta
+W0530 22:48:41.574708 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.gamma
+W0530 22:48:41.574787 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.beta
+W0530 22:48:41.574864 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.gamma
+W0530 22:48:41.574941 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.gamma
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.beta
+W0530 22:48:41.575004 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer_norm.beta
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.query_dense_layer.kernel
+W0530 22:48:41.575065 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.key_dense_layer.kernel
+W0530 22:48:41.575125 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.value_dense_layer.kernel
+W0530 22:48:41.575212 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.output_dense_layer.kernel
+W0530 22:48:41.575284 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.575350 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.bias
+W0530 22:48:41.575421 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.kernel
+W0530 22:48:41.575484 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.bias
+W0530 22:48:41.575549 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.0.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.query_dense_layer.kernel
+W0530 22:48:41.575616 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.key_dense_layer.kernel
+W0530 22:48:41.575682 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.value_dense_layer.kernel
+W0530 22:48:41.575749 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.output_dense_layer.kernel
+W0530 22:48:41.575817 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.575885 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.bias
+W0530 22:48:41.575968 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.kernel
+W0530 22:48:41.576066 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.bias
+W0530 22:48:41.576145 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.1.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.query_dense_layer.kernel
+W0530 22:48:41.576218 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.key_dense_layer.kernel
+W0530 22:48:41.576296 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.value_dense_layer.kernel
+W0530 22:48:41.576400 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.output_dense_layer.kernel
+W0530 22:48:41.576481 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.576571 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.bias
+W0530 22:48:41.576656 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.kernel
+W0530 22:48:41.576733 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.bias
+W0530 22:48:41.576805 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.2.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.query_dense_layer.kernel
+W0530 22:48:41.576878 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.key_dense_layer.kernel
+W0530 22:48:41.576952 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.value_dense_layer.kernel
+W0530 22:48:41.577023 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.output_dense_layer.kernel
+W0530 22:48:41.577098 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.577172 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.bias
+W0530 22:48:41.577236 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.kernel
+W0530 22:48:41.577301 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.bias
+W0530 22:48:41.577373 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.3.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.query_dense_layer.kernel
+W0530 22:48:41.577444 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.key_dense_layer.kernel
+W0530 22:48:41.577508 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.value_dense_layer.kernel
+W0530 22:48:41.577572 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.output_dense_layer.kernel
+W0530 22:48:41.577638 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.577712 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.bias
+W0530 22:48:41.577777 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.kernel
+W0530 22:48:41.577842 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.bias
+W0530 22:48:41.577906 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.4.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.query_dense_layer.kernel
+W0530 22:48:41.577972 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.key_dense_layer.kernel
+W0530 22:48:41.578039 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.value_dense_layer.kernel
+W0530 22:48:41.578107 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.output_dense_layer.kernel
+W0530 22:48:41.578178 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.kernel
+W0530 22:48:41.578244 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.bias
+W0530 22:48:41.578308 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.kernel
+W0530 22:48:41.578379 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.bias
+W0530 22:48:41.578448 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.encoder_stack.layers.5.1.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.query_dense_layer.kernel
+W0530 22:48:41.578529 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.key_dense_layer.kernel
+W0530 22:48:41.578599 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.value_dense_layer.kernel
+W0530 22:48:41.578671 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.output_dense_layer.kernel
+W0530 22:48:41.578760 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.query_dense_layer.kernel
+W0530 22:48:41.578845 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.key_dense_layer.kernel
+W0530 22:48:41.578932 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.value_dense_layer.kernel
+W0530 22:48:41.579010 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.output_dense_layer.kernel
+W0530 22:48:41.579101 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.579171 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.bias
+W0530 22:48:41.579243 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.kernel
+W0530 22:48:41.579309 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.bias
+W0530 22:48:41.579406 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.0.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.query_dense_layer.kernel
+W0530 22:48:41.579479 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.key_dense_layer.kernel
+W0530 22:48:41.579552 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.value_dense_layer.kernel
+W0530 22:48:41.579637 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.output_dense_layer.kernel
+W0530 22:48:41.579716 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.query_dense_layer.kernel
+W0530 22:48:41.579783 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.key_dense_layer.kernel
+W0530 22:48:41.579849 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.value_dense_layer.kernel
+W0530 22:48:41.579915 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.output_dense_layer.kernel
+W0530 22:48:41.579981 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.580045 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.bias
+W0530 22:48:41.580110 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.kernel
+W0530 22:48:41.580177 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.bias
+W0530 22:48:41.580249 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.1.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.query_dense_layer.kernel
+W0530 22:48:41.580314 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.key_dense_layer.kernel
+W0530 22:48:41.580489 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.value_dense_layer.kernel
+W0530 22:48:41.580622 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.output_dense_layer.kernel
+W0530 22:48:41.580703 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.query_dense_layer.kernel
+W0530 22:48:41.580775 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.key_dense_layer.kernel
+W0530 22:48:41.580844 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.value_dense_layer.kernel
+W0530 22:48:41.580931 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.output_dense_layer.kernel
+W0530 22:48:41.581002 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.581069 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.bias
+W0530 22:48:41.581137 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.kernel
+W0530 22:48:41.581211 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.bias
+W0530 22:48:41.581287 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.2.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.query_dense_layer.kernel
+W0530 22:48:41.581353 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.key_dense_layer.kernel
+W0530 22:48:41.581432 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.value_dense_layer.kernel
+W0530 22:48:41.581498 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.output_dense_layer.kernel
+W0530 22:48:41.581564 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.query_dense_layer.kernel
+W0530 22:48:41.581630 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.key_dense_layer.kernel
+W0530 22:48:41.581692 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.value_dense_layer.kernel
+W0530 22:48:41.581759 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.output_dense_layer.kernel
+W0530 22:48:41.581826 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.581892 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.bias
+W0530 22:48:41.581957 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.kernel
+W0530 22:48:41.582023 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.bias
+W0530 22:48:41.582089 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.3.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.query_dense_layer.kernel
+W0530 22:48:41.582156 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.key_dense_layer.kernel
+W0530 22:48:41.582222 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.value_dense_layer.kernel
+W0530 22:48:41.582288 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.output_dense_layer.kernel
+W0530 22:48:41.582353 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.query_dense_layer.kernel
+W0530 22:48:41.582430 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.key_dense_layer.kernel
+W0530 22:48:41.582515 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.value_dense_layer.kernel
+W0530 22:48:41.582721 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.output_dense_layer.kernel
+W0530 22:48:41.582817 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.582887 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.bias
+W0530 22:48:41.582955 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.kernel
+W0530 22:48:41.583022 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.bias
+W0530 22:48:41.583086 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.4.2.layer.output_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.query_dense_layer.kernel
+W0530 22:48:41.583151 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.key_dense_layer.kernel
+W0530 22:48:41.583215 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.value_dense_layer.kernel
+W0530 22:48:41.583277 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.output_dense_layer.kernel
+W0530 22:48:41.583345 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.0.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.query_dense_layer.kernel
+W0530 22:48:41.583426 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.query_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.key_dense_layer.kernel
+W0530 22:48:41.583496 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.key_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.value_dense_layer.kernel
+W0530 22:48:41.583585 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.value_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.output_dense_layer.kernel
+W0530 22:48:41.583660 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.1.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.kernel
+W0530 22:48:41.583724 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.bias
+W0530 22:48:41.583786 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.filter_dense_layer.bias
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.kernel
+W0530 22:48:41.583873 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.kernel
+WARNING:tensorflow:Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.bias
+W0530 22:48:41.583952 139692772566848 util.py:144] Unresolved object in checkpoint: (root).optimizer's state 'v' for (root).layer_with_weights-0.decoder_stack.layers.5.2.layer.output_dense_layer.bias
+WARNING:tensorflow:A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+W0530 22:48:41.584017 139692772566848 util.py:152] A checkpoint was restored (e.g. tf.train.Checkpoint.restore or tf.keras.Model.load_weights) but not all checkpointed values were used. See above for specific issues. Use expect_partial() on the load status object, e.g. tf.train.Checkpoint.restore(...).expect_partial(), to silence these warnings, or use assert_consumed() to make the check explicit. See https://www.tensorflow.org/guide/checkpoint#loading_mechanics for details.
+Traceback (most recent call last):
+  File "compute_bleu.py", line 140, in <module>
+    absl_app.run(main)
+  File "/usr/local/lib/python3.6/dist-packages/absl/app.py", line 303, in run
+    _run_main(main, args)
+  File "/usr/local/lib/python3.6/dist-packages/absl/app.py", line 251, in _run_main
+    sys.exit(main(argv))
+  File "compute_bleu.py", line 108, in main
+    score = bleu_wrapper(FLAGS.reference, FLAGS.translation, False)
+  File "compute_bleu.py", line 92, in bleu_wrapper
+    tf.io.gfile.GFile(hyp_filename).read()).strip().splitlines()
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/lib/io/file_io.py", line 116, in read
+    self._preread_check()
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/lib/io/file_io.py", line 79, in _preread_check
+    self.__name, 1024 * 512)
+tensorflow.python.framework.errors_impl.NotFoundError: translationv2.nn.soft1.en; No such file or directory
