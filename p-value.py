@@ -13,34 +13,41 @@ def get_loss(path):
     f = open(path)
     lines = f.readlines()
     loss = 0
-    key = "IoU=0.50:0.95"
+    key = "Bleu score (cased)"
     cur = ''
     for line in lines:
-        pre = cur
-        cur = line
         if key in line:
-            print(cur)
 
             #index = line.find(key)
             #res = line[index + len(key):index + len(key)+ 10]
-            res = cur.split('=')[4]
+            res = line.split(':')[-1]
             print(res)
             loss = float(res)
             break
     return loss
 def cal():
     res = collections.defaultdict(list)
-    dep = "log/od_2.1.0/log_eval"
+    dep = "log/transform_2.2.0/v1.nn.softmax"
 
     # log/resnet-1.13/conv2d", "log/resnet-1.13/dense", "log/resnet-1.13/max_pooling2d", "log/resnet-1.13/batch_normalization"
-    new = "log/od_2.1.0/log_eval_new"
+    new = "log/transform_2.2.0/v2.nn.softmax"
 
     for i in os.listdir(dep):
-        res['deprecated'].append(get_loss(os.path.join(dep, i)))
+        data = get_loss(os.path.join(dep, i))
+        if data != 0:
+            res['deprecated'].append(data)
+        else:
+            print('dep:zero')
 
     for i in os.listdir(new):
-        res['new'].append(get_loss(os.path.join(new, i)))
+        data = get_loss(os.path.join(new, i))
+        if data != 0:
+            res['new'].append(data)
+        else:
+            print('new:zero')
+    res['new'].remove()
     rev = pg.ttest(res['deprecated'], res['new'])
+    print(res)
     print(numpy.average(res['deprecated']), numpy.average(res['new']))
     print(rev['p-val'], rev['cohen-d'])
     res['final'] = [numpy.average(res['deprecated']), numpy.average(res['new']), rev['p-val'], rev['cohen-d'], 0, 0, 0,

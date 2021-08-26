@@ -237,7 +237,8 @@ def initialize(params: base_configs.ExperimentConfig,
   tf.keras.backend.set_image_data_format(data_format)
   if params.runtime.run_eagerly:
     # Enable eager execution to allow step-by-step debugging
-    tf.config.experimental_run_functions_eagerly(True)
+    #tf.config.experimental_run_functions_eagerly(True)
+    tf.config.run_functions_eagerly(True)
   if tf.config.list_physical_devices('GPU'):
     if params.runtime.gpu_thread_mode:
       keras_utils.set_gpu_thread_mode_and_count(

@@ -1,0 +1,25 @@
+I0825 21:03:24.366645 139656516908864 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:03:24.366978 139656516908864 client.py:777] Refreshing access_token
+I0825 21:03:24.477614 139656516908864 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:03:24.477892 139656516908864 client.py:777] Refreshing access_token
+2021-08-25 21:03:24.569526: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-08-25 21:03:24.569580: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2021-08-25 21:03:24.569596: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (instance-7): /proc/driver/nvidia/version does not exist
+I0825 21:03:24.574728 139656516908864 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:03:24.574998 139656516908864 client.py:777] Refreshing access_token
+I0825 21:03:24.669117 139656516908864 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:03:24.669415 139656516908864 client.py:777] Refreshing access_token
+I0825 21:03:24.753397 139656516908864 remote.py:218] Entering into master device scope: /job:worker/replica:0/task:0/device:CPU:0
+2021-08-25 21:03:24.753863: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-08-25 21:03:24.764154: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2249995000 Hz
+2021-08-25 21:03:24.764435: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f03a4000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-08-25 21:03:24.764475: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-08-25 21:03:24.773104: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job worker -> {0 -> 10.19.217.114:8470}
+2021-08-25 21:03:24.773156: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:47979}
+2021-08-25 21:03:24.792774: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job worker -> {0 -> 10.19.217.114:8470}
+2021-08-25 21:03:24.792830: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:47979}
+2021-08-25 21:03:24.793343: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:390] Started server with target: grpc://localhost:47979
+INFO:tensorflow:Initializing the TPU system: node-1
+I0825 21:03:24.794111 139656516908864 tpu_strategy_util.py:72] Initializing the TPU system: node-1
+INFO:tensorflow:Clearing out eager caches
+I0825 21:03:24.951175 139656516908864 tpu_strategy_util.py:100] Clearing out eager caches

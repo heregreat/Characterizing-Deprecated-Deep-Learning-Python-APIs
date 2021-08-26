@@ -70,7 +70,8 @@ class EmbeddingSharedWeights(tf.layers.Layer):
     """
     with tf.name_scope("embedding"):
       # Create binary mask of size [batch_size, length]
-      mask = tf.to_float(tf.not_equal(x, 0))
+      #mask = tf.to_float(tf.not_equal(x, 0))
+      mask = tf.cast(tf.not_equal(x, 0), tf.float32)
 
       if self.method == "gather":
         embeddings = tf.gather(self.shared_weights, x)
