@@ -1,0 +1,393 @@
+I0825 21:04:31.325771 140097168242496 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:04:31.326120 140097168242496 client.py:777] Refreshing access_token
+I0825 21:04:31.422214 140097168242496 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:04:31.422623 140097168242496 client.py:777] Refreshing access_token
+2021-08-25 21:04:31.520313: W tensorflow/stream_executor/platform/default/dso_loader.cc:55] Could not load dynamic library 'libcuda.so.1'; dlerror: libcuda.so.1: cannot open shared object file: No such file or directory
+2021-08-25 21:04:31.520398: E tensorflow/stream_executor/cuda/cuda_driver.cc:313] failed call to cuInit: UNKNOWN ERROR (303)
+2021-08-25 21:04:31.520426: I tensorflow/stream_executor/cuda/cuda_diagnostics.cc:156] kernel driver does not appear to be running on this host (instance-7): /proc/driver/nvidia/version does not exist
+I0825 21:04:31.525748 140097168242496 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:04:31.526002 140097168242496 client.py:777] Refreshing access_token
+I0825 21:04:31.644330 140097168242496 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:04:31.644613 140097168242496 client.py:777] Refreshing access_token
+I0825 21:04:31.731296 140097168242496 remote.py:218] Entering into master device scope: /job:worker/replica:0/task:0/device:CPU:0
+2021-08-25 21:04:31.731948: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-08-25 21:04:31.741788: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 2249995000 Hz
+2021-08-25 21:04:31.742041: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7f6a40000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2021-08-25 21:04:31.742254: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2021-08-25 21:04:31.750519: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job worker -> {0 -> 10.19.217.114:8470}
+2021-08-25 21:04:31.750585: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:48150}
+2021-08-25 21:04:31.767666: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job worker -> {0 -> 10.19.217.114:8470}
+2021-08-25 21:04:31.767824: I tensorflow/core/distributed_runtime/rpc/grpc_channel.cc:301] Initialize GrpcChannelCache for job localhost -> {0 -> localhost:48150}
+2021-08-25 21:04:31.768680: I tensorflow/core/distributed_runtime/rpc/grpc_server_lib.cc:390] Started server with target: grpc://localhost:48150
+INFO:tensorflow:Initializing the TPU system: node-1
+I0825 21:04:31.769338 140097168242496 tpu_strategy_util.py:72] Initializing the TPU system: node-1
+INFO:tensorflow:Clearing out eager caches
+I0825 21:04:31.924799 140097168242496 tpu_strategy_util.py:100] Clearing out eager caches
+INFO:tensorflow:Finished initializing TPU system.
+I0825 21:04:41.059095 140097168242496 tpu_strategy_util.py:123] Finished initializing TPU system.
+I0825 21:04:41.062319 140097168242496 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:04:41.062496 140097168242496 client.py:777] Refreshing access_token
+I0825 21:04:41.147146 140097168242496 transport.py:157] Attempting refresh to obtain initial access_token
+I0825 21:04:41.147415 140097168242496 client.py:777] Refreshing access_token
+INFO:tensorflow:Found TPU system:
+I0825 21:04:41.236254 140097168242496 tpu_system_metadata.py:140] Found TPU system:
+INFO:tensorflow:*** Num TPU Cores: 8
+I0825 21:04:41.236556 140097168242496 tpu_system_metadata.py:141] *** Num TPU Cores: 8
+INFO:tensorflow:*** Num TPU Workers: 1
+I0825 21:04:41.236849 140097168242496 tpu_system_metadata.py:142] *** Num TPU Workers: 1
+INFO:tensorflow:*** Num TPU Cores Per Worker: 8
+I0825 21:04:41.236934 140097168242496 tpu_system_metadata.py:144] *** Num TPU Cores Per Worker: 8
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0825 21:04:41.237004 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0825 21:04:41.237222 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:localhost/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+I0825 21:04:41.237307 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:CPU:0, CPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+I0825 21:04:41.237392 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:0, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+I0825 21:04:41.237477 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:1, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+I0825 21:04:41.237552 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:2, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+I0825 21:04:41.237631 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:3, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+I0825 21:04:41.237710 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:4, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+I0825 21:04:41.237788 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:5, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+I0825 21:04:41.237879 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:6, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+I0825 21:04:41.237953 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU:7, TPU, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+I0825 21:04:41.238037 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:TPU_SYSTEM:0, TPU_SYSTEM, 0, 0)
+INFO:tensorflow:*** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0825 21:04:41.238108 140097168242496 tpu_system_metadata.py:146] *** Available Device: _DeviceAttributes(/job:worker/replica:0/task:0/device:XLA_CPU:0, XLA_CPU, 0, 0)
+I0825 21:04:41.238508 140097168242496 transformer_main.py:179] For training, using distribution strategy: <tensorflow.python.distribute.tpu_strategy.TPUStrategy object at 0x7f6a6632bfd0>
+WARNING:tensorflow:From /home/nianliu/ModelGarden/models-r2.2.0/official/nlp/transformer/metrics.py:74: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+W0825 21:04:53.687953 140097168242496 deprecation.py:323] From /home/nianliu/ModelGarden/models-r2.2.0/official/nlp/transformer/metrics.py:74: softmax_cross_entropy_with_logits (from tensorflow.python.ops.nn_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+
+Future major versions of TensorFlow will allow gradients to flow
+into the labels input on backprop by default.
+
+See `tf.nn.softmax_cross_entropy_with_logits_v2`.
+
+Model: "model"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+inputs (InputLayer)             [(None, None)]       0                                            
+__________________________________________________________________________________________________
+targets (InputLayer)            [(None, None)]       0                                            
+__________________________________________________________________________________________________
+transformer_v2 (Transformer)    (None, None, 33708)  210804736   inputs[0][0]                     
+                                                                 targets[0][0]                    
+__________________________________________________________________________________________________
+logits (Lambda)                 (None, None, 33708)  0           transformer_v2[0][0]             
+__________________________________________________________________________________________________
+tf_op_layer_Shape (TensorFlowOp [(3,)]               0           logits[0][0]                     
+__________________________________________________________________________________________________
+tf_op_layer_Shape_1 (TensorFlow [(2,)]               0           targets[0][0]                    
+__________________________________________________________________________________________________
+tf_op_layer_strided_slice (Tens [()]                 0           tf_op_layer_Shape[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_strided_slice_1 (Te [()]                 0           tf_op_layer_Shape_1[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Maximum (TensorFlow [()]                 0           tf_op_layer_strided_slice[0][0]  
+                                                                 tf_op_layer_strided_slice_1[0][0]
+__________________________________________________________________________________________________
+tf_op_layer_Sub_1 (TensorFlowOp [()]                 0           tf_op_layer_Maximum[0][0]        
+                                                                 tf_op_layer_strided_slice_1[0][0]
+__________________________________________________________________________________________________
+tf_op_layer_Pad_1/paddings/1 (T [(2,)]               0           tf_op_layer_Sub_1[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_Pad_1/paddings (Ten [(2, 2)]             0           tf_op_layer_Pad_1/paddings/1[0][0
+__________________________________________________________________________________________________
+tf_op_layer_Sub (TensorFlowOpLa [()]                 0           tf_op_layer_Maximum[0][0]        
+                                                                 tf_op_layer_strided_slice[0][0]  
+__________________________________________________________________________________________________
+tf_op_layer_Pad_1 (TensorFlowOp [(None, None)]       0           targets[0][0]                    
+                                                                 tf_op_layer_Pad_1/paddings[0][0] 
+__________________________________________________________________________________________________
+tf_op_layer_Pad/paddings/1 (Ten [(2,)]               0           tf_op_layer_Sub[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_Cast (TensorFlowOpL [(None, None)]       0           tf_op_layer_Pad_1[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_Pad/paddings (Tenso [(3, 2)]             0           tf_op_layer_Pad/paddings/1[0][0] 
+__________________________________________________________________________________________________
+tf_op_layer_OneHot (TensorFlowO [(None, None, 33708) 0           tf_op_layer_Cast[0][0]           
+__________________________________________________________________________________________________
+tf_op_layer_Pad (TensorFlowOpLa [(None, None, None)] 0           logits[0][0]                     
+                                                                 tf_op_layer_Pad/paddings[0][0]   
+__________________________________________________________________________________________________
+tf_op_layer_labels_stop_gradien [(None, None, 33708) 0           tf_op_layer_OneHot[0][0]         
+__________________________________________________________________________________________________
+tf_op_layer_Shape_3 (TensorFlow [(3,)]               0           tf_op_layer_Pad[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_Shape_4 (TensorFlow [(3,)]               0           tf_op_layer_labels_stop_gradient[
+__________________________________________________________________________________________________
+tf_op_layer_Slice (TensorFlowOp [(1,)]               0           tf_op_layer_Shape_3[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Slice_1 (TensorFlow [(1,)]               0           tf_op_layer_Shape_4[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_concat (TensorFlowO [(2,)]               0           tf_op_layer_Slice[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_concat_1 (TensorFlo [(2,)]               0           tf_op_layer_Slice_1[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Reshape (TensorFlow [(None, None)]       0           tf_op_layer_Pad[0][0]            
+                                                                 tf_op_layer_concat[0][0]         
+__________________________________________________________________________________________________
+tf_op_layer_Reshape_1 (TensorFl [(None, None)]       0           tf_op_layer_labels_stop_gradient[
+                                                                 tf_op_layer_concat_1[0][0]       
+__________________________________________________________________________________________________
+tf_op_layer_Shape_2 (TensorFlow [(3,)]               0           tf_op_layer_Pad[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_SoftmaxCrossEntropy [(None,), (None, Non 0           tf_op_layer_Reshape[0][0]        
+                                                                 tf_op_layer_Reshape_1[0][0]      
+__________________________________________________________________________________________________
+tf_op_layer_Slice_2 (TensorFlow [(2,)]               0           tf_op_layer_Shape_2[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_Reshape_2 (TensorFl [(None, None)]       0           tf_op_layer_SoftmaxCrossEntropyWi
+                                                                 tf_op_layer_Slice_2[0][0]        
+__________________________________________________________________________________________________
+tf_op_layer_NotEqual (TensorFlo [(None, None)]       0           tf_op_layer_Pad_1[0][0]          
+__________________________________________________________________________________________________
+tf_op_layer_Sub_2 (TensorFlowOp [(None, None)]       0           tf_op_layer_Reshape_2[0][0]      
+__________________________________________________________________________________________________
+tf_op_layer_Cast_1 (TensorFlowO [(None, None)]       0           tf_op_layer_NotEqual[0][0]       
+__________________________________________________________________________________________________I0825 21:04:54.749063 140097168242496 transformer_main.py:296] Start train iteration at global step:0
+I0825 21:10:54.486600 140097168242496 transformer_main.py:310] Train Step: 5000/5000 / loss = 3.9048190116882324
+I0825 21:11:27.986405 140097168242496 transformer_main.py:322] Saved checkpoint to gs://apiss/transformer_out_old/model_31nn1/model_big/ctl_step_5000.ckpt-1
+I0825 21:11:27.986667 140097168242496 transformer_main.py:339] End train iteration at global step:5000
+I0825 21:11:36.080635 140097168242496 transformer_main.py:413] Load weights: gs://apiss/transformer_out_old/model_31nn1/model_big/ctl_step_5000.ckpt-1
+INFO:tensorflow:Initializing Subtokenizer from file gs://apiss/transformer/vocab.ende.32768.
+I0825 21:11:47.477832 140097168242496 tokenizer.py:67] Initializing Subtokenizer from file gs://apiss/transformer/vocab.ende.32768.
+INFO:tensorflow:Decoding batch 0 out of 94.
+I0825 21:11:48.117024 140097168242496 translate.py:121] Decoding batch 0 out of 94.
+INFO:tensorflow:Decoding batch 1 out of 94.
+I0825 21:11:59.467651 140097168242496 translate.py:121] Decoding batch 1 out of 94.
+INFO:tensorflow:Decoding batch 2 out of 94.
+I0825 21:12:01.238708 140097168242496 translate.py:121] Decoding batch 2 out of 94.
+INFO:tensorflow:Decoding batch 3 out of 94.
+I0825 21:12:02.636068 140097168242496 translate.py:121] Decoding batch 3 out of 94.
+INFO:tensorflow:Decoding batch 4 out of 94.
+I0825 21:12:03.967315 140097168242496 translate.py:121] Decoding batch 4 out of 94.
+INFO:tensorflow:Decoding batch 5 out of 94.
+I0825 21:12:05.732851 140097168242496 translate.py:121] Decoding batch 5 out of 94.
+INFO:tensorflow:Decoding batch 6 out of 94.
+I0825 21:12:07.115214 140097168242496 translate.py:121] Decoding batch 6 out of 94.
+INFO:tensorflow:Decoding batch 7 out of 94.
+I0825 21:12:08.884692 140097168242496 translate.py:121] Decoding batch 7 out of 94.
+INFO:tensorflow:Decoding batch 8 out of 94.
+I0825 21:12:10.232487 140097168242496 translate.py:121] Decoding batch 8 out of 94.
+INFO:tensorflow:Decoding batch 9 out of 94.
+I0825 21:12:11.687794 140097168242496 translate.py:121] Decoding batch 9 out of 94.
+INFO:tensorflow:Decoding batch 10 out of 94.
+I0825 21:12:13.060126 140097168242496 translate.py:121] Decoding batch 10 out of 94.
+INFO:tensorflow:Decoding batch 11 out of 94.
+I0825 21:12:14.334498 140097168242496 translate.py:121] Decoding batch 11 out of 94.
+INFO:tensorflow:Decoding batch 12 out of 94.
+I0825 21:12:15.711031 140097168242496 translate.py:121] Decoding batch 12 out of 94.
+INFO:tensorflow:Decoding batch 13 out of 94.
+I0825 21:12:16.936598 140097168242496 translate.py:121] Decoding batch 13 out of 94.
+INFO:tensorflow:Decoding batch 14 out of 94.
+I0825 21:12:18.274612 140097168242496 translate.py:121] Decoding batch 14 out of 94.
+INFO:tensorflow:Decoding batch 15 out of 94.
+I0825 21:12:20.045362 140097168242496 translate.py:121] Decoding batch 15 out of 94.
+INFO:tensorflow:Decoding batch 16 out of 94.
+I0825 21:12:21.392411 140097168242496 translate.py:121] Decoding batch 16 out of 94.
+INFO:tensorflow:Decoding batch 17 out of 94.
+I0825 21:12:22.658713 140097168242496 translate.py:121] Decoding batch 17 out of 94.
+INFO:tensorflow:Decoding batch 18 out of 94.
+I0825 21:12:24.024517 140097168242496 translate.py:121] Decoding batch 18 out of 94.
+INFO:tensorflow:Decoding batch 19 out of 94.
+I0825 21:12:25.372176 140097168242496 translate.py:121] Decoding batch 19 out of 94.
+INFO:tensorflow:Decoding batch 20 out of 94.
+I0825 21:12:26.479688 140097168242496 translate.py:121] Decoding batch 20 out of 94.
+INFO:tensorflow:Decoding batch 21 out of 94.
+I0825 21:12:27.749392 140097168242496 translate.py:121] Decoding batch 21 out of 94.
+INFO:tensorflow:Decoding batch 22 out of 94.
+I0825 21:12:29.051587 140097168242496 translate.py:121] Decoding batch 22 out of 94.
+INFO:tensorflow:Decoding batch 23 out of 94.
+I0825 21:12:30.194101 140097168242496 translate.py:121] Decoding batch 23 out of 94.
+INFO:tensorflow:Decoding batch 24 out of 94.
+I0825 21:12:31.282404 140097168242496 translate.py:121] Decoding batch 24 out of 94.
+INFO:tensorflow:Decoding batch 25 out of 94.
+I0825 21:12:32.384734 140097168242496 translate.py:121] Decoding batch 25 out of 94.
+INFO:tensorflow:Decoding batch 26 out of 94.
+I0825 21:12:34.144991 140097168242496 translate.py:121] Decoding batch 26 out of 94.
+INFO:tensorflow:Decoding batch 27 out of 94.
+I0825 21:12:35.234020 140097168242496 translate.py:121] Decoding batch 27 out of 94.
+INFO:tensorflow:Decoding batch 28 out of 94.
+I0825 21:12:36.380863 140097168242496 translate.py:121] Decoding batch 28 out of 94.
+INFO:tensorflow:Decoding batch 29 out of 94.
+I0825 21:12:37.576503 140097168242496 translate.py:121] Decoding batch 29 out of 94.
+INFO:tensorflow:Decoding batch 30 out of 94.
+I0825 21:12:38.663609 140097168242496 translate.py:121] Decoding batch 30 out of 94.
+INFO:tensorflow:Decoding batch 31 out of 94.
+I0825 21:12:39.757102 140097168242496 translate.py:121] Decoding batch 31 out of 94.
+INFO:tensorflow:Decoding batch 32 out of 94.
+I0825 21:12:40.870133 140097168242496 translate.py:121] Decoding batch 32 out of 94.
+INFO:tensorflow:Decoding batch 33 out of 94.
+I0825 21:12:41.966386 140097168242496 translate.py:121] Decoding batch 33 out of 94.
+INFO:tensorflow:Decoding batch 34 out of 94.
+I0825 21:12:43.172404 140097168242496 translate.py:121] Decoding batch 34 out of 94.
+INFO:tensorflow:Decoding batch 35 out of 94.
+I0825 21:12:44.457145 140097168242496 translate.py:121] Decoding batch 35 out of 94.
+INFO:tensorflow:Decoding batch 36 out of 94.
+I0825 21:12:45.926332 140097168242496 translate.py:121] Decoding batch 36 out of 94.
+INFO:tensorflow:Decoding batch 37 out of 94.
+I0825 21:12:47.161028 140097168242496 translate.py:121] Decoding batch 37 out of 94.
+INFO:tensorflow:Decoding batch 38 out of 94.
+I0825 21:12:48.762112 140097168242496 translate.py:121] Decoding batch 38 out of 94.
+INFO:tensorflow:Decoding batch 39 out of 94.
+I0825 21:12:49.747094 140097168242496 translate.py:121] Decoding batch 39 out of 94.
+INFO:tensorflow:Decoding batch 40 out of 94.
+I0825 21:12:50.808745 140097168242496 translate.py:121] Decoding batch 40 out of 94.
+INFO:tensorflow:Decoding batch 41 out of 94.
+I0825 21:12:52.542123 140097168242496 translate.py:121] Decoding batch 41 out of 94.
+INFO:tensorflow:Decoding batch 42 out of 94.
+I0825 21:12:53.679562 140097168242496 translate.py:121] Decoding batch 42 out of 94.
+INFO:tensorflow:Decoding batch 43 out of 94.
+I0825 21:12:54.725341 140097168242496 translate.py:121] Decoding batch 43 out of 94.
+INFO:tensorflow:Decoding batch 44 out of 94.
+I0825 21:12:55.850611 140097168242496 translate.py:121] Decoding batch 44 out of 94.
+INFO:tensorflow:Decoding batch 45 out of 94.
+I0825 21:12:56.853633 140097168242496 translate.py:121] Decoding batch 45 out of 94.
+INFO:tensorflow:Decoding batch 46 out of 94.
+I0825 21:12:57.861591 140097168242496 translate.py:121] Decoding batch 46 out of 94.
+INFO:tensorflow:Decoding batch 47 out of 94.
+I0825 21:12:59.595162 140097168242496 translate.py:121] Decoding batch 47 out of 94.
+INFO:tensorflow:Decoding batch 48 out of 94.
+I0825 21:13:00.750918 140097168242496 translate.py:121] Decoding batch 48 out of 94.
+INFO:tensorflow:Decoding batch 49 out of 94.
+I0825 21:13:01.949847 140097168242496 translate.py:121] Decoding batch 49 out of 94.
+INFO:tensorflow:Decoding batch 50 out of 94.
+I0825 21:13:03.714561 140097168242496 translate.py:121] Decoding batch 50 out of 94.
+INFO:tensorflow:Decoding batch 51 out of 94.
+I0825 21:13:04.993592 140097168242496 translate.py:121] Decoding batch 51 out of 94.
+INFO:tensorflow:Decoding batch 52 out of 94.
+I0825 21:13:06.150657 140097168242496 translate.py:121] Decoding batch 52 out of 94.
+INFO:tensorflow:Decoding batch 53 out of 94.
+I0825 21:13:07.161327 140097168242496 translate.py:121] Decoding batch 53 out of 94.
+INFO:tensorflow:Decoding batch 54 out of 94.
+I0825 21:13:08.260465 140097168242496 translate.py:121] Decoding batch 54 out of 94.
+INFO:tensorflow:Decoding batch 55 out of 94.
+I0825 21:13:09.393319 140097168242496 translate.py:121] Decoding batch 55 out of 94.
+INFO:tensorflow:Decoding batch 56 out of 94.
+I0825 21:13:10.533061 140097168242496 translate.py:121] Decoding batch 56 out of 94.
+INFO:tensorflow:Decoding batch 57 out of 94.
+I0825 21:13:11.451395 140097168242496 translate.py:121] Decoding batch 57 out of 94.
+INFO:tensorflow:Decoding batch 58 out of 94.
+I0825 21:13:12.555280 140097168242496 translate.py:121] Decoding batch 58 out of 94.
+INFO:tensorflow:Decoding batch 59 out of 94.
+I0825 21:13:13.721350 140097168242496 translate.py:121] Decoding batch 59 out of 94.
+INFO:tensorflow:Decoding batch 60 out of 94.
+I0825 21:13:14.769577 140097168242496 translate.py:121] Decoding batch 60 out of 94.
+INFO:tensorflow:Decoding batch 61 out of 94.
+I0825 21:13:15.772935 140097168242496 translate.py:121] Decoding batch 61 out of 94.
+INFO:tensorflow:Decoding batch 62 out of 94.
+I0825 21:13:16.750980 140097168242496 translate.py:121] Decoding batch 62 out of 94.
+INFO:tensorflow:Decoding batch 63 out of 94.
+I0825 21:13:17.940935 140097168242496 translate.py:121] Decoding batch 63 out of 94.
+INFO:tensorflow:Decoding batch 64 out of 94.
+I0825 21:13:19.030461 140097168242496 translate.py:121] Decoding batch 64 out of 94.
+INFO:tensorflow:Decoding batch 65 out of 94.
+I0825 21:13:20.078171 140097168242496 translate.py:121] Decoding batch 65 out of 94.
+INFO:tensorflow:Decoding batch 66 out of 94.
+I0825 21:13:21.035236 140097168242496 translate.py:121] Decoding batch 66 out of 94.
+INFO:tensorflow:Decoding batch 67 out of 94.
+I0825 21:13:21.883194 140097168242496 translate.py:121] Decoding batch 67 out of 94.
+INFO:tensorflow:Decoding batch 68 out of 94.
+I0825 21:13:22.814908 140097168242496 translate.py:121] Decoding batch 68 out of 94.
+INFO:tensorflow:Decoding batch 69 out of 94.
+I0825 21:13:24.251717 140097168242496 translate.py:121] Decoding batch 69 out of 94.
+INFO:tensorflow:Decoding batch 70 out of 94.
+I0825 21:13:25.281254 140097168242496 translate.py:121] Decoding batch 70 out of 94.
+INFO:tensorflow:Decoding batch 71 out of 94.
+I0825 21:13:26.272043 140097168242496 translate.py:121] Decoding batch 71 out of 94.
+INFO:tensorflow:Decoding batch 72 out of 94.
+I0825 21:13:27.203932 140097168242496 translate.py:121] Decoding batch 72 out of 94.
+INFO:tensorflow:Decoding batch 73 out of 94.
+I0825 21:13:28.266354 140097168242496 translate.py:121] Decoding batch 73 out of 94.
+INFO:tensorflow:Decoding batch 74 out of 94.
+I0825 21:13:29.233359 140097168242496 translate.py:121] Decoding batch 74 out of 94.
+INFO:tensorflow:Decoding batch 75 out of 94.
+I0825 21:13:30.143680 140097168242496 translate.py:121] Decoding batch 75 out of 94.
+INFO:tensorflow:Decoding batch 76 out of 94.
+I0825 21:13:31.343306 140097168242496 translate.py:121] Decoding batch 76 out of 94.
+INFO:tensorflow:Decoding batch 77 out of 94.
+I0825 21:13:32.257923 140097168242496 translate.py:121] Decoding batch 77 out of 94.
+INFO:tensorflow:Decoding batch 78 out of 94.
+I0825 21:13:33.231346 140097168242496 translate.py:121] Decoding batch 78 out of 94.
+INFO:tensorflow:Decoding batch 79 out of 94.
+I0825 21:13:34.254431 140097168242496 translate.py:121] Decoding batch 79 out of 94.
+INFO:tensorflow:Decoding batch 80 out of 94.
+I0825 21:13:35.331928 140097168242496 translate.py:121] Decoding batch 80 out of 94.
+INFO:tensorflow:Decoding batch 81 out of 94.
+I0825 21:13:36.257602 140097168242496 translate.py:121] Decoding batch 81 out of 94.
+INFO:tensorflow:Decoding batch 82 out of 94.
+I0825 21:13:37.400304 140097168242496 translate.py:121] Decoding batch 82 out of 94.
+INFO:tensorflow:Decoding batch 83 out of 94.
+I0825 21:13:38.376043 140097168242496 translate.py:121] Decoding batch 83 out of 94.
+INFO:tensorflow:Decoding batch 84 out of 94.
+I0825 21:13:39.143402 140097168242496 translate.py:121] Decoding batch 84 out of 94.
+INFO:tensorflow:Decoding batch 85 out of 94.
+I0825 21:13:39.993130 140097168242496 translate.py:121] Decoding batch 85 out of 94.
+INFO:tensorflow:Decoding batch 86 out of 94.
+I0825 21:13:40.843880 140097168242496 translate.py:121] Decoding batch 86 out of 94.
+INFO:tensorflow:Decoding batch 87 out of 94.
+I0825 21:13:41.675010 140097168242496 translate.py:121] Decoding batch 87 out of 94.
+INFO:tensorflow:Decoding batch 88 out of 94.
+I0825 21:13:42.611241 140097168242496 translate.py:121] Decoding batch 88 out of 94.
+INFO:tensorflow:Decoding batch 89 out of 94.
+I0825 21:13:43.551119 140097168242496 translate.py:121] Decoding batch 89 out of 94.
+INFO:tensorflow:Decoding batch 90 out of 94.
+I0825 21:13:44.422794 140097168242496 translate.py:121] Decoding batch 90 out of 94.
+INFO:tensorflow:Decoding batch 91 out of 94.
+I0825 21:13:45.299738 140097168242496 translate.py:121] Decoding batch 91 out of 94.
+INFO:tensorflow:Decoding batch 92 out of 94.
+I0825 21:13:46.094177 140097168242496 translate.py:121] Decoding batch 92 out of 94.
+INFO:tensorflow:Decoding batch 93 out of 94.
+I0825 21:13:46.903681 140097168242496 translate.py:121] Decoding batch 93 out of 94.
+INFO:tensorflow:Writing to file /tmp/tmpn54fx_lg
+I0825 21:13:47.618302 140097168242496 translate.py:184] Writing to file /tmp/tmpn54fx_lg
+I0825 21:14:40.219234 140097168242496 transformer_main.py:119] Bleu score (uncased): 4.709319025278091
+I0825 21:14:40.219603 140097168242496 transformer_main.py:120] Bleu score (cased): 4.580191895365715
+
+tf_op_layer_Mul (TensorFlowOpLa [(None, None)]       0           tf_op_layer_Sub_2[0][0]          
+                                                                 tf_op_layer_Cast_1[0][0]         
+__________________________________________________________________________________________________
+tf_op_layer_Sum (TensorFlowOpLa [()]                 0           tf_op_layer_Mul[0][0]            
+__________________________________________________________________________________________________
+tf_op_layer_Sum_1 (TensorFlowOp [()]                 0           tf_op_layer_Cast_1[0][0]         
+__________________________________________________________________________________________________
+tf_op_layer_RealDiv (TensorFlow [()]                 0           tf_op_layer_Sum[0][0]            
+                                                                 tf_op_layer_Sum_1[0][0]          
+__________________________________________________________________________________________________
+add_loss (AddLoss)              ()                   0           tf_op_layer_RealDiv[0][0]        
+==================================================================================================
+Total params: 210,804,736
+Trainable params: 210,804,736
+Non-trainable params: 0
+__________________________________________________________________________________________________
+Model: "model_1"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+inputs (InputLayer)          [(None, None)]            0         
+_________________________________________________________________
+transformer_v2 (Transformer) {'outputs': (4, 147), 'sc 210804736 
+=================================================================
+Total params: 210,804,736
+Trainable params: 210,804,736
+Non-trainable params: 0
+_________________________________________________________________
