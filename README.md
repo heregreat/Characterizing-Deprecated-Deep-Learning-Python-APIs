@@ -21,7 +21,7 @@
 - output/models_all(official).csv: data of deprecated APIs usage in Models from version 1.10.0 to 2.3.0 without false positive.
 ## RQ4
 - p-value.py: script used to calculate p-value and cohen'd value.
-- commit_history.numbers: commit history of each commit that updated deprecated APIs.
+- commit_history.csv: commit history of each commit that updated deprecated APIs.
 - log: original log which contains model training and testing result for the 13 tests in RQ4.
 
 ## Other files
