@@ -1,0 +1,6 @@
+,0,1,2
+tensorflow-r1.5,argmin,argmax,
+tensorflow-r1.13,increment_var,,
+tensorflow-r1.14,shard,colocate_with,
+tensorflow-r2.0,where,,
+tensorflow-r2.1,vector,matrix,scalar

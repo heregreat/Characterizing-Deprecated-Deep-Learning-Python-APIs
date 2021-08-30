@@ -328,5 +328,5 @@ The dev set predictions will be saved into a file called predictions.json in the
 model_dir:
 
 ```shell
-python $SQUAD_DIR/evaluate-v1.1.py $SQUAD_DIR/dev-v1.1.json ./squad/predictions.json
+python $SQUAD_DIR/evaluate-v1.extract_deprecation_message.py $SQUAD_DIR/dev-v1.1.json ./squad/predictions.json
 ```

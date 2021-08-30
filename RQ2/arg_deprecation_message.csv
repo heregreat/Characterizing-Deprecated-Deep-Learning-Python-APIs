@@ -1,0 +1,593 @@
+,0
+add_update,"onitor directly.')
+
+      # Insert layers into the Keras Graph Network.
+      self._graph_network_add_metric(value, aggregation, name)
+
+  @deprecation.deprecated_args(None, '`inputs` is now automatically inferred',
+                               'inputs')
+  @doc_controls.for_subclass_implementers
+  def add_update(self, updates, inputs=None):
+    """"""Add update op(s), potentially dependent on layer inputs.
+
+    Weight updates (for instance, the updates of the moving mean and variance
+    in a BatchNormalization layer) may be dependent on the inputs passed
+    when calling a layer. Hence, when re"
+seek,"""""""
+    self._preread_check()
+    if n == -1:
+      length = self.size() - self.tell()
+    else:
+      length = n
+    return self._prepare_value(self._read_buf.read(length))
+
+  @deprecation.deprecated_args(
+      None, ""position is deprecated in favor of the offset argument."",
+      ""position"")
+  def seek(self, offset=None, whence=0, position=None):
+    # TODO(jhseu): Delete later. Used to omit `position` from docs.
+    # pylint: disable=g-doc-args
+    """"""Seeks to the offset in the file.
+
+    Args:
+      offset: The byte count relative to the whence argument.
+      whence: Valid values for w"
+reduce_join,"-1, -1)
+
+
+@tf_export(v1=[""strings.reduce_join"", ""reduce_join""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+@deprecation.deprecated_endpoints(""reduce_join"")
+def reduce_join(inputs, axis=None,  # pylint: disable=missing-docstring
+                keep_dims=None,
+                separator="""",
+                name=None,
+                reduction_indices=None,
+                keepdims=None):
+  keepdims = deprecation.deprecated_argument_lookup(""keepdims"", kee"
+expand_dims,"handle_data""):
+    ret._handle_data = input._handle_data  # pylint: disable=protected-access
+  return ret
+
+
+# pylint: disable=redefined-builtin,protected-access
+@tf_export(v1=[""expand_dims""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None, ""Use the `axis` argument instead"", ""dim"")
+def expand_dims(input, axis=None, name=None, dim=None):
+  """"""Returns a tensor with a length 1 axis inserted at index `axis`.
+
+  Given a tensor `input`, this operation inserts a dimension of length 1 at the
+  dimension index `axis` of `input`'s shape. The dimension index follows Python
+  indexing rul"
+squeeze,"or result.dtype.base_dtype == dtype.base_dtype:
+      return result
+    else:
+      return gen_math_ops.cast(result, dtype)
+
+
+@tf_export(v1=[""squeeze""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None, ""Use the `axis` argument instead"",
+                             ""squeeze_dims"")
+def squeeze(input, axis=None, name=None, squeeze_dims=None):
+  # pylint: disable=redefined-builtin
+  """"""Removes dimensions of size 1 from the shape of a tensor.
+
+  Given a tensor `input`, this operation returns a tensor of the same type with
+  all dimensions of size 1 removed. If you don't want to r"
+reverse_sequence,"tion.deprecated_args(None,
+                             ""seq_dim is deprecated, use seq_axis instead"",
+                             ""seq_dim"")
+@deprecation.deprecated_args(None,
+                             ""batch_dim is deprecated, use batch_axis instead"",
+                             ""batch_dim"")
+def reverse_sequence(input,
+                     seq_lengths,
+                     seq_axis=None,
+                     batch_axis=None,
+                     name=None,
+                     seq_dim=None,
+                     batch_dim=None):
+  """"""Reverses variable length slices.
+
+  This op first slic"
+extract_image_patches,"name)
+  else:
+    raise ValueError(""side must be either 'right' or 'left'.  Saw: %s."" % side)
+  return reshape(output, shape_internal(values))
+
+
+quantize.__doc__ = gen_array_ops.quantize_v2.__doc__
+
+
+@tf_export(""image.extract_patches"")
+@dispatch.add_dispatch_support
+def extract_image_patches_v2(images, sizes, strides, rates, padding, name=None):
+  r""""""Extract `patches` from `images`.
+
+  This op collects patches from the input image, as if applying a
+  convolution. All extracted patches are stacked in the depth (last) dimension
+  of the output.
+
+  Specifically,"
+string_split,"ult.char_to_byte_starts, flat_result.row_splits,
+          validate=False)
+      if input_ndims > 1:
+        offsets = input.with_flat_values(offsets)
+
+  if with_offsets:
+    return codepoints, offsets
+  else:
+    return codepoints
+
+
+@tf_export(""strings.split"", v1=[])
+@dispatch.add_dispatch_support
+def string_split_v2(input, sep=None, maxsplit=-1, name=None):  # pylint: disable=redefined-builtin
+  """"""Split elements of `input` based on `sep` into a `RaggedTensor`.
+
+  Let N be the size of `input` (typically N will be the batch size). Split each
+  element of `input` based on `sep` and return a `R"
+map_fn,"rflow.python.platform import tf_logging as logging
+from tensorflow.python.util import deprecation
+from tensorflow.python.util import nest
+from tensorflow.python.util.tf_export import tf_export
+
+
+@tf_export(v1=[""map_fn""])
+@deprecation.deprecated_args(None, ""Use fn_output_signature instead"", ""dtype"")
+def map_fn(fn,
+           elems,
+           dtype=None,
+           parallel_iterations=None,
+           back_prop=True,
+           swap_memory=False,
+           infer_shape=True,
+           name=None,
+           fn_output_signature=None):
+  """"""Transforms `elems` by applying `fn` to each element unst"
+map_fn_v2,"nsider using tf.stop_gradient instead.
+Instead of:
+results = tf.map_fn(fn, elems, back_prop=False)
+Use:
+results = tf.nest.map_structure(tf.stop_gradient, tf.map_fn(fn, elems))"""""",
+    warn_once=True,
+    back_prop=False)
+@deprecation.deprecated_args(None, ""Use fn_output_signature instead"", ""dtype"")
+def map_fn_v2(fn,
+              elems,
+              dtype=None,
+              parallel_iterations=None,
+              back_prop=True,
+              swap_memory=False,
+              infer_shape=True,
+              name=None,
+              fn_output_signature=None):
+  """"""Transform `elems` by applying"
+sparse_concat,"e, dtype=dtype),
+        dense_shape=[num_rows, num_columns])
+
+
+# pylint: disable=protected-access
+@tf_export(v1=[""sparse.concat"", ""sparse_concat""])
+@deprecation.deprecated_endpoints(""sparse_concat"")
+@deprecation.deprecated_args(
+    None, ""concat_dim is deprecated, use axis instead"", ""concat_dim"")
+def sparse_concat(axis,
+                  sp_inputs,
+                  name=None,
+                  expand_nonconcat_dim=False,
+                  concat_dim=None,
+                  expand_nonconcat_dims=None):
+  """"""Concatenates a list of `SparseTensor` along the specified dimension.
+
+  Concatenation"
+sparse_add,"v2.__doc__ = sparse_concat.__doc__.replace(
+    ""    concat_dim: The old (deprecated) name for axis.\n"", """")
+
+
+@tf_export(v1=[""sparse.add"", ""sparse_add""])
+@deprecation.deprecated_endpoints(""sparse_add"")
+@deprecation.deprecated_args(
+    None, ""thresh is deprecated, use threshold instead"", ""thresh"")
+def sparse_add(a, b, threshold=None, thresh=None):
+  """"""Adds two tensors, at least one of each is a `SparseTensor`.
+
+  If one `SparseTensor` and one `Tensor` are passed in, returns a `Tensor`.  If
+  both arguments are `SparseTensor`s, this returns a `SparseTensor`.  The order
+  of arguments does not"
+sparse_split,"s is needed to make documentation without fully qualified module paths
+    return ""KeywordRequired()""
+
+
+@tf_export(v1=[""sparse.split"", ""sparse_split""])
+@deprecation.deprecated_endpoints(""sparse_split"")
+@deprecation.deprecated_args(
+    None, ""split_dim is deprecated, use axis instead"", ""split_dim"")
+def sparse_split(keyword_required=KeywordRequired(),
+                 sp_input=None,
+                 num_split=None,
+                 axis=None,
+                 name=None,
+                 split_dim=None):
+  """"""Split a `SparseTensor` into `num_split` tensors along `axis`.
+
+  If the `sp_input.dense"
+sparse_reduce_max,"tput_shape`.  Has the same type as
+    `sparse_values`.
+  """"""
+  return gen_sparse_ops.sparse_to_dense(
+      sparse_indices,
+      output_shape,
+      sparse_values,
+      default_value=default_value,
+      validate_indices=validate_indices,
+      name=name)
+
+
+@tf_export(""sparse.reduce_max"", v1=[])
+def sparse_reduce_max_v2(
+    sp_input, axis=None, keepdims=None, output_is_sparse=False, name=None):
+  """"""Computes the max of elements across dimensions of a SparseTensor.
+
+  This Op takes a SparseTensor and is the sparse counterpart to
+  `tf.reduce_max()`.  In particular, this Op also returns a de"
+sparse_reduce_max_sparse,"ops._ReductionDims(sp_input, axis, reduction_axes), keepdims)
+
+
+@tf_export(v1=[""sparse.reduce_max_sparse"", ""sparse_reduce_max_sparse""])
+@deprecation.deprecated_endpoints(""sparse_reduce_max_sparse"")
+@deprecation.deprecated_args(
+    None, ""keep_dims is deprecated, use keepdims instead"", ""keep_dims"")
+def sparse_reduce_max_sparse(sp_input,
+                             axis=None,
+                             keepdims=None,
+                             reduction_axes=None,
+                             keep_dims=None):
+  """"""Computes the max of elements across dimensions of a SparseTensor.
+
+  This Op"
+sparse_reduce_sum,"n_sparse_ops.sparse_reduce_max_sparse(
+          sp_input.indices, sp_input.values, sp_input.dense_shape,
+          math_ops._ReductionDims(sp_input, axis, reduction_axes), keepdims))
+
+  return sparse_tensor.SparseTensor(output_ind, output_val, output_shape)
+
+
+@tf_export(""sparse.reduce_sum"", v1=[])
+def sparse_reduce_sum_v2(
+    sp_input, axis=None, keepdims=None, output_is_sparse=False, name=None):
+  """"""Computes the sum of elements across dimensions of a SparseTensor.
+
+  This Op takes a SparseTensor and is the sparse counterpart to
+  `tf.reduce_sum()`.  In particular, this Op also returns a de"
+sparse_reduce_sum_sparse,"ops._ReductionDims(sp_input, axis, reduction_axes), keepdims)
+
+
+@tf_export(v1=[""sparse.reduce_sum_sparse"", ""sparse_reduce_sum_sparse""])
+@deprecation.deprecated_endpoints(""sparse_reduce_sum_sparse"")
+@deprecation.deprecated_args(
+    None, ""keep_dims is deprecated, use keepdims instead"", ""keep_dims"")
+def sparse_reduce_sum_sparse(sp_input,
+                             axis=None,
+                             keepdims=None,
+                             reduction_axes=None,
+                             keep_dims=None):
+  """"""Computes the sum of elements across dimensions of a SparseTensor.
+
+  This Op"
+decode_raw_v1,"input_bytes, out_type, little_endian=little_endian, name=name)
+
+
+@tf_export(v1=[""decode_raw"", ""io.decode_raw""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""bytes is deprecated, use input_bytes instead"",
+                             ""bytes"")
+def decode_raw_v1(
+    input_bytes=None,
+    out_type=None,
+    little_endian=True,
+    name=None,
+    bytes=None  # pylint: disable=redefined-builtin
+):
+  """"""Convert raw byte strings into tensors.
+
+  Args:
+    input_bytes:
+      Each element of the input Tensor is converted to an array of bytes."
+crop_and_resize_v1,"method, extrapolation_value, name)
+
+
+@tf_export(v1=['image.crop_and_resize'])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             'box_ind is deprecated, use box_indices instead',
+                             'box_ind')
+def crop_and_resize_v1(  # pylint: disable=missing-docstring
+    image,
+    boxes,
+    box_ind=None,
+    crop_size=None,
+    method='bilinear',
+    extrapolation_value=0,
+    name=None,
+    box_indices=None):
+  box_ind = deprecation.deprecated_argument_lookup('box_indices', box_indices,"
+cond,"== 1:
+    return res[0]
+  else:
+    return res
+
+
+# pylint: disable=redefined-outer-name
+# pylint: disable=g-doc-args
+@tf_export(v1=[""cond""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(
+    None, ""fn1/fn2 are deprecated in favor of the true_fn/false_fn arguments."",
+    ""fn1"", ""fn2"")
+def cond(pred,
+         true_fn=None,
+         false_fn=None,
+         strict=False,
+         name=None,
+         fn1=None,
+         fn2=None):
+  """"""Return `true_fn()` if the predicate `pred` is true else `false_fn()`.
+
+  `true_fn` and `false_fn` both return lists of output tensors. `true_fn` and"
+softmax,"_rank, 1), name=name)
+
+  # Make shape inference work since transpose may erase its static shape.
+  output.set_shape(shape)
+
+  return output
+
+
+@tf_export(v1=[""nn.softmax"", ""math.softmax""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None, ""dim is deprecated, use axis instead"", ""dim"")
+def softmax(logits, axis=None, name=None, dim=None):
+  """"""Computes softmax activations.
+
+  This function performs the equivalent of
+
+      softmax = tf.exp(logits) / tf.reduce_sum(tf.exp(logits), axis)
+
+  See: https://en.wikipedia.org/wiki/Softmax_function
+
+  Example usage:
+
+  >>> tf.nn.softmax([-1,"
+log_softmax,"last
+      dimension of `logits`.
+  """"""
+  if axis is None:
+    axis = -1
+  return _softmax(logits, gen_nn_ops.softmax, axis, name)
+
+
+@tf_export(v1=[""nn.log_softmax"", ""math.log_softmax""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None, ""dim is deprecated, use axis instead"", ""dim"")
+def log_softmax(logits, axis=None, name=None, dim=None):
+  """"""Computes log softmax activations.
+
+  For each batch `i` and class `j` we have
+
+      logsoftmax = logits - log(reduce_sum(exp(logits), axis))
+
+  Args:
+    logits: A non-empty `Tensor`. Must be one of the following types: `half`,
+      `fl"
+dropout,"hape(new_dims)
+
+  return noise_shape
+
+
+@tf_export(v1=[""nn.dropout""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None, ""Please use `rate` instead of `keep_prob`. ""
+                             ""Rate should be set to `rate = 1 - keep_prob`."",
+                             ""keep_prob"")
+def dropout(x, keep_prob=None, noise_shape=None, seed=None, name=None,
+            rate=None):
+  """"""Computes dropout.
+
+  For each element of `x`, with probability `rate`, outputs `0`, and otherwise
+  scales up the input by `1 / (1-rate)`. The scaling is such that the expected
+  sum is unchanged."
+norm,", v = gen_linalg_ops.svd(
+      tensor, compute_uv=compute_uv, full_matrices=full_matrices, name=name)
+  if compute_uv:
+    return math_ops.real(s), u, v
+  else:
+    return math_ops.real(s)
+
+
+# pylint: disable=redefined-builtin
+@tf_export('norm', 'linalg.norm', v1=[])
+@dispatch.add_dispatch_support
+def norm_v2(tensor,
+            ord='euclidean',
+            axis=None,
+            keepdims=None,
+            name=None):
+  r""""""Computes the norm of vectors, matrices, and tensors.
+
+  This function can compute several different vector norms (the 1-norm, the
+  Euclidean or 2-norm, the inf-norm, and"
+argmax,"""argmax""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None, ""Use the `axis` argument instead"",
+                             ""dimension"")
+@_set_doc(
+    gen_math_ops.arg_max.__doc__.replace(""dimensions"",
+                                         ""axes"").replace(""dimension"", ""axis""))
+def argmax(input,
+           axis=None,
+           name=None,
+           dimension=None,
+           output_type=dtypes.int64):
+  axis = deprecation.deprecated_argument_lookup(""axis"", axis, ""dimension"",
+                                                dimension)
+  return argmax_v2(input, axis, output_"
+argmin,"""argmin""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None, ""Use the `axis` argument instead"",
+                             ""dimension"")
+@_set_doc(
+    gen_math_ops.arg_min.__doc__.replace(""dimensions"",
+                                         ""axes"").replace(""dimension"", ""axis""))
+def argmin(input,
+           axis=None,
+           name=None,
+           dimension=None,
+           output_type=dtypes.int64):
+  axis = deprecation.deprecated_argument_lookup(""axis"", axis, ""dimension"",
+                                                dimension)
+  return argmin_v2(input, axis, output_"
+reduce_sum_v1,"axis is None):
+    output.set_shape(())
+  return output
+
+
+@tf_export(v1=[""math.reduce_sum"", ""reduce_sum""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+def reduce_sum_v1(input_tensor,
+                  axis=None,
+                  keepdims=None,
+                  name=None,
+                  reduction_indices=None,
+                  keep_dims=None):
+  """"""Computes the sum of elements across dimensions of a tensor.
+
+  Reduces `input_tensor` along the"
+count_nonzero,"patch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+@deprecation.deprecated_args(
+    None, ""reduction_indices is deprecated, use axis instead"",
+    ""reduction_indices"")
+def count_nonzero(input_tensor=None,
+                  axis=None,
+                  keepdims=None,
+                  dtype=dtypes.int64,
+                  name=None,
+                  reduction_indices=None,
+                  keep_dims=None,
+                  input=None):  # pylint: disable=redefine"
+reduce_prod_v1,"ionDims(input_tensor, axis), keepdims,
+          name=name))
+
+
+@tf_export(v1=[""math.reduce_prod"", ""reduce_prod""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+def reduce_prod_v1(input_tensor,
+                   axis=None,
+                   keepdims=None,
+                   name=None,
+                   reduction_indices=None,
+                   keep_dims=None):
+  """"""Computes the product of elements across dimensions of a tensor.
+
+  Reduces `input_tensor`"
+reduce_min_v1,"dims)
+  return reduce_prod(input_tensor, axis, keepdims, name)
+
+
+@tf_export(v1=[""math.reduce_min"", ""reduce_min""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+def reduce_min_v1(input_tensor,
+                  axis=None,
+                  keepdims=None,
+                  name=None,
+                  reduction_indices=None,
+                  keep_dims=None):
+  """"""Computes the minimum of elements across dimensions of a tensor.
+
+  Reduces `input_tensor` along"
+reduce_max_v1,"ctionDims(input_tensor, axis), keepdims,
+          name=name))
+
+
+@tf_export(v1=[""math.reduce_max"", ""reduce_max""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+def reduce_max_v1(input_tensor,
+                  axis=None,
+                  keepdims=None,
+                  name=None,
+                  reduction_indices=None,
+                  keep_dims=None):
+  """"""Computes the maximum of elements across dimensions of a tensor.
+
+  Reduces `input_tensor` along"
+reduce_all_v1,"gen_math_ops._max(input_tensor, dims, keepdims, name=name))
+
+
+@tf_export(v1=[""math.reduce_all"", ""reduce_all""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+def reduce_all_v1(input_tensor,
+                  axis=None,
+                  keepdims=None,
+                  name=None,
+                  reduction_indices=None,
+                  keep_dims=None):
+  """"""Computes the ""logical and"" of elements across dimensions of a tensor.
+
+  Reduces `input_tensor`"
+reduce_any_v1,"ctionDims(input_tensor, axis), keepdims,
+          name=name))
+
+
+@tf_export(v1=[""math.reduce_any"", ""reduce_any""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+def reduce_any_v1(input_tensor,
+                  axis=None,
+                  keepdims=None,
+                  name=None,
+                  reduction_indices=None,
+                  keep_dims=None):
+  """"""Computes the ""logical or"" of elements across dimensions of a tensor.
+
+  Reduces `input_tensor`"
+reduce_logsumexp_v1,"put_tensor, axis), keepdims,
+          name=name))
+
+
+@tf_export(v1=[""math.reduce_logsumexp"", ""reduce_logsumexp""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated_args(None,
+                             ""keep_dims is deprecated, use keepdims instead"",
+                             ""keep_dims"")
+def reduce_logsumexp_v1(input_tensor,
+                        axis=None,
+                        keepdims=None,
+                        name=None,
+                        reduction_indices=None,
+                        keep_dims=None):
+  """"""Computes log(sum(exp(elements across dimensions of a tensor"

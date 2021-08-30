@@ -1,0 +1,14 @@
+,0
+listdiff,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/array_ops.py
+all_variables,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/variables.py
+initialize_variables,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/variables.py
+initialize_all_variables,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/variables.py
+initialize_local_variables,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/variables.py
+initialize_all_tables,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/lookup_ops.py
+var_scope,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/template.py
+histogram_summary,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/logging_ops.py
+image_summary,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/logging_ops.py
+audio_summary,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/logging_ops.py
+merge_summary,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/logging_ops.py
+merge_all_summaries,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/logging_ops.py
+scalar_summary,/Users/nianliu/tensorflow/tensorflow-r1.2/tensorflow/python/ops/logging_ops.py

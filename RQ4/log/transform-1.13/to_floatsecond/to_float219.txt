@@ -1,0 +1,131 @@
+2021-08-26 08:10:01.968338: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2021-08-26 08:10:02.641630: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2021-08-26 08:10:02.642604: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x1d2fe60 executing computations on platform CUDA. Devices:
+2021-08-26 08:10:02.642635: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla V100-SXM2-16GB, Compute Capability 7.0
+2021-08-26 08:10:02.645256: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2199995000 Hz
+2021-08-26 08:10:02.645843: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x23f39d0 executing computations on platform Host. Devices:
+2021-08-26 08:10:02.645877: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2021-08-26 08:10:02.646245: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla V100-SXM2-16GB major: 7 minor: 0 memoryClockRate(GHz): 1.53
+pciBusID: 0000:00:04.0
+totalMemory: 15.78GiB freeMemory: 15.48GiB
+2021-08-26 08:10:02.646278: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-08-26 08:10:02.647160: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-08-26 08:10:02.647189: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-08-26 08:10:02.647205: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-08-26 08:10:02.647314: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/device:GPU:0 with 15060 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+2021-08-26 08:10:04.179518: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-08-26 08:10:04.179584: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-08-26 08:10:04.179601: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-08-26 08:10:04.179612: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-08-26 08:10:04.179740: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/device:GPU:0 with 15060 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+I0826 08:10:04.324962 140390069593920 logger.py:151] Benchmark run: {'model_name': 'transformer', 'dataset': {'name': 'wmt_translate_ende'}, 'machine_config': {'cpu_info': {'num_cores': 4, 'cpu_info': 'intel', 'mhz_per_cpu': 1000000.0}, 'gpu_info': {'count': 1, 'model': 'Tesla V100-SXM2-16GB'}, 'memory_total': 15764037632, 'memory_available': 14721814528}, 'test_id': None, 'run_date': '2021-08-26T08:10:02.652622Z', 'tensorflow_version': {'version': '1.13.2', 'git_hash': "b'v1.13.2-5-g04256c89d8'"}, 'tensorflow_environment_variables': [], 'run_parameters': [{'name': 'allow_ffn_pad', 'bool_value': 'True'}, {'name': 'alpha', 'float_value': 0.6}, {'name': 'attention_dropout', 'float_value': 0.1}, {'name': 'batch_size', 'long_value': 4096}, {'name': 'beam_size', 'long_value': 4}, {'name': 'data_dir', 'string_value': '/root/transformer'}, {'name': 'default_batch_size', 'long_value': 4096}, {'name': 'default_batch_size_tpu', 'long_value': 16384}, {'name': 'extra_decode_length', 'long_value': 50}, {'name': 'filter_size', 'long_value': 4096}, {'name': 'hidden_size', 'long_value': 1024}, {'name': 'initializer_gain', 'float_value': 1.0}, {'name': 'label_smoothing', 'float_value': 0.1}, {'name': 'layer_postprocess_dropout', 'float_value': 0.1}, {'name': 'learning_rate', 'float_value': 2.0}, {'name': 'learning_rate_decay_rate', 'float_value': 1.0}, {'name': 'learning_rate_warmup_steps', 'long_value': 16000}, {'name': 'max_length', 'long_value': 256}, {'name': 'model_dir', 'string_value': '/root/transformer/model_19to_float2/model_big'}, {'name': 'num_heads', 'long_value': 16}, {'name': 'num_hidden_layers', 'long_value': 6}, {'name': 'num_parallel_calls', 'long_value': 4}, {'name': 'optimizer_adam_beta1', 'float_value': 0.9}, {'name': 'optimizer_adam_beta2', 'float_value': 0.997}, {'name': 'optimizer_adam_epsilon', 'float_value': 1e-09}, {'name': 'relu_dropout', 'float_value': 0.1}, {'name': 'repeat_dataset', 'string_value': 'None'}, {'name': 'static_batch', 'bool_value': 'False'}, {'name': 'tpu', 'string_value': 'None'}, {'name': 'use_synthetic_data', 'bool_value': 'False'}, {'name': 'use_tpu', 'bool_value': 'False'}, {'name': 'vocab_size', 'long_value': 33708}], 'test_environment': 'GCP'}
+I0826 08:10:07.599280 140390069593920 run_config.py:532] Initializing RunConfig with distribution strategies.
+I0826 08:10:07.599506 140390069593920 estimator_training.py:166] Not using Distribute Coordinator.
+I0826 08:10:07.600167 140390069593920 estimator.py:201] Using config: {'_model_dir': '/root/transformer/model_19to_float2/model_big', '_tf_random_seed': None, '_save_summary_steps': 100, '_save_checkpoints_steps': None, '_save_checkpoints_secs': 600, '_session_config': allow_soft_placement: true
+graph_options {
+  rewrite_options {
+    meta_optimizer_iterations: ONE
+  }
+}
+, '_keep_checkpoint_max': 5, '_keep_checkpoint_every_n_hours': 10000, '_log_step_count_steps': 100, '_train_distribute': <tensorflow.contrib.distribute.python.one_device_strategy.OneDeviceStrategy object at 0x7fae22ad3da0>, '_device_fn': None, '_protocol': None, '_eval_distribute': None, '_experimental_distribute': None, '_service': None, '_cluster_spec': <tensorflow.python.training.server_lib.ClusterSpec object at 0x7fae22ad3e80>, '_task_type': 'worker', '_task_id': 0, '_global_id_in_cluster': 0, '_master': '', '_evaluation_master': '', '_is_chief': True, '_num_ps_replicas': 0, '_num_worker_replicas': 1, '_distribute_coordinator_mode': None}
+I0826 08:10:07.601224 140390069593920 transformer_main.py:303] Training schedule:
+I0826 08:10:07.601313 140390069593920 transformer_main.py:305] 	1. Train for 5000 steps.
+I0826 08:10:07.601374 140390069593920 transformer_main.py:306] 	2. Evaluate model.
+I0826 08:10:07.601441 140390069593920 transformer_main.py:308] 	3. Compute BLEU score.
+I0826 08:10:07.601512 140390069593920 transformer_main.py:314] Repeat above steps 1 times.
+I0826 08:10:07.602334 140390069593920 transformer_main.py:327] Starting iteration 1
+W0826 08:10:07.620124 140390069593920 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/transformer/utils/dataset.py:227: parallel_interleave (from tensorflow.contrib.data.python.ops.interleave_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.parallel_interleave(...)`.
+W0826 08:10:07.651568 140390069593920 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/transformer/utils/dataset.py:190: group_by_window (from tensorflow.contrib.data.python.ops.grouping) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.experimental.group_by_window(...)`.
+W0826 08:10:07.731325 140390069593920 deprecation.py:323] From /usr/local/lib/python3.6/dist-packages/tensorflow/python/data/ops/dataset_ops.py:1419: colocate_with (from tensorflow.python.framework.ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Colocations handled automatically by placer.
+I0826 08:10:07.742624 140390069593920 estimator.py:1111] Calling model_fn.
+W0826 08:10:07.807928 140390069593920 deprecation.py:506] From /root/ModelGarden/models-r1.13.0/official/transformer/model/transformer.py:125: calling dropout (from tensorflow.python.ops.nn_ops) with keep_prob is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use `rate` instead of `keep_prob`. Rate should be set to `rate = 1 - keep_prob`.
+W0826 08:10:08.024868 140390069593920 deprecation.py:323] From /root/ModelGarden/models-r1.13.0/official/transformer/model/ffn_layer.py:65: to_int32 (from tensorflow.python.ops.math_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use tf.cast instead.
+/usr/local/lib/python3.6/dist-packages/tensorflow/python/ops/gradients_impl.py:110: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+I0826 08:10:22.257718 140390069593920 estimator.py:1113] Done calling model_fn.
+I0826 08:10:22.543194 140390069593920 basic_session_run_hooks.py:527] Create CheckpointSaverHook.
+I0826 08:10:25.684060 140390069593920 monitored_session.py:222] Graph was finalized.
+2021-08-26 08:10:25.684581: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2021-08-26 08:10:25.684707: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2021-08-26 08:10:25.684734: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2021-08-26 08:10:25.684745: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2021-08-26 08:10:25.684865: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 15060 MB memory) -> physical GPU (device: 0, name: Tesla V100-SXM2-16GB, pci bus id: 0000:00:04.0, compute capability: 7.0)
+I0826 08:10:31.754157 140390069593920 session_manager.py:491] Running local_init_op.
+I0826 08:10:31.976029 140390069593920 session_manager.py:493] Done running local_init_op.
+I0826 08:10:40.782516 140390069593920 basic_session_run_hooks.py:594] Saving checkpoints for 0 into /root/transformer/model_19to_float2/model_big/model.ckpt.
+I0826 08:10:53.636792 140390069593920 util.py:164] Initialize strategy
+2021-08-26 08:10:59.534005: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+I0826 08:11:01.130106 140390069593920 basic_session_run_hooks.py:249] cross_entropy_loss = 9.813859, learning_rate = 0.0
+I0826 08:11:01.130473 140390069593920 basic_session_run_hooks.py:249] loss = 9.813859, step = 0
+I0826 08:11:57.928123 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.76061
+I0826 08:11:57.929238 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 8.282438, learning_rate = 3.088162e-06 (56.799 sec)
+I0826 08:11:57.929465 140390069593920 basic_session_run_hooks.py:247] loss = 8.282438, step = 100 (56.799 sec)
+I0826 08:12:49.563362 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93666
+I0826 08:12:49.564748 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 7.721527, learning_rate = 6.176324e-06 (51.636 sec)
+I0826 08:12:49.564962 140390069593920 basic_session_run_hooks.py:247] loss = 7.721527, step = 200 (51.635 sec)
+I0826 08:13:41.263007 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93425
+I0826 08:13:41.264196 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.986948, learning_rate = 9.264486e-06 (51.699 sec)
+I0826 08:13:41.264405 140390069593920 basic_session_run_hooks.py:247] loss = 6.986948, step = 300 (51.699 sec)
+I0826 08:14:32.978619 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93365
+I0826 08:14:32.979751 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 7.180676, learning_rate = 1.2352648e-05 (51.716 sec)
+I0826 08:14:32.979989 140390069593920 basic_session_run_hooks.py:247] loss = 7.180676, step = 400 (51.716 sec)
+I0826 08:15:24.622643 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93633
+I0826 08:15:24.623794 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.7132964, learning_rate = 1.544081e-05 (51.644 sec)
+I0826 08:15:24.624046 140390069593920 basic_session_run_hooks.py:247] loss = 6.7132964, step = 500 (51.644 sec)
+I0826 08:16:16.352077 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93314
+I0826 08:16:16.353169 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.5580163, learning_rate = 1.8528972e-05 (51.729 sec)
+I0826 08:16:16.353373 140390069593920 basic_session_run_hooks.py:247] loss = 6.5580163, step = 600 (51.729 sec)
+I0826 08:17:08.085532 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93299
+I0826 08:17:08.086676 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.4925723, learning_rate = 2.1617136e-05 (51.734 sec)
+I0826 08:17:08.086940 140390069593920 basic_session_run_hooks.py:247] loss = 6.4925723, step = 700 (51.734 sec)
+I0826 08:17:59.829342 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.9326
+I0826 08:17:59.830313 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.3995867, learning_rate = 2.4705296e-05 (51.744 sec)
+I0826 08:17:59.830501 140390069593920 basic_session_run_hooks.py:247] loss = 6.3995867, step = 800 (51.744 sec)
+I0826 08:18:51.557825 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93317
+I0826 08:18:51.558810 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.2347875, learning_rate = 2.779346e-05 (51.728 sec)
+I0826 08:18:51.559017 140390069593920 basic_session_run_hooks.py:247] loss = 6.2347875, step = 900 (51.729 sec)
+I0826 08:19:43.300791 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93263
+I0826 08:19:43.301882 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.214208, learning_rate = 3.088162e-05 (51.743 sec)
+I0826 08:19:43.302283 140390069593920 basic_session_run_hooks.py:247] loss = 6.214208, step = 1000 (51.743 sec)
+I0826 08:20:35.091860 140390069593920 basic_session_run_hooks.py:680] global_step/sec: 1.93083
+I0826 08:20:35.093107 140390069593920 basic_session_run_hooks.py:247] cross_entropy_loss = 6.2649555, learning_rate = 3.3969784e-05 (51.791 sec)
+I0826 08:20:35.093458 140390069593920 basic_session_run_hooks.py:247] loss = 6.2649555, step = 1100 (51.791 sec)
+I0826 08:20:53.257689 140390069593920 basic_session_run_hooks.py:594] Saving checkpoints for 1136 into /root/transformer/model_19to_float2/model_big/model.ckpt.
+2021-08-26 08:21:08.261895: W tensorflow/core/framework/op_kernel.cc:1401] OP_REQUIRES failed at save_restore_v2_ops.cc:134 : Resource exhausted: /root/transformer/model_19to_float2/model_big/model.ckpt-1136_temp_1effd5d1f783491b99ac64ed5340b3d5/part-00000-of-00001.data-00000-of-00001.tempstate17452854225374593773; No space left on device
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1334, in _do_call
+    return fn(*args)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1319, in _run_fn
+    options, feed_dict, fetch_list, target_list, run_metadata)
+  File "/usr/local/lib/python3.6/dist-packages/tensorflow/python/client/session.py", line 1407, in _call_tf_sessionrun
+    run_metadata)
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: /root/transformer/model_19to_float2/model_big/model.ckpt-1136_temp_1effd5d1f783491b99ac64ed5340b3d5/part-00000-of-00001.data-00000-of-00001.tempstate17452854225374593773; No space left on device
+	 [[{{node save/SaveV2}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info.
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "transformer_main.py", line 638, in <module>
+    absl_app.run(main)
+  File "/usr/local/lib/python3.6/dist-packages/absl/app.py", line 300, in run
+    _run_main(main, arg

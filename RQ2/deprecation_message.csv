@@ -1,0 +1,3364 @@
+,0
+set_learning_phase,"ps.placeholder_with_default(
+          False, shape=(), name='keras_learning_phase')
+
+
+@deprecated('2020-10-11',
+            'Simply pass a True/False value to the `training` argument '
+            'of the `__call__` method of your layer or model.')
+@keras_export('keras.backend.set_learning_phase')
+def set_learning_phase(value):
+  """"""Sets the learning phase to a fixed value.
+
+  The backend learning phase affects any code that calls
+  `backend.learning_phase()`
+  In particular, all Keras built-in layers use the learning phase as the default
+  for the `training` arg to `Layer.__call__`.
+
+  User-"
+learning_phase_scope,"alue
+    _GRAPH_LEARNING_PHASES[get_graph()] = value
+
+
+@deprecated('2020-10-11',
+            'Simply pass a True/False value to the `training` argument '
+            'of the `__call__` method of your layer or model.')
+@keras_export('keras.backend.learning_phase_scope')
+@tf_contextlib.contextmanager
+def learning_phase_scope(value):
+  """"""Provides a scope within which the learning phase is equal to `value`.
+
+  The learning phase gets restored to its original value upon exiting the scope.
+
+  Arguments:
+     value: Learning phase value, either 0 or 1 (integers).
+            0 = test, 1 = train
+
+  Y"
+random_binomial,"ed is None:
+    seed = np.random.randint(10e6)
+  return random_ops.random_uniform(
+      shape, minval=minval, maxval=maxval, dtype=dtype, seed=seed)
+
+
+@deprecated(None, 'Use `tf.keras.backend.random_bernoulli` instead.')
+@keras_export('keras.backend.random_binomial')
+@dispatch.add_dispatch_support
+def random_binomial(shape, p=0.0, dtype=None, seed=None):
+  """"""Returns a tensor with random binomial distribution of values.
+
+  DEPRECATED, use `tf.keras.backend.random_bernoulli` instead.
+
+  The binomial distribution with parameters `n` and `p` is the probability
+  distribution of the number of suc"
+convert_all_kernels_in_model,"+ non_trainable_extra_variables)
+  return weights + non_trainable_extra_variables
+
+
+@deprecation.deprecated('2020-06-23',
+                        'The Theano kernel format is legacy; '
+                        'this utility will be removed.')
+@keras_export('keras.utils.convert_all_kernels_in_model')
+def convert_all_kernels_in_model(model):
+  """"""Converts all convolution kernels in a model from Theano to TensorFlow.
+
+  Also works from TensorFlow to Theano.
+
+  This is used for converting legacy Theano-saved model files.
+
+  Arguments:
+      model: target model for the conversion.
+  """"""
+  # Note: Se"
+terminate_keras_multiprocessing_pools,")
+  return _WORKER_ID_QUEUE
+
+
+def init_pool(seqs):
+  global _SHARED_SEQUENCES
+  _SHARED_SEQUENCES = seqs
+
+
+@deprecation.deprecated('2020-06-07', 'Please manage pools using the standard '
+                        'Python lib.')
+@keras_export('keras.experimental.terminate_keras_multiprocessing_pools')
+def terminate_keras_multiprocessing_pools(grace_period=0.1, use_sigkill=False):
+  """"""Destroy Keras' multiprocessing pools to prevent deadlocks.
+
+  In general multiprocessing.Pool can interact quite badly with other, seemingly
+  unrelated, parts of a codebase due to Pool's reliance on fork. This meth"
+multi_gpu_model,"s():
+  return [x.name for x in K.get_session().list_devices()]
+
+
+def _normalize_device_name(name):
+  name = '/' + name.lower().split('device:')[1]
+  return name
+
+
+@keras_export('keras.utils.multi_gpu_model')
+@deprecation.deprecated(
+    '2020-04-01', 'Use `tf.distribute.MirroredStrategy` instead.')
+def multi_gpu_model(model, gpus, cpu_merge=True, cpu_relocation=False):
+  """"""Replicates a model on different GPUs.
+
+  Specifically, this function implements single-machine
+  multi-GPU data parallelism. It works in the following way:
+
+  - Divide the model's input(s) into multiple sub-batches.
+  - App"
+conv1d,"cation.deprecated_arg_values(
+    None,
+    ""`NCHW` for data_format is deprecated, use `NCW` instead"",
+    warn_once=True,
+    data_format=""NCHW"")
+@deprecation.deprecated_arg_values(
+    None,
+    ""`NHWC` for data_format is deprecated, use `NWC` instead"",
+    warn_once=True,
+    data_format=""NHWC"")
+def conv1d(
+    value=None,
+    filters=None,
+    stride=None,
+    padding=None,
+    use_cudnn_on_gpu=None,
+    data_format=None,
+    name=None,
+    input=None,  # pylint: disable=redefined-builtin
+    dilations=None):
+  r""""""Computes a 1-D convolution of input with rank `>=3` and a `3-D` filter."
+conv2d,"=activity_regularizer,
+        kernel_constraint=kernel_constraint,
+        bias_constraint=bias_constraint,
+        trainable=trainable,
+        name=name, **kwargs)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use `tf.keras.layers.Conv2D` instead.')
+@tf_export(v1=['layers.conv2d'])
+def conv2d(inputs,
+           filters,
+           kernel_size,
+           strides=(1, 1),
+           padding='valid',
+           data_format='channels_last',
+           dilation_rate=(1, 1),
+           activation=None,
+           use_bias=True,
+           kernel_initializer=None,
+           bias_ini"
+conv3d,"=activity_regularizer,
+        kernel_constraint=kernel_constraint,
+        bias_constraint=bias_constraint,
+        trainable=trainable,
+        name=name, **kwargs)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use `tf.keras.layers.Conv3D` instead.')
+@tf_export(v1=['layers.conv3d'])
+def conv3d(inputs,
+           filters,
+           kernel_size,
+           strides=(1, 1, 1),
+           padding='valid',
+           data_format='channels_last',
+           dilation_rate=(1, 1, 1),
+           activation=None,
+           use_bias=True,
+           kernel_initializer=None,
+           bi"
+separable_conv1d,"intwise_constraint=pointwise_constraint,
+        bias_constraint=bias_constraint,
+        trainable=trainable,
+        name=name,
+        **kwargs)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use `tf.keras.layers.SeparableConv1D` instead.')
+@tf_export(v1=['layers.separable_conv1d'])
+def separable_conv1d(inputs,
+                     filters,
+                     kernel_size,
+                     strides=1,
+                     padding='valid',
+                     data_format='channels_last',
+                     dilation_rate=1,
+                     depth_multiplier=1,"
+separable_conv2d,"bias_constraint=bias_constraint,
+      trainable=trainable,
+      name=name,
+      _reuse=reuse,
+      _scope=name)
+  return layer.apply(inputs)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use `tf.keras.layers.SeparableConv2D` instead.')
+@tf_export(v1=['layers.separable_conv2d'])
+def separable_conv2d(inputs,
+                     filters,
+                     kernel_size,
+                     strides=(1, 1),
+                     padding='valid',
+                     data_format='channels_last',
+                     dilation_rate=(1, 1),
+                     depth_multiplier=1"
+conv2d_transpose,"kernel_constraint=kernel_constraint,
+        bias_constraint=bias_constraint,
+        trainable=trainable,
+        name=name,
+        **kwargs)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use `tf.keras.layers.Conv2DTranspose` instead.')
+@tf_export(v1=['layers.conv2d_transpose'])
+def conv2d_transpose(inputs,
+                     filters,
+                     kernel_size,
+                     strides=(1, 1),
+                     padding='valid',
+                     data_format='channels_last',
+                     activation=None,
+                     use_bias=True,"
+conv3d_transpose,"kernel_constraint=kernel_constraint,
+        bias_constraint=bias_constraint,
+        trainable=trainable,
+        name=name,
+        **kwargs)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use `tf.keras.layers.Conv3DTranspose` instead.')
+@tf_export(v1=['layers.conv3d_transpose'])
+def conv3d_transpose(inputs,
+                     filters,
+                     kernel_size,
+                     strides=(1, 1, 1),
+                     padding='valid',
+                     data_format='channels_last',
+                     activation=None,
+                     use_bias=True,"
+average_pooling1d,"it__(
+        pool_size=pool_size,
+        strides=strides,
+        padding=padding,
+        data_format=data_format,
+        name=name,
+        **kwargs)
+
+
+@deprecation.deprecated(
+    date=None, instructions='Use keras.layers.AveragePooling1D instead.')
+@tf_export(v1=['layers.average_pooling1d'])
+def average_pooling1d(inputs, pool_size, strides,
+                      padding='valid', data_format='channels_last',
+                      name=None):
+  """"""Average Pooling layer for 1D inputs.
+
+  Arguments:
+    inputs: The tensor over which to pool. Must have rank 3.
+    pool_size: An integer or tu"
+max_pooling1d,"lf).__init__(
+        pool_size=pool_size,
+        strides=strides,
+        padding=padding,
+        data_format=data_format,
+        name=name,
+        **kwargs)
+
+
+@deprecation.deprecated(
+    date=None, instructions='Use keras.layers.MaxPooling1D instead.')
+@tf_export(v1=['layers.max_pooling1d'])
+def max_pooling1d(inputs, pool_size, strides,
+                  padding='valid', data_format='channels_last',
+                  name=None):
+  """"""Max Pooling layer for 1D inputs.
+
+  Arguments:
+    inputs: The tensor over which to pool. Must have rank 3.
+    pool_size: An integer or tuple/list of a si"
+average_pooling2d,"per(AveragePooling2D, self).__init__(
+        pool_size=pool_size, strides=strides,
+        padding=padding, data_format=data_format, name=name, **kwargs)
+
+
+@deprecation.deprecated(
+    date=None, instructions='Use keras.layers.AveragePooling2D instead.')
+@tf_export(v1=['layers.average_pooling2d'])
+def average_pooling2d(inputs,
+                      pool_size, strides,
+                      padding='valid', data_format='channels_last',
+                      name=None):
+  """"""Average pooling layer for 2D inputs (e.g. images).
+
+  Arguments:
+    inputs: The tensor over which to pool. Must have ran"
+max_pooling2d,"ne.')
+    super(MaxPooling2D, self).__init__(
+        pool_size=pool_size, strides=strides,
+        padding=padding, data_format=data_format, name=name, **kwargs)
+
+
+@deprecation.deprecated(
+    date=None, instructions='Use keras.layers.MaxPooling2D instead.')
+@tf_export(v1=['layers.max_pooling2d'])
+def max_pooling2d(inputs,
+                  pool_size, strides,
+                  padding='valid', data_format='channels_last',
+                  name=None):
+  """"""Max pooling layer for 2D inputs (e.g. images).
+
+  Arguments:
+    inputs: The tensor over which to pool. Must have rank 4.
+    pool_size:"
+average_pooling3d,"per(AveragePooling3D, self).__init__(
+        pool_size=pool_size, strides=strides,
+        padding=padding, data_format=data_format, name=name, **kwargs)
+
+
+@deprecation.deprecated(
+    date=None, instructions='Use keras.layers.AveragePooling3D instead.')
+@tf_export(v1=['layers.average_pooling3d'])
+def average_pooling3d(inputs,
+                      pool_size, strides,
+                      padding='valid', data_format='channels_last',
+                      name=None):
+  """"""Average pooling layer for 3D inputs (e.g. volumes).
+
+  Arguments:
+    inputs: The tensor over which to pool. Must have ra"
+max_pooling3d,"ne.')
+    super(MaxPooling3D, self).__init__(
+        pool_size=pool_size, strides=strides,
+        padding=padding, data_format=data_format, name=name, **kwargs)
+
+
+@deprecation.deprecated(
+    date=None, instructions='Use keras.layers.MaxPooling3D instead.')
+@tf_export(v1=['layers.max_pooling3d'])
+def max_pooling3d(inputs,
+                  pool_size, strides,
+                  padding='valid', data_format='channels_last',
+                  name=None):
+  """"""Max pooling layer for 3D inputs (e.g.
+
+  volumes).
+
+  Arguments:
+    inputs: The tensor over which to pool. Must have rank 5.
+    pool_si"
+dense,"bias_constraint=bias_constraint,
+                                trainable=trainable,
+                                name=name,
+                                **kwargs)
+
+
+@deprecation.deprecated(
+    date=None, instructions='Use keras.layers.Dense instead.')
+@tf_export(v1=['layers.dense'])
+def dense(
+    inputs, units,
+    activation=None,
+    use_bias=True,
+    kernel_initializer=None,
+    bias_initializer=init_ops.zeros_initializer(),
+    kernel_regularizer=None,
+    bias_regularizer=None,
+    activity_regularizer=None,
+    kernel_constraint=None,
+    bias_constraint=None,
+    train"
+dropout,"name=name,
+                                  **kwargs)
+
+  def call(self, inputs, training=False):
+    return super(Dropout, self).call(inputs, training=training)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use keras.layers.dropout instead.')
+@tf_export(v1=['layers.dropout'])
+def dropout(inputs,
+            rate=0.5,
+            noise_shape=None,
+            seed=None,
+            training=False,
+            name=None):
+  """"""Applies Dropout to the input.
+
+  Dropout consists in randomly setting a fraction `rate` of input units to 0
+  at each update during training time, w"
+flatten,"ape `(None, 16)`
+
+    x = tf.compat.v1.placeholder(shape=(None, 3, None), dtype='float32')
+    y = Flatten()(x)
+    # now `y` has shape `(None, None)`
+  ```
+  """"""
+  pass
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions='Use keras.layers.Flatten instead.')
+@tf_export(v1=['layers.flatten'])
+def flatten(inputs, name=None, data_format='channels_last'):
+  """"""Flattens an input tensor while preserving the batch axis (axis 0).
+
+  Arguments:
+    inputs: Tensor input.
+    name: The name of the layer (string).
+    data_format: A string, one of `channels_last` (default) or `channels_first`."
+batch_normalization,"ted(
+    date=None, instructions='Use keras.layers.BatchNormalization instead.  In '
+    'particular, `tf.control_dependencies(tf.GraphKeys.UPDATE_OPS)` should not '
+    'be used (consult the `tf.keras.layers.BatchNormalization` '
+    'documentation).')
+@tf_export(v1=['layers.batch_normalization'])
+def batch_normalization(inputs,
+                        axis=-1,
+                        momentum=0.99,
+                        epsilon=1e-3,
+                        center=True,
+                        scale=True,
+                        beta_initializer=init_ops.zeros_initializer(),"
+graph,"pe = None
+
+  # We no longer track graph in tf.layers layers. This property is only kept to
+  # maintain API backward compatibility.
+  @property
+  @deprecation.deprecated(
+      date=None,
+      instructions='Stop using this property because tf.layers layers no '
+      'longer track their graph.')
+  def graph(self):
+    if context.executing_eagerly():
+      raise RuntimeError('Layer.graph not supported when executing eagerly.')
+    return None
+
+  def _init_set_name(self, name):
+    # Determine layer name (non-unique).
+    if isinstance(name, vs.VariableScope):
+      base_name = name.name
+      "
+export_saved_model,".sequential"")
+# pylint:enable=g-inconsistent-quotes
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=('Please use `model.save(..., save_format=""tf"")` or '
+                  '`tf.keras.models.save_model(..., save_format=""tf"")`.'))
+@keras_export(v1=['keras.experimental.export_saved_model'])
+def export_saved_model(model,
+                       saved_model_path,
+                       custom_objects=None,
+                       as_text=False,
+                       input_signature=None,
+                       serving_only=False):
+  """"""Exports a `tf.keras.Model` as a Tensorflow SavedModel"
+load_from_saved_model,"this works in eager mode.
+  return True
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=('The experimental save and load functions have been  '
+                  'deprecated. Please switch to `tf.keras.models.load_model`.'))
+@keras_export(v1=['keras.experimental.load_from_saved_model'])
+def load_from_saved_model(saved_model_path, custom_objects=None):
+  """"""Loads a keras Model from a SavedModel created by `export_saved_model()`.
+
+  This function reinstantiates model state by:
+  1) loading model topology from json (this will eventually come
+     from metagraph).
+  2) loading model we"
+updates,"variables.
+    """"""
+    return self.trainable_weights + self.non_trainable_weights
+
+  @property
+  @deprecation.deprecated(
+      date=None,
+      instructions='This property should not be used in TensorFlow 2.0, '
+      'as updates are applied automatically.')
+  @doc_controls.do_not_generate_docs
+  def updates(self):
+    if keras_tensor.keras_tensors_enabled():
+      return []
+
+    collected_updates = []
+    all_layers = self._flatten_layers()
+    with backend.get_graph().as_default():
+      for layer in all_layers:
+        if not layer.trainable and not layer.stateful:
+          continue"
+get_updates_for,"tHandler):
+        output_weights.extend(weight.get_tensors())
+      else:
+        output_weights.append(weight)
+    return backend.batch_get_value(output_weights)
+
+  @deprecation.deprecated(
+      date=None, instructions='Please use `layer.updates` instead.')
+  @doc_controls.do_not_generate_docs
+  def get_updates_for(self, inputs):
+    """"""Deprecated, do NOT use!
+
+    Retrieves updates relevant to a specific set of inputs.
+
+    Arguments:
+      inputs: Input tensor or list/tuple of input tensors.
+
+    Returns:
+      List of update ops of the layer that depend on `inputs`.
+    """"""
+    return se"
+get_losses_for,"   inputs: Input tensor or list/tuple of input tensors.
+
+    Returns:
+      List of update ops of the layer that depend on `inputs`.
+    """"""
+    return self.updates
+
+  @deprecation.deprecated(
+      date=None, instructions='Please use `layer.losses` instead.')
+  @doc_controls.do_not_generate_docs
+  def get_losses_for(self, inputs):
+    """"""Deprecated, do NOT use!
+
+    Retrieves losses relevant to a specific set of inputs.
+
+    Arguments:
+      inputs: Input tensor or list/tuple of input tensors.
+
+    Returns:
+      List of loss tensors of the layer that depend on `inputs`.
+    """"""
+    return se"
+apply,"ods & attributes below are public aliases of other methods.            #
+  ##############################################################################
+
+  @deprecation.deprecated(
+      date=None, instructions='Please use `layer.__call__` method instead.')
+  @doc_controls.do_not_doc_inheritable
+  def apply(self, inputs, *args, **kwargs):
+    """"""Deprecated, do NOT use!
+
+    This is an alias of `self.__call__`.
+
+    Arguments:
+      inputs: Input tensor(s).
+      *args: additional positional arguments to be passed to `self.call`.
+      **kwargs: additional keyword arguments to be passed to `se"
+add_variable,"ditional keyword arguments to be passed to `self.call`.
+
+    Returns:
+      Output tensor(s).
+    """"""
+    return self.__call__(inputs, *args, **kwargs)
+
+  @deprecation.deprecated(
+      date=None, instructions='Please use `layer.add_weight` method instead.')
+  @doc_controls.do_not_doc_inheritable
+  def add_variable(self, *args, **kwargs):
+    """"""Deprecated, do NOT use! Alias for `add_weight`.""""""
+    return self.add_weight(*args, **kwargs)
+
+  @property
+  def variables(self):
+    """"""Returns the list of all layer variables/weights.
+
+    Alias of `self.weights`.
+
+    Returns:
+      A list of varia"
+predict_proba,"really safe to call
+    # by itself because it will duplicate any updates and losses in graph
+    # mode by `call`ing the Layers again.
+    outputs = self.call(inputs, mask=mask)
+    return getattr(outputs, '_keras_mask', None)
+
+  @deprecated('2021-01-01', 'Please use `model.predict()` instead.')
+  def predict_proba(self, x, batch_size=32, verbose=0):
+    """"""Generates class probability predictions for the input samples.
+
+    The input samples are processed batch by batch.
+
+    Arguments:
+        x: input data, as a Numpy array or list of Numpy arrays
+            (if the model has multiple inpu"
+predict_classes,"es multi-class classification '
+              '  (e.g. if it uses a `softmax` last-layer activation).'
+              '* `(model.predict(x) > 0.5).astype(""int32"")`, '
+              '  if your model does binary classification '
+              '  (e.g. if it uses a `sigmoid` last-layer activation).')
+  def predict_classes(self, x, batch_size=32, verbose=0):
+    """"""Generate class predictions for the input samples.
+
+    The input samples are processed batch by batch.
+
+    Arguments:
+        x: input data, as a Numpy array or list of Numpy arrays
+            (if the model has multiple inputs)."
+fit_generator,"pter.single_batch_iterator(self.distribute_strategy, x)
+      predict_function = self.make_predict_function()
+      outputs = predict_function(iterator)
+    return tf_utils.to_numpy_or_python_type(outputs)
+
+  @deprecation.deprecated(
+      None, 'Please use Model.fit, which supports generators.')
+  def fit_generator(self,
+                    generator,
+                    steps_per_epoch=None,
+                    epochs=1,
+                    verbose=1,
+                    callbacks=None,
+                    validation_data=None,
+                    validation_steps=None,
+                    v"
+evaluate_generator,"lass_weight=class_weight,
+        max_queue_size=max_queue_size,
+        workers=workers,
+        use_multiprocessing=use_multiprocessing,
+        shuffle=shuffle,
+        initial_epoch=initial_epoch)
+
+  @deprecation.deprecated(
+      None, 'Please use Model.evaluate, which supports generators.')
+  def evaluate_generator(self,
+                         generator,
+                         steps=None,
+                         callbacks=None,
+                         max_queue_size=10,
+                         workers=1,
+                         use_multiprocessing=False,"
+predict_generator,"generator,
+        steps=steps,
+        max_queue_size=max_queue_size,
+        workers=workers,
+        use_multiprocessing=use_multiprocessing,
+        verbose=verbose,
+        callbacks=callbacks)
+
+  @deprecation.deprecated(
+      None, 'Please use Model.predict, which supports generators.')
+  def predict_generator(self,
+                        generator,
+                        steps=None,
+                        callbacks=None,
+                        max_queue_size=10,
+                        workers=1,
+                        use_multiprocessing=False,
+                        verbose="
+state_updates,"reset_states') and getattr(layer, 'stateful', False):
+        layer.reset_states()
+
+  @property
+  @deprecation.deprecated(
+      date=None,
+      instructions='This property should not be used in TensorFlow 2.0, '
+      'as updates are applied automatically.')
+  @doc_controls.do_not_generate_docs
+  def state_updates(self):
+    """"""Deprecated, do NOT use!
+
+    Returns the `updates` from all layers that are stateful.
+
+    This is useful for separating training updates and
+    state updates, e.g. when we need to update a layer's internal state
+    during prediction.
+
+    Returns:
+        A list of"
+add_meta_graph,"rate a sharded output for all saveables in the
+      # current scope.
+      saver = tf_saver.Saver(
+          variables._all_saveable_objects(),  # pylint: disable=protected-access
+          sharded=True,
+          write_version=saver_pb2.SaverDef.V2,
+          allow_empty=True)
+    return saver
+
+  def add_meta_graph(self,
+                     tags,
+                     signature_def_map=None,
+                     assets_list=None,
+                     clear_devices=False,
+                     init_op=None,
+                     train_op=None,
+                     saver=None):
+    """"""Adds the c"
+add_meta_graph_and_variables,"ices=clear_devices, strip_default_attrs=True)
+
+    # Save asset files and write them to disk, if any.
+    self._save_and_write_assets(meta_graph_def, assets_list)
+
+    # Tag the meta graph def and add it to the SavedModel.
+    self._tag_and_add_meta_graph(meta_graph_def, tags, signature_def_map)
+
+  def add_meta_graph_and_variables(self,
+                                   sess,
+                                   tags,
+                                   signature_def_map=None,
+                                   assets_list=None,
+                                   clear_devices=False,
+           "
+load,"A `Tensor` that will hold the variable value before the increment. If no
+      other Op modifies this variable, the values produced will all be
+      distinct.
+    """"""
+    raise NotImplementedError
+
+  @deprecated(None,
+              ""Prefer Variable.assign which has equivalent behavior in 2.X."")
+  def load(self, value, session=None):
+    """"""Load new value into this variable.
+
+    Writes new value to variable's memory. Doesn't add ops to the graph.
+
+    This convenience method requires a session where the graph
+    containing this variable has been launched. If no session is
+    passed, the de"
+build_tensor_info,"d_tensor_info"",
+               ""saved_model.utils.build_tensor_info""])
+@deprecation.deprecated(
+    None,
+    ""This function will only be available through the v1 compatibility ""
+    ""library as tf.compat.v1.saved_model.utils.build_tensor_info or ""
+    ""tf.compat.v1.saved_model.build_tensor_info."")
+def build_tensor_info(tensor):
+  """"""Utility function to build TensorInfo proto from a Tensor.
+
+  Args:
+    tensor: Tensor or SparseTensor whose name, dtype and shape are used to
+        build the TensorInfo. For SparseTensors, the names of the three
+        constituent Tensors are used.
+
+  Returns:"
+get_tensor_from_tensor_info,"""saved_model.utils.get_tensor_from_tensor_info""])
+@deprecation.deprecated(
+    None,
+    ""This function will only be available through the v1 compatibility ""
+    ""library as tf.compat.v1.saved_model.utils.get_tensor_from_tensor_info or ""
+    ""tf.compat.v1.saved_model.get_tensor_from_tensor_info."")
+def get_tensor_from_tensor_info(tensor_info, graph=None, import_scope=None):
+  """"""Returns the Tensor or CompositeTensor described by a TensorInfo proto.
+
+  Args:
+    tensor_info: A TensorInfo proto describing a Tensor or SparseTensor or
+      CompositeTensor.
+    graph: The tf.Graph in which tensors"
+main_op,"hon.util import deprecation
+from tensorflow.python.util.tf_export import tf_export
+
+
+@tf_export(v1=['saved_model.main_op.main_op'])
+@deprecation.deprecated(
+    None,
+    'This function will only be available through the v1 compatibility '
+    'library as tf.compat.v1.saved_model.main_op.main_op.')
+def main_op():
+  """"""Returns a main op to init variables and tables.
+
+  Returns the main op including the group of ops that initializes all
+  variables, initializes local variables and initialize all tables.
+
+  Returns:
+    The set of ops to be run as part of the main op upon the load operation.
+  """""
+main_op_with_restore,"',
+               'saved_model.main_op.main_op_with_restore'])
+@deprecation.deprecated(
+    None,
+    'This function will only be available through the v1 compatibility '
+    'library as tf.compat.v1.saved_model.main_op_with_restore or '
+    'tf.compat.v1.saved_model.main_op.main_op_with_restore.')
+def main_op_with_restore(restore_op_name):
+  """"""Returns a main op to init variables, tables and restore the graph.
+
+  Returns the main op including the group of ops that initializes all
+  variables, initialize local variables, initialize all tables and the restore
+  op name.
+
+  Args:
+    restore_op_"
+simple_save,"flow.python.util import deprecation
+from tensorflow.python.util.tf_export import tf_export
+
+
+@tf_export(v1=['saved_model.simple_save'])
+@deprecation.deprecated(
+    None,
+    'This function will only be available through the v1 compatibility '
+    'library as tf.compat.v1.saved_model.simple_save.')
+def simple_save(session, export_dir, inputs, outputs, legacy_init_op=None):
+  """"""Convenience function to build a SavedModel suitable for serving.
+
+  In many common cases, saving models for serving will be as simple as:
+
+      simple_save(session,
+                  export_dir,
+                  input"
+import_graph_def,"    node_def.attr[key].CopyFrom(attr_def.default_value)
+
+
+@tf_export('graph_util.import_graph_def', 'import_graph_def')
+@deprecated_args(None, 'Please file an issue at '
+                 'https://github.com/tensorflow/tensorflow/issues if you depend'
+                 ' on this feature.', 'op_dict')
+def import_graph_def(graph_def,
+                     input_map=None,
+                     return_elements=None,
+                     name=None,
+                     op_dict=None,
+                     producer_op_list=None):
+  """"""Imports the graph from `graph_def` into the current default `Graph`.
+
+ "
+load_file_system_library,"# Allow this to be recognized by AutoGraph.
+  setattr(module, '_IS_TENSORFLOW_PLUGIN', True)
+  sys.modules[module_name] = module
+  return module
+
+
+@deprecation.deprecated(date=None,
+                        instructions='Use `tf.load_library` instead.')
+@tf_export(v1=['load_file_system_library'])
+def load_file_system_library(library_filename):
+  """"""Loads a TensorFlow plugin, containing file system implementation.
+
+  Pass `library_filename` to a platform-specific mechanism for dynamically
+  loading a library. The rules for determining the exact location of the
+  library are platform-specific"
+is_gpu_available," horizon
+          with forward_compatibility_horizon(year, month, day):
+            f(self, *args, **kwargs)
+    return decorated
+
+  return decorator
+
+
+@deprecation.deprecated(None,
+                        ""Use `tf.config.list_physical_devices('GPU')` instead."")
+@tf_export(""test.is_gpu_available"")
+def is_gpu_available(cuda_only=False, min_cuda_compute_capability=None):
+  """"""Returns whether TensorFlow can access a GPU.
+
+  Warning: if a non-GPU version of the package is installed, the function would
+  also return False. Use `tf.test.is_built_with_cuda` to validate if TensorFlow
+  was build with"
+test_session,"lf._constrain_devices_and_set_default(sess, use_gpu,
+                                                   force_gpu) as cached:
+        yield cached
+
+  @contextlib.contextmanager
+  @deprecation.deprecated(None, ""Use `self.session()` or ""
+                          ""`self.cached_session()` instead."")
+  def test_session(self,
+                   graph=None,
+                   config=None,
+                   use_gpu=False,
+                   force_gpu=False):
+    """"""Use cached_session instead.""""""
+    if self.id().endswith("".test_session""):
+      self.skipTest(
+          ""Tests that have the name \""te"
+experimental_ref,"save_slice_info):
+    """"""Sets the slice info for this `Variable`.
+
+    Args:
+      save_slice_info: A `Variable.SaveSliceInfo` object.
+    """"""
+    self._save_slice_info = save_slice_info
+
+  def _get_save_slice_info(self):
+    return self._save_slice_info
+
+  @deprecated(None, ""Use ref() instead."")
+  def experimental_ref(self):
+    return self.ref()
+
+  def ref(self):
+    # tf.Tensor also has the same ref() API.  If you update the
+    # documentation here, please update tf.Tensor.ref() as well.
+    """"""Returns a hashable reference object to this Variable.
+
+    The primary use case for this API is "
+cpu,"turn self.shape
+
+  def _shape_as_list(self):
+    """"""The shape of the tensor as a list.""""""
+    return list(self._shape_tuple())
+
+  @property
+  def ndim(self):
+    """"""Returns the number of Tensor dimensions.""""""
+    return self.shape.ndims
+
+  @deprecation.deprecated(None, ""Use tf.identity instead."")
+  def cpu(self):
+    """"""A copy of this Tensor with contents backed by host memory.""""""
+    return self._copy(context.context(), ""CPU:0"")
+
+  @deprecation.deprecated(None, ""Use tf.identity instead."")
+  def gpu(self, gpu_index=0):
+    """"""A copy of this Tensor with contents backed by memory on the GPU."
+gpu,"ensions.""""""
+    return self.shape.ndims
+
+  @deprecation.deprecated(None, ""Use tf.identity instead."")
+  def cpu(self):
+    """"""A copy of this Tensor with contents backed by host memory.""""""
+    return self._copy(context.context(), ""CPU:0"")
+
+  @deprecation.deprecated(None, ""Use tf.identity instead."")
+  def gpu(self, gpu_index=0):
+    """"""A copy of this Tensor with contents backed by memory on the GPU.
+
+    Arguments:
+      gpu_index: Identifies which GPU to place the contents on the returned
+        Tensor in.
+
+    Returns:
+      A GPU-memory backed Tensor object initialized with the same contents"
+create_op,"Returns True iff this graph represents a function.""""""
+    return self._building_function
+
+  # Helper functions to create operations.
+  @deprecated_args(None,
+                   ""Shapes are always computed; don't use the compute_shapes ""
+                   ""as it has no effect."", ""compute_shapes"")
+  def create_op(
+      self,
+      op_type,
+      inputs,
+      dtypes=None,  # pylint: disable=redefined-outer-name
+      input_types=None,
+      name=None,
+      attrs=None,
+      op_def=None,
+      compute_shapes=True,
+      compute_device=True):
+    """"""Creates an `Operation` in this graph.
+
+    Th"
+VARIABLES,"VARIABLES,
+      TRAINABLE_RESOURCE_VARIABLES,
+  ]
+
+  # Key for streaming model ports.
+  # NOTE(yuanbyu): internal and experimental.
+  _STREAMING_MODEL_PORTS = ""streaming_model_ports""
+
+  @decorator_utils.classproperty
+  @deprecation.deprecated(None, ""Use `tf.GraphKeys.GLOBAL_VARIABLES` instead."")
+  def VARIABLES(cls):  # pylint: disable=no-self-argument
+    return cls.GLOBAL_VARIABLES
+
+
+def dismantle_graph(graph):
+  """"""Cleans up reference cycles from a `Graph`.
+
+  Helpful for making sure the garbage collector doesn't need to run after a
+  temporary `Graph` is no longer needed.
+
+  Args:
+    gra"
+must_run_on_cpu,"""Merge"",
+    ""NextIteration"",
+]
+
+
+def _is_variable_op(op):
+  """"""Returns true if 'op' refers to a Variable node.""""""
+  return op in _VARIABLE_OPS
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use `tf.compat.v1.graph_util.must_run_on_cpu`"")
+@tf_export(v1=[""graph_util.must_run_on_cpu""])
+def must_run_on_cpu(node, pin_variables_on_cpu=False):
+  """"""Returns True if the given node_def must run on CPU, otherwise False.
+
+  Args:
+    node: The node to be assigned to a device. Could be either an ops.Operation
+      or NodeDef.
+    pin_variables_on_cpu: If True, this function will return Fal"
+extract_sub_graph,"ontinue
+    nodes_to_keep.add(node)
+    if node in name_to_input_name:
+      next_to_visit += name_to_input_name[node]
+  return nodes_to_keep
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use `tf.compat.v1.graph_util.extract_sub_graph`"")
+@tf_export(v1=[""graph_util.extract_sub_graph""])
+def extract_sub_graph(graph_def, dest_nodes):
+  """"""Extract the subgraph that can reach any of the nodes in 'dest_nodes'.
+
+  Args:
+    graph_def: A graph_pb2.GraphDef proto.
+    dest_nodes: A list of strings specifying the destination node names.
+  Returns:
+    The GraphDef of the sub-graph.
+
+  Raise"
+tensor_shape_from_node_def_name,"o_node[n])])
+  out.library.CopyFrom(graph_def.library)
+  out.versions.CopyFrom(graph_def.versions)
+
+  return out
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use `tf.compat.v1.graph_util.tensor_shape_from_node_def_name`""
+)
+@tf_export(v1=[""graph_util.tensor_shape_from_node_def_name""])
+def tensor_shape_from_node_def_name(graph, input_name):
+  """"""Convenience function to get a shape from a NodeDef's input string.""""""
+  # To get a tensor, the name must be in the form <input>:<port>, for example
+  # 'Mul:0'. The GraphDef input strings don't always have the port specified
+  # though, so"
+convert_variables_to_constants,"l_name = input_name
+  tensor = graph.get_tensor_by_name(canonical_name)
+  shape = tensor.get_shape()
+  return shape
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use `tf.compat.v1.graph_util.convert_variables_to_constants`"")
+@tf_export(v1=[""graph_util.convert_variables_to_constants""])
+def convert_variables_to_constants(sess,
+                                   input_graph_def,
+                                   output_node_names,
+                                   variable_names_whitelist=None,
+                                   variable_names_blacklist=None):
+  """"""Replaces all th"
+remove_training_nodes,"ogic generated an empty versions field, we clear it here
+  # to maintain backwards compatibility.
+  ret.versions.Clear()
+  return ret
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use `tf.compat.v1.graph_util.remove_training_nodes`"")
+@tf_export(v1=[""graph_util.remove_training_nodes""])
+def remove_training_nodes(input_graph, protected_nodes=None):
+  """"""Prunes out nodes that aren't needed for inference.
+
+  There are nodes like Identity and CheckNumerics that are only useful
+  during training, and can be removed in graphs that will be used for
+  nothing but inference. Here we identif"
+add_queue_runner,"ueRunner` object created from `queue_runner_def`.""""""
+    return QueueRunner(queue_runner_def=queue_runner_def,
+                       import_scope=import_scope)
+
+
+@tf_export(v1=[""train.queue_runner.add_queue_runner"", ""train.add_queue_runner""])
+@deprecation.deprecated(None, _DEPRECATION_INSTRUCTION)
+def add_queue_runner(qr, collection=ops.GraphKeys.QUEUE_RUNNERS):
+  """"""Adds a `QueueRunner` to a collection in the graph.
+
+  When building a complex model that uses many queues it is often difficult to
+  gather all the queue runners that need to be run.  This convenience function
+  allows you to add"
+start_queue_runners,"he graph collection to add
+      the queue runner to.  Defaults to `GraphKeys.QUEUE_RUNNERS`.
+  """"""
+  ops.add_to_collection(collection, qr)
+
+
+@tf_export(v1=[""train.queue_runner.start_queue_runners"",
+               ""train.start_queue_runners""])
+@deprecation.deprecated(None, _DEPRECATION_INSTRUCTION)
+def start_queue_runners(sess=None, coord=None, daemon=True, start=True,
+                        collection=ops.GraphKeys.QUEUE_RUNNERS):
+  """"""Starts all queue runners collected in the graph.
+
+  This is a companion method to `add_queue_runner()`.  It just starts
+  threads for all queue runners collec"
+do_quantize_training_on_graphdef,"precation
+from tensorflow.python.util.tf_export import tf_export
+
+
+# Migrated this python code from deprecated quantize_training.i
+@deprecation.deprecated(
+    None,
+    ""GraphDef quantized training rewriter is deprecated in the long term."")
+@tf_export(v1=[""train.do_quantize_training_on_graphdef""])
+def do_quantize_training_on_graphdef(input_graph, num_bits):
+  """"""A general quantization scheme is being developed in `tf.contrib.quantize`.
+
+  Consider using that instead, though since it is in the tf.contrib namespace,
+  it is not subject to backward compatibility guarantees.
+
+  Args:
+    input_gr"
+limit_epochs,"rainable=False, validate_shape=False,
+        collections=[ops.GraphKeys.LOCAL_VARIABLES])
+
+
+@tf_export(v1=[""train.limit_epochs""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.from_tensors(tensor).repeat(num_epochs)`."")
+def limit_epochs(tensor, num_epochs=None, name=None):
+  """"""Returns tensor `num_epochs` times and then raises an `OutOfRange` error.
+
+  Note: creates local counter `epochs`. Use `local_variables_initializer()` to
+  initialize local variables.
+
+  Args:
+    tensor: Any `Tensor`.
+    num_epochs: A posit"
+input_producer,"r""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.from_tensor_slices(input_tensor).shuffle""
+    ""(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If ""
+    ""`shuffle=False`, omit the `.shuffle(...)`."")
+def input_producer(input_tensor,
+                   element_shape=None,
+                   num_epochs=None,
+                   shuffle=True,
+                   seed=None,
+                   capacity=32,
+                   shared_name=None,
+                   summary_name=None,
+                   nam"
+string_input_producer,"""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.from_tensor_slices(string_tensor).shuffle""
+    ""(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If ""
+    ""`shuffle=False`, omit the `.shuffle(...)`."")
+def string_input_producer(string_tensor,
+                          num_epochs=None,
+                          shuffle=True,
+                          seed=None,
+                          capacity=32,
+                          shared_name=None,
+                          name=None,"
+range_input_producer,"cancel_op=cancel_op)
+
+
+@tf_export(v1=[""train.range_input_producer""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.range(limit).shuffle(limit).repeat(num_epochs)`. If ""
+    ""`shuffle=False`, omit the `.shuffle(...)`."")
+def range_input_producer(limit, num_epochs=None, shuffle=True, seed=None,
+                         capacity=32, shared_name=None, name=None):
+  """"""Produces the integers from 0 to limit-1 in a queue.
+
+  Note: if `num_epochs` is not `None`, this function creates local counter
+  `epochs`. Use `local_va"
+slice_input_producer,"deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.from_tensor_slices(tuple(tensor_list)).shuffle""
+    ""(tf.shape(input_tensor, out_type=tf.int64)[0]).repeat(num_epochs)`. If ""
+    ""`shuffle=False`, omit the `.shuffle(...)`."")
+def slice_input_producer(tensor_list, num_epochs=None, shuffle=True, seed=None,
+                         capacity=32, shared_name=None, name=None):
+  """"""Produces a slice of each `Tensor` in `tensor_list`.
+
+  Implemented using a Queue -- a `QueueRunner` for the Queue
+  is added to the current `Graph`"
+batch,"ctions ----------------------------------------------------------
+
+
+@tf_export(v1=[""train.batch""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.batch(batch_size)` (or `padded_batch(...)` if ""
+    ""`dynamic_pad=True`)."")
+def batch(tensors, batch_size, num_threads=1, capacity=32,
+          enqueue_many=False, shapes=None, dynamic_pad=False,
+          allow_smaller_final_batch=False, shared_name=None, name=None):
+  """"""Creates batches of tensors in `tensors`.
+
+  The argument `tensors` can be a list or a dictionary of t"
+maybe_batch,"shared_name=shared_name,
+      name=name)
+
+
+@tf_export(v1=[""train.maybe_batch""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.filter(...).batch(batch_size)` (or `padded_batch(...)`""
+    "" if `dynamic_pad=True`)."")
+def maybe_batch(tensors, keep_input, batch_size, num_threads=1, capacity=32,
+                enqueue_many=False, shapes=None, dynamic_pad=False,
+                allow_smaller_final_batch=False, shared_name=None, name=None):
+  """"""Conditionally creates batches of tensors based on `keep_input`.
+
+  See"
+batch_join,"shared_name=shared_name,
+      name=name)
+
+
+@tf_export(v1=[""train.batch_join""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.interleave(...).batch(batch_size)` (or ""
+    ""`padded_batch(...)` if `dynamic_pad=True`)."")
+def batch_join(tensors_list, batch_size, capacity=32, enqueue_many=False,
+               shapes=None, dynamic_pad=False, allow_smaller_final_batch=False,
+               shared_name=None, name=None):
+  """"""Runs a list of tensors to fill a queue to create batches of examples.
+
+  The `tensors_list` argu"
+maybe_batch_join,"red_name,
+      name=name)
+
+
+@tf_export(v1=[""train.maybe_batch_join""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.interleave(...).filter(...).batch(batch_size)` (or ""
+    ""`padded_batch(...)` if `dynamic_pad=True`)."")
+def maybe_batch_join(tensors_list, keep_input, batch_size, capacity=32,
+                     enqueue_many=False, shapes=None, dynamic_pad=False,
+                     allow_smaller_final_batch=False, shared_name=None,
+                     name=None):
+  """"""Runs a list of tensors to conditionally fill"
+shuffle_batch,"nal_batch=allow_smaller_final_batch,
+      shared_name=shared_name,
+      name=name)
+
+
+@tf_export(v1=[""train.shuffle_batch""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.shuffle(min_after_dequeue).batch(batch_size)`."")
+def shuffle_batch(tensors, batch_size, capacity, min_after_dequeue,
+                  num_threads=1, seed=None, enqueue_many=False, shapes=None,
+                  allow_smaller_final_batch=False, shared_name=None, name=None):
+  """"""Creates batches by randomly shuffling tensors.
+
+  This function adds"
+maybe_shuffle_batch,"inal_batch,
+      shared_name=shared_name,
+      name=name)
+
+
+@tf_export(v1=[""train.maybe_shuffle_batch""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.filter(...).shuffle(min_after_dequeue).batch(batch_size)`""
+    ""."")
+def maybe_shuffle_batch(tensors, batch_size, capacity, min_after_dequeue,
+                        keep_input, num_threads=1, seed=None,
+                        enqueue_many=False, shapes=None,
+                        allow_smaller_final_batch=False, shared_name=None,
+                        name=Non"
+shuffle_batch_join,"l_batch,
+      shared_name=shared_name,
+      name=name)
+
+
+@tf_export(v1=[""train.shuffle_batch_join""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.interleave(...).shuffle(min_after_dequeue).batch""
+    ""(batch_size)`."")
+def shuffle_batch_join(tensors_list, batch_size, capacity,
+                       min_after_dequeue, seed=None, enqueue_many=False,
+                       shapes=None, allow_smaller_final_batch=False,
+                       shared_name=None, name=None):
+  """"""Create batches by randomly shuffling tens"
+maybe_shuffle_batch_join,"red_name=shared_name,
+      name=name)
+
+
+@tf_export(v1=[""train.maybe_shuffle_batch_join""])
+@deprecation.deprecated(
+    None, ""Queue-based input pipelines have been replaced by `tf.data`. Use ""
+    ""`tf.data.Dataset.interleave(...).filter(...).shuffle(min_after_dequeue)""
+    "".batch(batch_size)`."")
+def maybe_shuffle_batch_join(tensors_list, batch_size, capacity,
+                             min_after_dequeue, keep_input, seed=None,
+                             enqueue_many=False, shapes=None,
+                             allow_smaller_final_batch=False, shared_name=None,"
+update_checkpoint_state,"=last_preserved_timestamp)
+
+  return coord_checkpoint_proto
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=(""Use `tf.train.CheckpointManager` to manage checkpoints ""
+                  ""rather than manually editing the Checkpoint proto.""))
+@tf_export(v1=[""train.update_checkpoint_state""])
+def update_checkpoint_state(save_dir,
+                            model_checkpoint_path,
+                            all_model_checkpoint_paths=None,
+                            latest_filename=None,
+                            all_model_checkpoint_timestamps=None,
+                            last_p"
+checkpoint_exists,"saver_pb2.SaverDef.V1)
+    if file_io.get_matching_files(v2_path) or file_io.get_matching_files(
+        v1_path):
+      return ckpt.model_checkpoint_path
+    else:
+      logging.error(""Couldn't match files for checkpoint %s"",
+                    ckpt.model_checkpoint_path)
+  return None
+
+
+def checkpoint_exists_internal(checkpoint_prefix):
+  """"""Checks whether a V1 or V2 checkpoint exists with the specified prefix.
+
+  This is an internal function to check if a checkpoint exists,
+  since it takes into account the naming difference between V1 and V2 formats.
+
+  Args:
+    checkpoint_prefi"
+get_checkpoint_mtimes,"Returns:
+    A bool, true if a checkpoint referred to by `checkpoint_prefix` exists.
+  """"""
+  return checkpoint_exists_internal(checkpoint_prefix)
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use standard file utilities to get mtimes."")
+@tf_export(v1=[""train.get_checkpoint_mtimes""])
+def get_checkpoint_mtimes(checkpoint_prefixes):
+  """"""Returns the mtimes (modification timestamps) of the checkpoints.
+
+  Globs for the checkpoints pointed to by `checkpoint_prefixes`.  If the files
+  exist, collect their mtime.  Both V2 and V1 checkpoints are considered, in
+  that priority.
+
+  This"
+remove_checkpoint,"continue
+    # Otherwise, tries V1, where the prefix is the complete pathname.
+    match_maybe_append(checkpoint_prefix)
+
+  return mtimes
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use standard file APIs to delete files with this prefix."")
+@tf_export(v1=[""train.remove_checkpoint""])
+def remove_checkpoint(checkpoint_prefix,
+                      checkpoint_format_version=saver_pb2.SaverDef.V2,
+                      meta_graph_suffix=""meta""):
+  """"""Removes a checkpoint given by `checkpoint_prefix`.
+
+  Args:
+    checkpoint_prefix: The prefix of a V1 or V2 checkpoint. Typically the"
+run_multiple_tasks_in_processes,"s.PIPE, stderr=subprocess.PIPE, env=env)
+
+  @deprecation.deprecated(
+      None, '`run_multiple_tasks_in_processes` is deprecated; any new test '
+      'requiring multiple processes should use `multi_process_runner` for '
+      'better support of log printing, streaming, and more functionality.')
+  def run_multiple_tasks_in_processes(self, cmd_args, cluster_spec):
+    """"""Run `cmd_args` in a process for each task in `cluster_spec`.""""""
+    processes = {}
+    for task_type in cluster_spec.keys():
+      processes[task_type] = []
+      for task_id in range(len(cluster_spec[task_type])):
+        p ="
+join_independent_workers,"uster_spec.keys():
+      threads[task_type] = []
+      for task_id in range(len(cluster_spec[task_type])):
+        t = self._run_task_in_thread(task_fn, cluster_spec, task_type, task_id,
+                                     *args, **kwargs)
+        threads[task_type].append(t)
+    return threads
+
+  def join_independent_workers(self, worker_threads):
+    with skip_if_grpc_server_cant_be_started(self):
+      self._coord.join(worker_threads)
+
+
+class MultiWorkerMultiProcessTest(test.TestCase):
+  """"""Testing infra for independent workers using multiple processes.""""""
+
+  def _run_task_in_process(self,"
+stream_stderr,"de in return_codes:
+      self.assertEqual(return_code, 0)
+
+  @deprecation.deprecated(
+      None, '`stream_stderr` is deprecated; any new test '
+      'requiring multiple processes should use `multi_process_runner` for '
+      'better support of log printing, streaming, and more functionality.')
+  def stream_stderr(self, processes, print_only_first=False):
+    """"""Consume stderr of all processes and print to stdout.
+
+    To reduce the amount of logging, caller can set print_only_first to True.
+    In that case, this function only prints stderr from the first process of
+    each type.
+
+    Argu"
+initialize,"tor = dataset_ops.make_initializable_iterator(dataset)
+
+    def get_next(self):
+      return self._iterator.get_next()
+
+    def get_next_as_optional(self):
+      return iterator_ops.get_next_as_optional(self._iterator)
+
+    @deprecated(None, ""Use the iterator's `initializer` property instead."")
+    def initialize(self):
+      """"""Initialize underlying iterators.
+
+      Returns:
+        A list of any initializer ops that should be run.
+      """"""
+      if eager_context.executing_eagerly():
+        self._iterator = self._dataset.make_one_shot_iterator()
+        return []
+      else:
+        return"
+experimental_make_numpy_dataset,"d: %r"" % replication_mode)
+    with self.scope():
+      return self.extended._make_input_fn_iterator(  # pylint: disable=protected-access
+          input_fn, replication_mode=replication_mode)
+
+  @deprecation.deprecated(
+      ""2020-09-30"", ""Please use tf.data.Dataset.from_tensor_slices instead"")
+  def experimental_make_numpy_dataset(self, numpy_input):
+    """"""Makes a `tf.data.Dataset` from a numpy array.
+
+    This avoids adding `numpy_input` as a large constant in the graph,
+    and copies the data to the machine or machines that will be processing
+    the input.
+
+    Note that you will likel"
+experimental_run_v2,", autograph_ctx.control_status_ctx(), convert_by_default=False)
+      return self._extended.call_for_each_replica(fn, args=args, kwargs=kwargs)
+
+  # TODO(b/151224785): Remove deprecated alias.
+  @doc_controls.do_not_doc_inheritable  # DEPRECATED
+  @deprecation.deprecated(None, ""renamed to `run`"")
+  def experimental_run_v2(self, fn, args=(), kwargs=None, options=None):
+    return self.run(fn, args=args, kwargs=kwargs, options=options)
+
+  def reduce(self, reduce_op, value, axis):
+    """"""Reduce `value` across replicas.
+
+    Given a per-replica value returned by `run`, say a
+    per-example loss,"
+tf_record_iterator,"s.zlib_options.compression_strategy = self.compression_strategy
+    return options
+
+
+@tf_export(v1=[""io.tf_record_iterator"", ""python_io.tf_record_iterator""])
+@deprecation.deprecated(
+    date=None,
+    instructions=(""Use eager execution and: \n""
+                  ""`tf.data.TFRecordDataset(path)`""))
+def tf_record_iterator(path, options=None):
+  """"""An iterator that read the records from a TFRecords file.
+
+  Args:
+    path: The path to the TFRecords file.
+    options: (optional) A TFRecordOptions object.
+
+  Returns:
+    An iterator of serialized TFRecords.
+
+  Raises:
+    IOError: If `path` cannot"
+substr_deprecated,", unit=""BYTE"", name=None):
+  return gen_string_ops.string_length(input, unit=unit, name=name)
+
+
+string_length_v2.__doc__ = gen_string_ops.string_length.__doc__
+
+
+@tf_export(v1=[""substr""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(None, ""Use `tf.strings.substr` instead of `tf.substr`."")
+def substr_deprecated(input, pos, len, name=None, unit=""BYTE""):
+  return substr(input, pos, len, name=name, unit=unit)
+
+substr_deprecated.__doc__ = gen_string_ops.substr.__doc__
+
+
+@tf_export(v1=[""strings.substr""])
+@dispatch.add_dispatch_support
+def substr(input, pos, len, name=None, unit=""BYTE""):"
+cosine_distance,"ath_ops.abs(math_ops.subtract(predictions, labels))
+    return compute_weighted_loss(
+        losses, weights, scope, loss_collection, reduction=reduction)
+
+
+@tf_export(v1=[""losses.cosine_distance""])
+@dispatch.add_dispatch_support
+@deprecated_args(None, ""dim is deprecated, use axis instead"", ""dim"")
+def cosine_distance(
+    labels, predictions, axis=None, weights=1.0, scope=None,
+    loss_collection=ops.GraphKeys.LOSSES,
+    reduction=Reduction.SUM_BY_NONZERO_WEIGHTS,
+    dim=None):
+  """"""Adds a cosine-distance loss to the training procedure.
+
+  Note that the function assumes that `predictions`"
+listdiff,"=redefined-builtin,protected-access
+
+
+# Aliases for some automatically-generated names.
+# pylint: disable=protected-access
+@deprecation.deprecated(""2016-11-30"",
+                        ""This op will be removed after the deprecation date. ""
+                        ""Please switch to tf.setdiff1d()."")
+def listdiff(x, y, out_idx=None, name=None):
+  return gen_array_ops.list_diff(x, y, out_idx, name)
+
+
+listdiff.__doc__ = gen_array_ops.list_diff.__doc__ + ""\n"" + listdiff.__doc__
+
+# pylint: enable=protected-access
+
+
+# pylint: disable=undefined-variable
+@deprecation.deprecated(""2018-11-30"","
+setdiff1d,"=protected-access
+
+
+# pylint: disable=undefined-variable
+@deprecation.deprecated(""2018-11-30"",
+                        ""This op will be removed after the deprecation date. ""
+                        ""Please switch to tf.sets.difference()."")
+@tf_export(v1=[""setdiff1d""])
+@dispatch.add_dispatch_support
+def setdiff1d(x, y, index_dtype=dtypes.int32, name=None):
+  """"""Computes the difference between two lists of numbers or strings.
+
+  Given a list x and a list y, this operation returns a list out that
+  represents all values that are in x but not in y. The returned list
+  out is sorted in the same ord"
+batch_gather,"atch_dims=batch_dims)
+
+
+gather_v2.__doc__ = gather.__doc__
+
+
+@tf_export(v1=[""batch_gather""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(
+    ""2017-10-25"", ""`tf.batch_gather` is deprecated, please use `tf.gather` ""
+    ""with `batch_dims=-1` instead."")  # pylint: disable=missing-docstring
+def batch_gather(params, indices, name=None):
+  """"""Gather slices from params according to indices with leading batch dims.""""""
+  with ops.name_scope(name, ""BatchGather"", [params, indices]):
+    indices = ops.convert_to_tensor(indices, name=""indices"")
+    params = ops.convert_to_tensor(params, name=""p"
+quantize_v2,"was added later.
+# (And also now because of 'axis' processing).
+@tf_export(v1=[""quantize_v2""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(
+    ""2017-10-25"",
+    ""`tf.quantize_v2` is deprecated, please use `tf.quantization.quantize` ""
+    ""instead."")  # pylint: disable=missing-docstring
+def quantize_v2(
+    input,  # pylint: disable=redefined-builtin
+    min_range,
+    max_range,
+    T,
+    mode=""MIN_COMBINED"",
+    name=None,
+    round_mode=""HALF_AWAY_FROM_ZERO"",
+    narrow_range=False,
+    axis=None,
+    ensure_minimum_range=0.01):
+  if axis is None:
+    axis = -1
+  elif axis < 0:"
+create_summary_file_writer,"n SummaryWriter.flush()
+
+
+def eval_dir(model_dir, name=None):
+  """"""Construct a logdir for an eval summary writer.""""""
+  return os.path.join(model_dir, ""eval"" if not name else ""eval_"" + name)
+
+
+@deprecation.deprecated(date=None,
+                        instructions=""Renamed to create_file_writer()."")
+def create_summary_file_writer(*args, **kwargs):
+  """"""Please use `tf.contrib.summary.create_file_writer`.""""""
+  logging.warning(""Deprecation Warning: create_summary_file_writer was renamed ""
+                  ""to create_file_writer"")
+  return create_file_writer(*args, **kwargs)
+
+
+def _serialize_graph"
+graph_parents,"elf):
+    """"""The `DType` of `Tensor`s handled by this `LinearOperator`.""""""
+    return self._dtype
+
+  @property
+  def name(self):
+    """"""Name prepended to all ops created by this `LinearOperator`.""""""
+    return self._name
+
+  @property
+  @deprecation.deprecated(None, ""Do not call `graph_parents`."")
+  def graph_parents(self):
+    """"""List of graph dependencies of this `LinearOperator`.""""""
+    return self._graph_parents
+
+  @property
+  def is_non_singular(self):
+    return self._is_non_singular
+
+  @property
+  def is_self_adjoint(self):
+    return self._is_self_adjoint
+
+  @property
+  def is_positive_"
+py_func,"one.
+  """"""
+  if ops.executing_eagerly_outside_functions():
+    with ops.device(context.context().host_address_space()):
+      return _internal_py_func(
+          func=func, inp=inp, Tout=Tout, eager=True, name=name)
+
+  return _internal_py_func(func=func, inp=inp, Tout=Tout, eager=True, name=name)
+
+
+def py_func_common(func, inp, Tout, stateful=True, name=None):
+  """"""Wraps a python function and uses it as a TensorFlow op.
+
+  Given a python function `func`, which takes numpy arrays as its
+  arguments and returns numpy arrays as its outputs, wrap this function as an
+  operation in a TensorFlow gra"
+weighted_cross_entropy_with_logits,"onentwise
+    logistic losses.
+
+  Raises:
+    ValueError: If `logits` and `labels` do not have the same shape.
+  """"""
+  return sigmoid_cross_entropy_with_logits(
+      logits=logits, labels=labels, name=name)
+
+
+@tf_export(""nn.weighted_cross_entropy_with_logits"", v1=[])
+@dispatch.add_dispatch_support
+def weighted_cross_entropy_with_logits_v2(labels, logits, pos_weight,
+                                          name=None):
+  """"""Computes a weighted cross entropy.
+
+  This is like `sigmoid_cross_entropy_with_logits()` except that `pos_weight`,
+  allows one to trade off recall and precision by up- or"
+l2_normalize,"keepdims=True)
+    norm = math_ops.cast(norm, tensor.dtype)
+    normalized = tensor / norm
+    return normalized, norm
+
+
+@tf_export(v1=[""math.l2_normalize"", ""linalg.l2_normalize"", ""nn.l2_normalize""])
+@dispatch.add_dispatch_support
+@deprecated_args(None, ""dim is deprecated, use axis instead"", ""dim"")
+def l2_normalize(x, axis=None, epsilon=1e-12, name=None, dim=None):
+  """"""Normalizes along dimension `axis` using an L2 norm.
+
+  For a 1-D tensor with `axis = 0`, computes
+
+      output = x / sqrt(max(sum(x**2), epsilon))
+
+  For `x` with more dimensions, independently normalizes each 1-D slice along"
+clip_by_average_norm,"d, use_norm
+
+
+@deprecation.deprecated(
+    date=None,
+    instructions=""clip_by_average_norm is deprecated in TensorFlow 2.0. Please ""
+    ""use clip_by_norm(t, clip_norm * tf.cast(tf.size(t), tf.float32), name) ""
+    ""instead."")
+@tf_export(v1=[""clip_by_average_norm""])
+@dispatch.add_dispatch_support
+def clip_by_average_norm(t, clip_norm, name=None):
+  """"""Clips tensor values to a maximum average L2-norm.
+
+  Given a tensor `t`, and a maximum clip value `clip_norm`, this operation
+  normalizes `t` so that its average L2-norm is less than or equal to
+  `clip_norm`. Specifically, if the average L2-n"
+alias_inplace_update,".ndims == 0:
+    # Single 0-dim update.
+    return op(x, array_ops.reshape(i, [1]), array_ops.expand_dims(v, 0))
+  return op(x, i, v)
+
+
+@deprecation.deprecated(
+    None,
+    ('Prefer tf.tensor_scatter_nd_update, which offers the same functionality '
+     'with well-defined read-write semantics.'))
+def alias_inplace_update(x, i, v):
+  """"""Applies an inplace update on input x at index i with value v. Aliases x.
+
+  If i is None, x and v must be the same shape. Computes
+    x = v;
+  If i is a scalar, x has a rank 1 higher than v's. Computes
+    x[i, :] = v;
+  Otherwise, x and v must have the same"
+alias_inplace_add,"a scalar or a vector.
+    v: A Tensor.
+
+  Returns:
+    Returns x.
+
+  """"""
+  return _inplace_helper(x, i, v, gen_array_ops.inplace_update)
+
+
+@deprecation.deprecated(
+    None,
+    ('Prefer tf.tensor_scatter_nd_add, which offers the same functionality '
+     'with well-defined read-write semantics.'))
+def alias_inplace_add(x, i, v):
+  """"""Applies an inplace add on input x at index i with value v. Aliases x.
+
+  If i is None, x and v must be the same shape. Computes
+    x += v;
+  If i is a scalar, x has a rank 1 higher than v's. Computes
+    x[i, :] += v;
+  Otherwise, x and v must have the same rank"
+alias_inplace_sub,"e, a scalar or a vector.
+    v: A Tensor.
+
+  Returns:
+    Returns x.
+
+  """"""
+  return _inplace_helper(x, i, v, gen_array_ops.inplace_add)
+
+
+@deprecation.deprecated(
+    None,
+    ('Prefer tf.tensor_scatter_nd_sub, which offers the same functionality '
+     'with well-defined read-write semantics.'))
+def alias_inplace_sub(x, i, v):
+  """"""Applies an inplace sub on input x at index i with value v. Aliases x.
+
+  If i is None, x and v must be the same shape. Computes
+    x -= v;
+  If i is a scalar, x has a rank 1 higher than v's. Computes
+    x[i, :] -= v;
+  Otherwise, x and v must have the same rank"
+inplace_update,"ontain
+    arbitrary data.
+
+  """"""
+  x = ops.convert_to_tensor(x)
+  return gen_array_ops.empty(array_ops.shape(x), x.dtype, init=init)
+
+
+@deprecation.deprecated(
+    None,
+    ('Prefer tf.tensor_scatter_nd_update, which offers the same functionality '
+     'with well-defined read-write semantics.'))
+def inplace_update(x, i, v):
+  """"""Applies an inplace update on input x at index i with value v.
+
+  Note that this function is not actually inplace - it allocates
+  a copy of x.  The utility is not avoiding memory copies but rather
+  specifying a sparse update.
+
+  If i is None, x and v must be the sa"
+inplace_add,"urns:
+    Returns y, which is guaranteed not to be an alias of x.
+
+  """"""
+  return alias_inplace_update(gen_array_ops.deep_copy(x), i, v)
+
+
+@deprecation.deprecated(
+    None,
+    ('Prefer tf.tensor_scatter_nd_add, which offers the same functionality '
+     'with well-defined read-write semantics.'))
+def inplace_add(x, i, v):
+  """"""Applies an inplace add on input x at index i with value v.
+
+  Note that this function is not actually inplace - it allocates
+  a copy of x.  The utility is not avoiding memory copies but rather
+  specifying a sparse update.
+
+  If i is None, x and v must be the same sha"
+inplace_sub,"Returns:
+    Returns y, which is guaranteed not to be an alias of x.
+
+  """"""
+  return alias_inplace_add(gen_array_ops.deep_copy(x), i, v)
+
+
+@deprecation.deprecated(
+    None,
+    ('Prefer tf.tensor_scatter_nd_sub, which offers the same functionality '
+     'with well-defined read-write semantics.'))
+def inplace_sub(x, i, v):
+  """"""Applies an inplace sub on input x at index i with value v.
+
+  Note that this function is not actually inplace - it allocates
+  a copy of x.  The utility is not avoiding memory copies but rather
+  specifying a sparse update.
+
+  If i is None, x and v must be the same sha"
+initialized_value,"ssion is used.
+
+    Returns:
+      A numpy `ndarray` with a copy of the value of this variable.
+    """"""
+    raise NotImplementedError
+
+  @deprecated(
+      None, ""Use Variable.read_value. Variables in 2.X are initialized ""
+      ""automatically both in eager and graph (inside tf.defun) contexts."")
+  def initialized_value(self):
+    """"""Returns the value of the initialized variable.
+
+    You should use this instead of the variable itself to initialize another
+    variable with a value that depends on the value of this variable.
+
+    ```python
+    # Initialize 'v' with a random tensor.
+    v = tf."
+count_up_to,"as completed.
+  """"""
+  if ref.dtype._is_ref_dtype:
+    return gen_state_ops.assign(
+        ref, value, use_locking=use_locking, name=name,
+        validate_shape=validate_shape)
+  return ref.assign(value, name=name)
+
+
+@tf_export(v1=[""count_up_to""])
+@deprecated(None, ""Prefer Dataset.range instead."")
+def count_up_to(ref, limit, name=None):
+  r""""""Increments 'ref' until it reaches 'limit'.
+
+  Args:
+    ref: A Variable. Must be one of the following types: `int32`, `int64`.
+      Should be from a scalar `Variable` node.
+    limit: An `int`.
+      If incrementing ref would bring it above limit, inste"
+all_variables,".match` means that a `scope` without special
+      tokens filters by prefix.
+
+  Returns:
+    A list of `Variable` objects.
+  """"""
+  return ops.get_collection(ops.GraphKeys.GLOBAL_VARIABLES, scope)
+
+
+@tf_export(v1=[""all_variables""])
+@deprecated(""2017-03-02"", ""Please use tf.global_variables instead."")
+def all_variables():
+  """"""Use `tf.compat.v1.global_variables` instead.""""""
+  return global_variables()
+
+
+def _all_saveable_objects(scope=None):
+  """"""Returns all variables and `SaveableObject`s that must be checkpointed.
+
+  Args:
+    scope: (Optional.) A string. If supplied, the resulting list is filt"
+initialize_variables,"ot context.executing_eagerly():
+    return control_flow_ops.group(*[v.initializer for v in var_list], name=name)
+  return control_flow_ops.no_op(name=name)
+
+
+@tf_export(v1=[""initialize_variables""])
+@tf_should_use.should_use_result
+@deprecated(""2017-03-02"", ""Use `tf.variables_initializer` instead."")
+def initialize_variables(var_list, name=""init""):
+  """"""See `tf.compat.v1.variables_initializer`.""""""
+  return variables_initializer(var_list, name=name)
+
+
+@tf_export(v1=[""initializers.global_variables"", ""global_variables_initializer""])
+def global_variables_initializer():
+  """"""Returns an Op that initia"
+initialize_all_variables,"t.executing_eagerly():
+    return control_flow_ops.no_op(name=""global_variables_initializer"")
+  return variables_initializer(global_variables())
+
+
+@tf_export(v1=[""initialize_all_variables""])
+@tf_should_use.should_use_result
+@deprecated(""2017-03-02"", ""Use `tf.global_variables_initializer` instead."")
+def initialize_all_variables():
+  """"""See `tf.compat.v1.global_variables_initializer`.""""""
+  return global_variables_initializer()
+
+
+@tf_export(v1=[""initializers.local_variables"", ""local_variables_initializer""])
+def local_variables_initializer():
+  """"""Returns an Op that initializes all local variables"
+initialize_local_variables,"xt.executing_eagerly():
+    return control_flow_ops.no_op(name=""local_variables_initializer"")
+  return variables_initializer(local_variables())
+
+
+@tf_export(v1=[""initialize_local_variables""])
+@tf_should_use.should_use_result
+@deprecated(""2017-03-02"", ""Use `tf.local_variables_initializer` instead."")
+def initialize_local_variables():
+  """"""See `tf.compat.v1.local_variables_initializer`.""""""
+  return local_variables_initializer()
+
+
+@tf_export(v1=[""is_variable_initialized""])
+@tf_should_use.should_use_result
+def is_variable_initialized(variable):
+  """"""Tests if a variable has been initialized.
+
+  Args"
+map_fn_v2,"nsider using tf.stop_gradient instead.
+Instead of:
+results = tf.map_fn(fn, elems, back_prop=False)
+Use:
+results = tf.nest.map_structure(tf.stop_gradient, tf.map_fn(fn, elems))"""""",
+    warn_once=True,
+    back_prop=False)
+@deprecation.deprecated_args(None, ""Use fn_output_signature instead"", ""dtype"")
+def map_fn_v2(fn,
+              elems,
+              dtype=None,
+              parallel_iterations=None,
+              back_prop=True,
+              swap_memory=False,
+              infer_shape=True,
+              name=None,
+              fn_output_signature=None):
+  """"""Transform `elems` by applying"
+sparse_to_dense,"return sparse_tensor.SparseTensor(output_indices, output_values,
+                                      output_shape)
+
+
+@tf_export(v1=[""sparse_to_dense""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(
+    None,
+    ""Create a `tf.sparse.SparseTensor` and use `tf.sparse.to_dense` instead."")
+def sparse_to_dense(sparse_indices,
+                    output_shape,
+                    sparse_values,
+                    default_value=0,
+                    validate_indices=True,
+                    name=None):
+  """"""Converts a sparse representation into a dense tensor.
+
+  Builds an array `dens"
+sparse_merge,":
+    # repeated indices are allowed when creating an indicator matrix.
+    return sparse_tensor_to_dense(
+        sp_new, default_value=False, validate_indices=False, name=name)
+
+
+@tf_export(v1=[""sparse.merge"", ""sparse_merge""])
+@deprecation.deprecated(None, ""No similar op available at this time."")
+def sparse_merge(sp_ids, sp_values, vocab_size, name=None,
+                 already_sorted=False):
+  """"""Combines a batch of feature ids and values into a single `SparseTensor`.
+
+  The most common use case for this function occurs when feature ids and
+  their corresponding values are stored in `Examp"
+initialize_all_tables,"ining.tracking import tracking as trackable
+from tensorflow.python.util import compat
+from tensorflow.python.util.deprecation import deprecated
+from tensorflow.python.util.tf_export import tf_export
+
+
+@tf_export(v1=[""initialize_all_tables""])
+@deprecated(None, ""Use `tf.tables_initializer` instead."")
+def initialize_all_tables(name=""init_all_tables""):
+  """"""Returns an Op that initializes all tables of the default graph.
+
+  Args:
+    name: Optional name for the initialization op.
+
+  Returns:
+    An Op that initializes all tables.  Note that if there are
+    not tables the returned Op is a NoOp.
+  """
+init,"ining.tracking import tracking as trackable
+from tensorflow.python.util import compat
+from tensorflow.python.util.deprecation import deprecated
+from tensorflow.python.util.tf_export import tf_export
+
+
+@tf_export(v1=[""initialize_all_tables""])
+@deprecated(None, ""Use `tf.tables_initializer` instead."")
+def initialize_all_tables(name=""init_all_tables""):
+  """"""Returns an Op that initializes all tables of the default graph.
+
+  Args:
+    name: Optional name for the initialization op.
+
+  Returns:
+    An Op that initializes all tables.  Note that if there are
+    not tables the returned Op is a NoOp.
+  """
+sample_distorted_bounding_box,"summing over the appropriate axis.
+    tot_var = (
+        math_ops.reduce_sum(math_ops.abs(pixel_dif1), axis=sum_axis) +
+        math_ops.reduce_sum(math_ops.abs(pixel_dif2), axis=sum_axis))
+
+  return tot_var
+
+
+@tf_export('image.sample_distorted_bounding_box', v1=[])
+@dispatch.add_dispatch_support
+def sample_distorted_bounding_box_v2(image_size,
+                                     bounding_boxes,
+                                     seed=0,
+                                     min_object_covered=0.1,
+                                     aspect_ratio_range=None,"
+stateless_multinomial,"math_ops.add(rnd * stddev, mean, name=name)
+    tensor_util.maybe_set_static_shape(result, shape)
+    return result
+
+
+@tf_export(v1=[""random.stateless_multinomial""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(
+    date=None, instructions=""Use `tf.random.stateless_categorical` instead."")
+def stateless_multinomial(logits,
+                          num_samples,
+                          seed,
+                          output_dtype=dtypes.int64,
+                          name=None):
+  """"""Draws deterministic pseudorandom samples from a multinomial distribution.
+
+  This is a stateless ve"
+while_loop_v2,"ecated_arg_values(
+    None,
+    """"""back_prop=False is deprecated. Consider using tf.stop_gradient instead.
+Instead of:
+results = tf.while_loop(c, b, vars, back_prop=False)
+Use:
+results = tf.nest.map_structure(tf.stop_gradient, tf.while_loop(c, b, vars))"""""",
+    warn_once=True,
+    back_prop=False)
+def while_loop_v2(cond,
+                  body,
+                  loop_vars,
+                  shape_invariants=None,
+                  parallel_iterations=10,
+                  back_prop=True,
+                  swap_memory=False,
+                  maximum_iterations=None,
+                  name=Non"
+compute_gradient,"x_init_value)]
+  return ret
+
+
+@tf_export(v1=[""test.compute_gradient""])
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use tf.test.compute_gradient in 2.0, which has better ""
+    ""support for functions. Note that the two versions have different usage, ""
+    ""so code change is needed."")
+def compute_gradient(x,
+                     x_shape,
+                     y,
+                     y_shape,
+                     x_init_value=None,
+                     delta=1e-3,
+                     init_targets=None,
+                     extra_feed_dict=None):
+  """"""Computes and returns the theor"
+compute_gradient_error,"n).max())
+  return error
+
+
+@tf_export(v1=[""test.compute_gradient_error""])
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use tf.test.compute_gradient in 2.0, which has better ""
+    ""support for functions. Note that the two versions have different usage, ""
+    ""so code change is needed."")
+def compute_gradient_error(x,
+                           x_shape,
+                           y,
+                           y_shape,
+                           x_init_value=None,
+                           delta=1e-3,
+                           init_targets=None,
+                           extra_feed"
+softmax_cross_entropy_with_logits_v2_helper,"mension of `labels`.
+  """"""
+  return softmax_cross_entropy_with_logits_v2_helper(
+      labels=labels, logits=logits, axis=axis, name=name)
+
+
+@tf_export(v1=[""nn.softmax_cross_entropy_with_logits_v2""])
+@dispatch.add_dispatch_support
+@deprecated_args(None, ""dim is deprecated, use axis instead"", ""dim"")
+def softmax_cross_entropy_with_logits_v2_helper(
+    labels, logits, axis=None, name=None, dim=None):
+  """"""Computes softmax cross entropy between `logits` and `labels`.
+
+  Measures the probability error in discrete classification tasks in which the
+  classes are mutually exclusive (each entry is in"
+softmax_cross_entropy_with_logits,"rror(""Only call `%s` with ""
+                     ""named arguments (labels=..., logits=..., ...)"" % name)
+  if labels is None or logits is None:
+    raise ValueError(""Both labels and logits must be provided."")
+
+
+@tf_export(""nn.softmax_cross_entropy_with_logits"", v1=[])
+@dispatch.add_dispatch_support
+def softmax_cross_entropy_with_logits_v2(labels, logits, axis=-1, name=None):
+  """"""Computes softmax cross entropy between `logits` and `labels`.
+
+  Measures the probability error in discrete classification tasks in which the
+  classes are mutually exclusive (each entry is in exactly one class).  For"
+fractional_max_pool,"return gen_nn_ops.nth_element(input, n, reverse=reverse, name=name)
+
+
+@tf_export(v1=[""nn.fractional_max_pool""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(date=None, instructions=""`seed2` and `deterministic` ""
+                        ""args are deprecated.  Use fractional_max_pool_v2."")
+def fractional_max_pool(value,
+                        pooling_ratio,
+                        pseudo_random=False,
+                        overlapping=False,
+                        deterministic=False,
+                        seed=0,
+                        seed2=0,
+                        name=Non"
+fractional_avg_pool,"seed=seed1, seed2=seed2, name=name)
+
+
+@tf_export(v1=[""nn.fractional_avg_pool""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(date=None, instructions=""`seed2` and `deterministic` ""
+                        ""args are deprecated.  Use fractional_avg_pool_v2."")
+def fractional_avg_pool(value,
+                        pooling_ratio,
+                        pseudo_random=False,
+                        overlapping=False,
+                        deterministic=False,
+                        seed=0,
+                        seed2=0,
+                        name=Non"
+disable_resource_variables,"alling tf.enable_resource_variables() lets you opt-in to this TensorFlow 2.0
+  feature.
+  """"""
+  global _DEFAULT_USE_RESOURCE
+  return _DEFAULT_USE_RESOURCE
+
+
+@deprecation.deprecated(
+    None, ""non-resource variables are not supported in the long term"")
+@tf_export(v1=[""disable_resource_variables""])
+def disable_resource_variables():
+  """"""Opts out of resource variables.
+
+  If your code needs tf.disable_resource_variables() to be called to work
+  properly please file a bug.
+  """"""
+  global _DEFAULT_USE_RESOURCE
+  _DEFAULT_USE_RESOURCE = False
+  _api_usage_gauge.get_cell().set(False)
+
+
+class _Varia"
+batch_scatter_update,"able_ops.resource_scatter_min(  # pylint: disable=protected-access
+      ref.handle, indices, ops.convert_to_tensor(updates, ref.dtype),
+      name=name))
+
+
+@tf_export(v1=[""batch_scatter_update""])
+@deprecation.deprecated(
+    ""2018-11-29"", ""Use the batch_scatter_update method of Variable instead."")
+def batch_scatter_update(ref, indices, updates, use_locking=True, name=None):
+  """"""Generalization of `tf.compat.v1.scatter_update` to axis different than 0.
+
+  Analogous to `batch_gather`. This assumes that `ref`, `indices` and `updates`
+  have a series of leading dimensions that are the same for al"
+var_scope,"s(self):
+    """"""List of non-trainable weights/variables created by the Template.""""""
+    return self.non_trainable_variables
+
+  @property
+  @deprecated(""2017-02-21"",
+              ""The .var_scope property is deprecated. Please change your ""
+              ""code to use the .variable_scope property"")
+  def var_scope(self):
+    """"""Returns the variable scope object created by this Template.""""""
+    return self._variable_scope
+
+
+class _EagerTemplateVariableStore(object):
+  """"""Wrapper around EagerVariableStore to support nesting EagerTemplates.""""""
+
+  def __init__(self, variable_scope_name):
+    self._v"
+foldl_v2,"ecation.deprecated_arg_values(
+    None,
+    """"""back_prop=False is deprecated. Consider using tf.stop_gradient instead.
+Instead of:
+results = tf.foldl(fn, elems, back_prop=False)
+Use:
+results = tf.nest.map_structure(tf.stop_gradient, tf.foldl(fn, elems))"""""",
+    warn_once=True,
+    back_prop=False)
+def foldl_v2(fn,
+             elems,
+             initializer=None,
+             parallel_iterations=10,
+             back_prop=True,
+             swap_memory=False,
+             name=None):
+  """"""foldl on the list of tensors unpacked from `elems` on dimension 0.
+
+  This foldl operator repeatedly app"
+foldr_v2,"ecation.deprecated_arg_values(
+    None,
+    """"""back_prop=False is deprecated. Consider using tf.stop_gradient instead.
+Instead of:
+results = tf.foldr(fn, elems, back_prop=False)
+Use:
+results = tf.nest.map_structure(tf.stop_gradient, tf.foldr(fn, elems))"""""",
+    warn_once=True,
+    back_prop=False)
+def foldr_v2(fn,
+             elems,
+             initializer=None,
+             parallel_iterations=10,
+             back_prop=True,
+             swap_memory=False,
+             name=None):
+  """"""foldr on the list of tensors unpacked from `elems` on dimension 0.
+
+  This foldr operator repeatedly app"
+scan_v2,"precation.deprecated_arg_values(
+    None,
+    """"""back_prop=False is deprecated. Consider using tf.stop_gradient instead.
+Instead of:
+results = tf.scan(fn, elems, back_prop=False)
+Use:
+results = tf.nest.map_structure(tf.stop_gradient, tf.scan(fn, elems))"""""",
+    warn_once=True,
+    back_prop=False)
+def scan_v2(fn,
+            elems,
+            initializer=None,
+            parallel_iterations=10,
+            back_prop=True,
+            swap_memory=False,
+            infer_shape=True,
+            reverse=False,
+            name=None):
+  """"""scan on the list of tensors unpacked from `elems` on d"
+to_float,"value = gen_math_ops.minimum(
+          value,
+          ops.convert_to_tensor(dtype.max, dtype=value.dtype, name=""max""))
+    return cast(value, dtype, name=name)
+
+
+@deprecation.deprecated(date=None, instructions=""Use `tf.cast` instead."")
+@tf_export(v1=[""to_float""])
+@dispatch.add_dispatch_support
+def to_float(x, name=""ToFloat""):
+  """"""Casts a tensor to type `float32`.
+
+  Args:
+    x: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with
+    type `float32`.
+
+  R"
+to_double,"with same shape as `x` with
+    type `float32`.
+
+  Raises:
+    TypeError: If `x` cannot be cast to the `float32`.
+  """"""
+  return cast(x, dtypes.float32, name=name)
+
+
+@deprecation.deprecated(date=None, instructions=""Use `tf.cast` instead."")
+@tf_export(v1=[""to_double""])
+@dispatch.add_dispatch_support
+def to_double(x, name=""ToDouble""):
+  """"""Casts a tensor to type `float64`.
+
+  Args:
+    x: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with
+    type `float64`."
+to_int32,"with same shape as `x` with
+    type `float64`.
+
+  Raises:
+    TypeError: If `x` cannot be cast to the `float64`.
+  """"""
+  return cast(x, dtypes.float64, name=name)
+
+
+@deprecation.deprecated(date=None, instructions=""Use `tf.cast` instead."")
+@tf_export(v1=[""to_int32""])
+@dispatch.add_dispatch_support
+def to_int32(x, name=""ToInt32""):
+  """"""Casts a tensor to type `int32`.
+
+  Args:
+    x: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with
+    type `int32`.
+
+  Raise"
+to_int64,"lices` with same shape as `x` with
+    type `int32`.
+
+  Raises:
+    TypeError: If `x` cannot be cast to the `int32`.
+  """"""
+  return cast(x, dtypes.int32, name=name)
+
+
+@deprecation.deprecated(date=None, instructions=""Use `tf.cast` instead."")
+@tf_export(v1=[""to_int64""])
+@dispatch.add_dispatch_support
+def to_int64(x, name=""ToInt64""):
+  """"""Casts a tensor to type `int64`.
+
+  Args:
+    x: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with
+    type `int64`.
+
+  Raise"
+to_bfloat16,"es` with same shape as `x` with
+    type `int64`.
+
+  Raises:
+    TypeError: If `x` cannot be cast to the `int64`.
+  """"""
+  return cast(x, dtypes.int64, name=name)
+
+
+@deprecation.deprecated(date=None, instructions=""Use `tf.cast` instead."")
+@tf_export(v1=[""to_bfloat16""])
+@dispatch.add_dispatch_support
+def to_bfloat16(x, name=""ToBFloat16""):
+  """"""Casts a tensor to type `bfloat16`.
+
+  Args:
+    x: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with
+    type `bfloat1"
+to_complex64,"ame shape as `x` with
+    type `bfloat16`.
+
+  Raises:
+    TypeError: If `x` cannot be cast to the `bfloat16`.
+  """"""
+  return cast(x, dtypes.bfloat16, name=name)
+
+
+@deprecation.deprecated(date=None, instructions=""Use `tf.cast` instead."")
+@tf_export(v1=[""to_complex64""])
+@dispatch.add_dispatch_support
+def to_complex64(x, name=""ToComplex64""):
+  """"""Casts a tensor to type `complex64`.
+
+  Args:
+    x: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with
+    type `comp"
+to_complex128,"shape as `x` with
+    type `complex64`.
+
+  Raises:
+    TypeError: If `x` cannot be cast to the `complex64`.
+  """"""
+  return cast(x, dtypes.complex64, name=name)
+
+
+@deprecation.deprecated(date=None, instructions=""Use `tf.cast` instead."")
+@tf_export(v1=[""to_complex128""])
+@dispatch.add_dispatch_support
+def to_complex128(x, name=""ToComplex128""):
+  """"""Casts a tensor to type `complex128`.
+
+  Args:
+    x: A `Tensor` or `SparseTensor` or `IndexedSlices`.
+    name: A name for the operation (optional).
+
+  Returns:
+    A `Tensor` or `SparseTensor` or `IndexedSlices` with same shape as `x` with
+    type `c"
+div,"e = name
+
+  def __truediv__(self, y):
+    return _truediv_python3(self.x, y, self.name)
+
+  def __floordiv__(self, y):
+    return floordiv(self.x, y, self.name)
+
+  def __div__(self, y):
+    return _div_python2(self.x, y, self.name)
+
+
+@tf_export(""math.divide"", ""divide"")
+@dispatch.add_dispatch_support
+def divide(x, y, name=None):
+  """"""Computes Python style division of `x` by `y`.
+
+  For example:
+
+  >>> x = tf.constant([16, 12, 11])
+  >>> y = tf.constant([4, 6, 2])
+  >>> tf.divide(x,y)
+  <tf.Tensor: shape=(3,), dtype=float64,
+  numpy=array([4. , 2. , 5.5])>
+
+  Args:
+    x: A `Tensor`
+    y: A `Ten"
+auc,"e: distribution.extended.read_var(value)
+  return _aggregate_across_replicas(collections, f, v)
+
+
+@tf_export(v1=['metrics.auc'])
+@deprecated(None,
+            'The value of AUC returned by this may race with the update so '
+            'this is deprecated. Please use tf.keras.metrics.AUC instead.')
+def auc(labels,
+        predictions,
+        weights=None,
+        num_thresholds=200,
+        metrics_collections=None,
+        updates_collections=None,
+        curve='ROC',
+        name=None,
+        summation_method='trapezoidal',
+        thresholds=None):
+  """"""Computes the approximate AUC via a"
+sparse_average_precision_at_k,"alues if _labels_is_sparse() else labels)
+  return control_flow_ops.cond(
+      math_ops.greater_equal(max_labels, num_classes),
+      _clean_labels_out_of_range,
+      lambda: labels)
+
+
+@tf_export(v1=['metrics.sparse_average_precision_at_k'])
+@deprecated(None, 'Use average_precision_at_k instead')
+def sparse_average_precision_at_k(labels,
+                                  predictions,
+                                  k,
+                                  weights=None,
+                                  metrics_collections=None,
+                                  updates_collections=None,"
+sparse_precision_at_k,"= math_ops.divide(
+        tp_update, math_ops.add(tp_update, fp_update), name='update')
+    if updates_collections:
+      ops.add_to_collections(updates_collections, update)
+    return metric, update
+
+
+@tf_export(v1=['metrics.sparse_precision_at_k'])
+@deprecated(None, 'Use precision_at_k instead')
+def sparse_precision_at_k(labels,
+                          predictions,
+                          k,
+                          class_id=None,
+                          weights=None,
+                          metrics_collections=None,
+                          updates_collections=None,"
+create_partitioned_variables,"ns_list = [1] * len(shape)
+    partitions_list[axis] = min(num_shards, shape.dims[axis].value)
+    return partitions_list
+  return _partitioner
+
+
+@tf_export(v1=[""create_partitioned_variables""])
+@deprecation.deprecated(
+    date=None,
+    instructions=""Use `tf.get_variable` with a partitioner set."")
+def create_partitioned_variables(
+    shape, slicing, initializer, dtype=dtypes.float32,
+    trainable=True, collections=None, name=None, reuse=None):
+  """"""Create a list of partitioned variables according to the given `slicing`.
+
+  Currently only one dimension of the full variable can be sliced, and"
+multinomial,"pe,
+        maxval=size.dtype.max,
+        seed=seed) % limit
+    return array_ops.slice(value, offset, size, name=name)
+
+
+@tf_export(v1=[""random.multinomial"", ""multinomial""])
+@dispatch.add_dispatch_support
+@deprecation.deprecated(
+    date=None, instructions=""Use `tf.random.categorical` instead."")
+def multinomial(logits, num_samples, seed=None, name=None, output_dtype=None):
+  """"""Draws samples from a multinomial distribution.
+
+  Example:
+
+  ```python
+  # samples has shape [1, 5], where each value is either 0 or 1 with equal
+  # probability.
+  samples = tf.random.categorical(tf.math.log([[0.5,"
+Print,"directly specified in session.run or used as a ""
+            ""control dependency for other operators. This is ""
+            ""only a concern in graph mode. Below is an example ""
+            ""of how to ensure tf.print executes in graph mode:\n"")
+@tf_export(v1=[""Print""])
+@dispatch.add_dispatch_support
+def Print(input_, data, message=None, first_n=None, summarize=None, name=None):
+  """"""Prints a list of tensors.
+
+  This is an identity op (behaves like `tf.identity`) with the side effect
+  of printing `data` when evaluating.
+
+  Note: This op prints to the standard error. It is not currently compatib"
+histogram_summary,"collection(key, val)
+
+
+@deprecated(
+    ""2016-11-30"", ""Please switch to tf.summary.histogram. Note that ""
+    ""tf.summary.histogram uses the node name instead of the tag. ""
+    ""This means that TensorFlow will automatically de-duplicate summary ""
+    ""names based on the scope they are created in."")
+def histogram_summary(tag, values, collections=None, name=None):
+  # pylint: disable=line-too-long
+  """"""Outputs a `Summary` protocol buffer with a histogram.
+
+  This ops is deprecated. Please switch to tf.summary.histogram.
+
+  For an explanation of why this op was deprecated, and information on how"
+image_summary,"ease switch to tf.summary.image. Note that ""
+    ""tf.summary.image uses the node name instead of the tag. ""
+    ""This means that TensorFlow will automatically de-duplicate summary ""
+    ""names based on the scope they are created in. Also, the max_images ""
+    ""argument was renamed to max_outputs."")
+def image_summary(tag, tensor, max_images=3, collections=None, name=None):
+  # pylint: disable=line-too-long
+  """"""Outputs a `Summary` protocol buffer with images.
+
+  For an explanation of why this op was deprecated, and information on how to
+  migrate, look
+  ['here'](https://github.com/tensorflow/t"
+audio_summary,"eys.SUMMARIES])
+  return val
+
+
+@deprecated(
+    ""2016-11-30"", ""Please switch to tf.summary.audio. Note that ""
+    ""tf.summary.audio uses the node name instead of the tag. ""
+    ""This means that TensorFlow will automatically de-duplicate summary ""
+    ""names based on the scope they are created in."")
+def audio_summary(tag,
+                  tensor,
+                  sample_rate,
+                  max_outputs=3,
+                  collections=None,
+                  name=None):
+  # pylint: disable=line-too-long
+  """"""Outputs a `Summary` protocol buffer with audio.
+
+  This op is deprecated. Please s"
+merge_summary,"= gen_logging_ops.audio_summary_v2(
+        tag=tag,
+        tensor=tensor,
+        max_outputs=max_outputs,
+        sample_rate=sample_rate,
+        name=scope)
+    _Collect(val, collections, [ops.GraphKeys.SUMMARIES])
+  return val
+
+
+@deprecated(""2016-11-30"", ""Please switch to tf.summary.merge."")
+def merge_summary(inputs, collections=None, name=None):
+  # pylint: disable=line-too-long
+  """"""Merges summaries.
+
+  This op is deprecated. Please switch to tf.compat.v1.summary.merge, which has
+  identical
+  behavior.
+
+  This op creates a
+  [`Summary`](https://www.tensorflow.org/code/tensorflow/core"
+merge_all_summaries,"Summary` protocol
+    buffer resulting from the merging.
+  """"""
+  with ops.name_scope(name, ""MergeSummary"", inputs):
+    val = gen_logging_ops.merge_summary(inputs=inputs, name=name)
+    _Collect(val, collections, [])
+  return val
+
+
+@deprecated(""2016-11-30"", ""Please switch to tf.summary.merge_all."")
+def merge_all_summaries(key=ops.GraphKeys.SUMMARIES):
+  """"""Merges all summaries collected in the default graph.
+
+  This op is deprecated. Please switch to tf.compat.v1.summary.merge_all, which
+  has
+  identical behavior.
+
+  Args:
+    key: `GraphKey` used to collect the summaries.  Defaults to"
+scalar_summary,"e that ""
+    ""tf.summary.scalar uses the node name instead of the tag. ""
+    ""This means that TensorFlow will automatically de-duplicate summary ""
+    ""names based on the scope they are created in. Also, passing a ""
+    ""tensor or list of tags to a scalar summary op is no longer ""
+    ""supported."")
+def scalar_summary(tags, values, collections=None, name=None):
+  # pylint: disable=line-too-long
+  """"""Outputs a `Summary` protocol buffer with scalar values.
+
+  This ops is deprecated. Please switch to tf.summary.scalar.
+  For an explanation of why this op was deprecated, and information on how to
+ "
+bidirectional_dynamic_rnn,"flat_results)
+  ]
+  return results
+
+
+@deprecation.deprecated(None, ""Please use `keras.layers.Bidirectional(""
+                        ""keras.layers.RNN(cell))`, which is equivalent to ""
+                        ""this API"")
+@tf_export(v1=[""nn.bidirectional_dynamic_rnn""])
+@dispatch.add_dispatch_support
+def bidirectional_dynamic_rnn(cell_fw,
+                              cell_bw,
+                              inputs,
+                              sequence_length=None,
+                              initial_state_fw=None,
+                              initial_state_bw=None,"
+dynamic_rnn,"outputs = (output_fw, output_bw)
+  output_states = (output_state_fw, output_state_bw)
+
+  return (outputs, output_states)
+
+
+@deprecation.deprecated(
+    None,
+    ""Please use `keras.layers.RNN(cell)`, which is equivalent to this API"")
+@tf_export(v1=[""nn.dynamic_rnn""])
+@dispatch.add_dispatch_support
+def dynamic_rnn(cell,
+                inputs,
+                sequence_length=None,
+                initial_state=None,
+                dtype=None,
+                parallel_iterations=None,
+                swap_memory=False,
+                time_major=False,
+                scope=None):
+  """"""Creates"
+static_rnn,"p_state = None
+
+    return (emit_ta, final_state, final_loop_state)
+
+
+@deprecation.deprecated(None,
+                        ""Please use `keras.layers.RNN(cell, unroll=True)`, ""
+                        ""which is equivalent to this API"")
+@tf_export(v1=[""nn.static_rnn""])
+@dispatch.add_dispatch_support
+def static_rnn(cell,
+               inputs,
+               initial_state=None,
+               dtype=None,
+               sequence_length=None,
+               scope=None):
+  """"""Creates a recurrent neural network specified by RNNCell `cell`.
+
+  The simplest form of RNN network generated is:
+
+  ```pyth"
+static_state_saving_rnn,"outputs.append(output)
+
+    return (outputs, state)
+
+
+@deprecation.deprecated(None,
+                        ""Please use `keras.layers.RNN(cell, stateful=True)`, ""
+                        ""which is equivalent to this API"")
+@tf_export(v1=[""nn.static_state_saving_rnn""])
+@dispatch.add_dispatch_support
+def static_state_saving_rnn(cell,
+                            inputs,
+                            state_saver,
+                            state_name,
+                            sequence_length=None,
+                            scope=None):
+  """"""RNN that accepts a state saver for time-truncated RNN"
+static_bidirectional_rnn,"eturn (outputs, state)
+
+
+@deprecation.deprecated(None, ""Please use `keras.layers.Bidirectional(""
+                        ""keras.layers.RNN(cell, unroll=True))`, which is ""
+                        ""equivalent to this API"")
+@tf_export(v1=[""nn.static_bidirectional_rnn""])
+@dispatch.add_dispatch_support
+def static_bidirectional_rnn(cell_fw,
+                             cell_bw,
+                             inputs,
+                             initial_state_fw=None,
+                             initial_state_bw=None,
+                             dtype=None,
+                             sequence_leng"
+kl_divergence,"nsorFlow Distributions library has moved to ""
+    ""TensorFlow Probability ""
+    ""(https://github.com/tensorflow/probability). You ""
+    ""should update all references to use `tfp.distributions` ""
+    ""instead of `tf.distributions`."",
+    warn_once=True)
+@tf_export(v1=[""distributions.kl_divergence""])
+def kl_divergence(distribution_a, distribution_b,
+                  allow_nan_stats=True, name=None):
+  """"""Get the KL-divergence KL(distribution_a || distribution_b).
+
+  If there is no KL method registered specifically for `type(distribution_a)`
+  and `type(distribution_b)`, then the class hierarchi"
+cross_entropy,"ation.deprecated(
+    ""2019-01-01"",
+    ""The TensorFlow Distributions library has moved to ""
+    ""TensorFlow Probability ""
+    ""(https://github.com/tensorflow/probability). You ""
+    ""should update all references to use `tfp.distributions` ""
+    ""instead of `tf.distributions`."",
+    warn_once=True)
+def cross_entropy(ref, other,
+                  allow_nan_stats=True, name=None):
+  """"""Computes the (Shannon) cross entropy.
+
+  Denote two distributions by `P` (`ref`) and `Q` (`other`). Assuming `P, Q`
+  are absolutely continuous with respect to one another and permit densities
+  `p(x) dr(x)` and `"
+map_and_batch_with_legacy_function,"`tf.data.Dataset.apply`.
+  """"""
+
+  def _apply_fn(dataset):
+    return _DenseToSparseBatchDataset(dataset, batch_size, row_shape)
+
+  return _apply_fn
+
+
+@deprecation.deprecated(None, ""Use `tf.data.experimental.map_and_batch()"")
+@tf_export(v1=[""data.experimental.map_and_batch_with_legacy_function""])
+def map_and_batch_with_legacy_function(map_func,
+                                       batch_size,
+                                       num_parallel_batches=None,
+                                       drop_remainder=False,
+                                       num_parallel_calls=None):
+  """"""Fus"
+map_and_batch,"`tf.data.Dataset.apply`.
+  """"""
+
+  def _apply_fn(dataset):
+    return _DenseToSparseBatchDataset(dataset, batch_size, row_shape)
+
+  return _apply_fn
+
+
+@deprecation.deprecated(None, ""Use `tf.data.experimental.map_and_batch()"")
+@tf_export(v1=[""data.experimental.map_and_batch_with_legacy_function""])
+def map_and_batch_with_legacy_function(map_func,
+                                       batch_size,
+                                       num_parallel_batches=None,
+                                       drop_remainder=False,
+                                       num_parallel_calls=None):
+  """"""Fus"
+unbatch,"ly exclusive."")
+
+  def _apply_fn(dataset):
+    return _MapAndBatchDataset(dataset, map_func, batch_size,
+                               num_parallel_calls, drop_remainder)
+
+  return _apply_fn
+
+
+@deprecation.deprecated(None, ""Use `tf.data.Dataset.unbatch()`."")
+@tf_export(""data.experimental.unbatch"")
+def unbatch():
+  """"""Splits elements of a dataset into multiple elements on the batch dimension.
+
+  For example, if elements of the dataset are shaped `[B, a0, a1, ...]`,
+  where `B` may vary for each input element, then for each element in the
+  dataset, the unbatched dataset will contain `B` consec"
+shuffle_and_repeat,"variant_tensor)
+
+
+@deprecation.deprecated(
+    None,
+    ""Use `tf.data.Dataset.shuffle(buffer_size, seed)` followed by ""
+    ""`tf.data.Dataset.repeat(count)`. Static tf.data optimizations will take ""
+    ""care of using the fused implementation."")
+@tf_export(""data.experimental.shuffle_and_repeat"")
+def shuffle_and_repeat(buffer_size, count=None, seed=None):
+  """"""Shuffles and repeats a Dataset, reshuffling with each repetition.
+
+  >>> d = tf.data.Dataset.from_tensor_slices([1, 2, 3])
+  >>> d = d.apply(tf.data.experimental.shuffle_and_repeat(2, count=2))
+  >>> [elem.numpy() for elem in d] # doct"
+set_stats_aggregator," import dtypes
+from tensorflow.python.framework import ops
+from tensorflow.python.ops import gen_experimental_dataset_ops
+from tensorflow.python.util import deprecation
+from tensorflow.python.util.tf_export import tf_export
+
+
+@deprecation.deprecated(None, ""Use `tf.data.experimental.StatsOptions`."")
+def set_stats_aggregator(stats_aggregator, prefix="""", counter_prefix=""""):
+  """"""Set the given `stats_aggregator` for aggregating the input dataset stats.
+
+  Args:
+    stats_aggregator: A `tf.data.experimental.StatsAggregator` object.
+    prefix: (Optional) String, all statistics recorded for the inpu"
+make_saveable_from_iterator,"', 'ignore' and 'fail'"".format(
+          external_state_policy))
+
+
+@tf_export(""data.experimental.make_saveable_from_iterator"")
+@deprecation.deprecated(
+    None, ""`make_saveable_from_iterator` is intended for use in TF1 with ""
+    ""`tf.compat.v1.Saver`. In TF2, use `tf.train.Checkpoint` instead."")
+def make_saveable_from_iterator(iterator, external_state_policy=""fail""):
+  """"""Returns a SaveableObject for saving/restoring iterator state using Saver.
+
+  Args:
+    iterator: Iterator.
+    external_state_policy: A string that identifies how to handle input
+      pipelines that depend on external sta"
+parallel_interleave,"ted(
+    None,
+    ""Use `tf.data.Dataset.interleave(map_func, cycle_length, block_length, ""
+    ""num_parallel_calls=tf.data.experimental.AUTOTUNE)` instead. If sloppy ""
+    ""execution is desired, use `tf.data.Options.experimental_deterministic`."")
+@tf_export(""data.experimental.parallel_interleave"")
+def parallel_interleave(map_func,
+                        cycle_length,
+                        block_length=1,
+                        sloppy=False,
+                        buffer_output_elements=None,
+                        prefetch_input_elements=None):
+  """"""A parallel version of the `Dataset.in"
+enumerate_dataset,"import
+from __future__ import division
+from __future__ import print_function
+
+from tensorflow.python.util import deprecation
+from tensorflow.python.util.tf_export import tf_export
+
+
+@deprecation.deprecated(None, ""Use `tf.data.Dataset.enumerate()`."")
+@tf_export(""data.experimental.enumerate_dataset"")
+def enumerate_dataset(start=0):
+  """"""A transformation that enumerates the elements of a dataset.
+
+  It is similar to python's `enumerate`.
+  For example:
+
+  ```python
+  # NOTE: The following examples use `{ ... }` to represent the
+  # contents of a dataset.
+  a = { 1, 2, 3 }
+  b = { (7, 8), (9, 10)"
+legacy_snapshot,",
+        seed2=self._seed2,
+        mode=self._mode,
+        snapshot_name=self._snapshot_name,
+        **self._flat_structure)
+
+    super(_LegacySnapshotDataset, self).__init__(input_dataset, variant_tensor)
+
+
+@deprecation.deprecated(
+    None, ""Use `tf.data.experimental.snapshot(...)` instead."")
+def legacy_snapshot(path,
+                    compression=None,
+                    reader_path_prefix=None,
+                    writer_path_prefix=None,
+                    shard_size_bytes=None,
+                    pending_snapshot_expiry_seconds=None,
+                    num_reader_threads=None,"
+output_classes,"ss
+    return iterator_ops.Iterator(
+        iterator_resource, initializer, get_legacy_output_types(dataset),
+        get_legacy_output_shapes(dataset), get_legacy_output_classes(dataset))
+
+  @property
+  @deprecation.deprecated(
+      None, ""Use `tf.compat.v1.data.get_output_classes(dataset)`."")
+  def output_classes(self):
+    """"""Returns the class of each component of an element of this dataset.
+
+    Returns:
+      A nested structure of Python `type` objects corresponding to each
+      component of an element of this dataset.
+    """"""
+    return nest.map_structure(
+        lambda component_spe"
+output_shapes,"this dataset.
+    """"""
+    return nest.map_structure(
+        lambda component_spec: component_spec._to_legacy_output_classes(),  # pylint: disable=protected-access
+        self.element_spec)
+
+  @property
+  @deprecation.deprecated(
+      None, ""Use `tf.compat.v1.data.get_output_shapes(dataset)`."")
+  def output_shapes(self):
+    """"""Returns the shape of each component of an element of this dataset.
+
+    Returns:
+      A nested structure of `tf.TensorShape` objects corresponding to each
+      component of an element of this dataset.
+    """"""
+    return nest.map_structure(
+        lambda component_s"
+output_types,"f this dataset.
+    """"""
+    return nest.map_structure(
+        lambda component_spec: component_spec._to_legacy_output_shapes(),  # pylint: disable=protected-access
+        self.element_spec)
+
+  @property
+  @deprecation.deprecated(
+      None, ""Use `tf.compat.v1.data.get_output_types(dataset)`."")
+  def output_types(self):
+    """"""Returns the type of each component of an element of this dataset.
+
+    Returns:
+      A nested structure of `tf.DType` objects corresponding to each component
+      of an element of this dataset.
+    """"""
+    return nest.map_structure(
+        lambda component_spec: com"
+get_next_as_optional,"ator.get_next())
+    tf.Tensor(42, shape=(), dtype=int32)
+
+    Returns:
+      A nested structure of `tf.Tensor` objects.
+
+    Raises:
+      `tf.errors.OutOfRangeError`: If the end of the iterator has been reached.
+    """"""
+    raise NotImplementedError(""Iterator.get_next()"")
+
+  @abc.abstractmethod
+  def get_next_as_optional(self):
+    """"""Returns a `tf.experimental.Optional` which contains the next element.
+
+    If the iterator has reached the end of the sequence, the returned
+    `tf.experimental.Optional` will have no value.
+
+    >>> dataset = tf.data.Dataset.from_tensors(42)
+    >>> iterator"
+make_one_shot_iterator,"ne_shot_iterator(dataset)` ""
+      ""to create a TF 1 graph mode style iterator for a dataset created ""
+      ""through TF 2 APIs. Note that this should be a transient state of your ""
+      ""code base as there are in general no guarantees about the ""
+      ""interoperability of TF 1 and TF 2 code."")
+  def make_one_shot_iterator(self):
+    """"""Creates an iterator for elements of this dataset.
+
+    Note: The returned iterator will be initialized automatically.
+    A ""one-shot"" iterator does not currently support re-initialization. For
+    that see `make_initializable_iterator`.
+
+    Example:
+
+    ``"
+make_initializable_iterator,"lizable_iterator(dataset)` to create a TF ""
+      ""1 graph mode style iterator for a dataset created through TF 2 APIs. ""
+      ""Note that this should be a transient state of your code base as there ""
+      ""are in general no guarantees about the interoperability of TF 1 and TF ""
+      ""2 code."")
+  def make_initializable_iterator(self, shared_name=None):
+    """"""Creates an iterator for elements of this dataset.
+
+    Note: The returned iterator will be in an uninitialized state,
+    and you must run the `iterator.initializer` operation before using it:
+
+    ```python
+    # Building graph ..."
+from_sparse_tensor_slices,"(DatasetV2.from_tensors(tensors))
+
+  @staticmethod
+  @functools.wraps(DatasetV2.from_tensor_slices)
+  def from_tensor_slices(tensors):
+    return DatasetV1Adapter(DatasetV2.from_tensor_slices(tensors))
+
+  @staticmethod
+  @deprecation.deprecated(None, ""Use `tf.data.Dataset.from_tensor_slices()`."")
+  def from_sparse_tensor_slices(sparse_tensor):
+    """"""Splits each rank-N `tf.sparse.SparseTensor` in this dataset row-wise.
+
+    Args:
+      sparse_tensor: A `tf.sparse.SparseTensor`.
+
+    Returns:
+      Dataset: A `Dataset` of rank-(N-1) sparse tensors.
+    """"""
+    return DatasetV1Adapter(SparseTens"
+map_with_legacy_function,"ality=False))
+    else:
+      return DatasetV1Adapter(
+          ParallelMapDataset(
+              self,
+              map_func,
+              num_parallel_calls,
+              deterministic,
+              preserve_cardinality=False))
+
+  @deprecation.deprecated(None, ""Use `tf.data.Dataset.map()"")
+  def map_with_legacy_function(self,
+                               map_func,
+                               num_parallel_calls=None,
+                               deterministic=None):
+    """"""Maps `map_func` across the elements of this dataset.
+
+    Note: This is an escape hatch for existing uses of"
+filter_with_legacy_function,"block_length,
+                                          num_parallel_calls, deterministic))
+
+  @functools.wraps(DatasetV2.filter)
+  def filter(self, predicate):
+    return DatasetV1Adapter(super(DatasetV1, self).filter(predicate))
+
+  @deprecation.deprecated(None, ""Use `tf.data.Dataset.filter()"")
+  def filter_with_legacy_function(self, predicate):
+    """"""Filters this dataset according to `predicate`.
+
+    Note: This is an escape hatch for existing uses of `filter` that do not work
+    with V2 functions. New uses are strongly discouraged and existing uses
+    should migrate to `filter` as this"
+start_tracing,"ture__ import absolute_import
+from __future__ import division
+from __future__ import print_function
+
+from tensorflow.python.profiler.internal import _pywrap_profiler
+from tensorflow.python.util.deprecation import deprecated
+
+
+@deprecated('2020-07-01', 'use `tf.profiler.experimental.client.trace`.')
+def start_tracing(service_addr,
+                  logdir,
+                  duration_ms,
+                  worker_list='',
+                  include_dataset_ops=True,
+                  num_tracing_attempts=3):
+  """"""Sends grpc requests to profiler server to perform on-demand profiling.
+
+  This method"
+monitor,"cted.
+
+  Raises:
+    UnavailableError: If no trace event is collected.
+  """"""
+  _pywrap_profiler.trace(service_addr, logdir, worker_list, include_dataset_ops,
+                         duration_ms, num_tracing_attempts, {})
+
+
+@deprecated('2020-07-01', 'use `tf.profiler.experimental.client.monitor`.')
+def monitor(service_addr,
+            duration_ms,
+            monitoring_level=1,
+            display_timestamp=False):
+  """"""Sends grpc requests to profiler server to perform on-demand monitoring.
+
+  This method will block caller thread until receives monitoring result.
+
+  Args:
+    service_addr: A"
+experimental_run_functions_eagerly,"riable_ops.var_is_initialized_op(self._handle),
+            not_assign_fn, assign_fn)
+
+
+RUN_FUNCTIONS_EAGERLY = False
+
+
+@deprecation.deprecated(
+    None,
+    ""Use `tf.config.run_functions_eagerly` instead of the experimental ""
+    ""version."")
+@tf_export(""config.experimental_run_functions_eagerly"")
+def experimental_run_functions_eagerly(run_eagerly):
+  """"""Enables / disables eager execution of `tf.function`s.
+
+  Calling `tf.config.experimental_run_functions_eagerly(True)` will make all
+  invocations of `tf.function` run eagerly instead of running as a traced graph
+  function.
+
+  This can be use"
+experimental_functions_run_eagerly,"y: Boolean. Whether to run functions eagerly.
+  """"""
+  global RUN_FUNCTIONS_EAGERLY
+  RUN_FUNCTIONS_EAGERLY = bool(run_eagerly)
+
+
+@deprecation.deprecated(
+    None,
+    ""Use tf.config.functions_run_eagerly instead of the experimental version."")
+@tf_export(""config.experimental_functions_run_eagerly"")
+def experimental_functions_run_eagerly():
+  """"""Returns the value of the `experimental_run_functions_eagerly` setting.""""""
+  return functions_run_eagerly()
+
+
+@tf_export(""config.functions_run_eagerly"")
+def functions_run_eagerly():
+  """"""Returns the value of the `run_functions_eagerly` setting.""""""
+  retu"
+start,"rofileEmptySuffix in
+# tensorflow/core/profiler/rpc/client/capture_profile.cc.
+_EVENT_FILE_SUFFIX = '.profile-empty'
+
+
+class ProfilerAlreadyRunningError(Exception):
+  pass
+
+
+class ProfilerNotRunningError(Exception):
+  pass
+
+
+@deprecated('2020-07-01', 'use `tf.profiler.experimental.start` instead.')
+def start():
+  """"""Start profiling.
+
+  Raises:
+    ProfilerAlreadyRunningError: If another profiling session is running.
+  """"""
+  global _profiler
+  with _profiler_lock:
+    if _profiler is not None:
+      raise ProfilerAlreadyRunningError('Another profiler is running.')
+    if context.default_executi"
+stop,"'
+                      'created by profiler server. Please avoid using profiler '
+                      'server and profiler APIs at the same time.')
+      raise ProfilerAlreadyRunningError('Another profiler is running.')
+
+
+@deprecated('2020-07-01', 'use `tf.profiler.experimental.stop` instead.')
+def stop():
+  """"""Stop current profiling session and return its result.
+
+  Returns:
+    A binary string of tensorflow.tpu.Trace. User can write the string
+    to file for offline analysis by tensorboard.
+
+  Raises:
+    ProfilerNotRunningError: If there is no active profiling session.
+  """"""
+  global _"
+maybe_create_event_file,"')
+    if context.default_execution_mode == context.EAGER_MODE:
+      context.context().executor.wait()
+    result = _profiler.stop()
+    _profiler = None
+    _run_num += 1
+  return result
+
+
+@deprecated(
+    '2020-07-01',
+    '`tf.python.eager.profiler` has deprecated, use `tf.profiler` instead.'
+)
+def maybe_create_event_file(logdir):
+  """"""Create an empty event file if not already exists.
+
+  This event file indicates that we have a plugins/profile/ directory in the
+  current logdir.
+
+  Args:
+    logdir: log directory.
+  """"""
+  for file_name in gfile.ListDirectory(logdir):
+    if file_name.endsw"
+save,"iter instead.
+  event_writer = _pywrap_events_writer.EventsWriter(
+      compat.as_bytes(os.path.join(logdir, 'events')))
+  event_writer.InitWithSuffix(compat.as_bytes(_EVENT_FILE_SUFFIX))
+
+
+@deprecated(
+    '2020-07-01',
+    '`tf.python.eager.profiler` has deprecated, use `tf.profiler` instead.'
+)
+def save(logdir, result):
+  """"""Save profile result to TensorBoard logdir.
+
+  Args:
+    logdir: log directory read by TensorBoard.
+    result: profiling result returned by stop().
+  """"""
+  plugin_dir = os.path.join(
+      logdir, 'plugins', 'profile',
+      datetime.datetime.now().strftime('%Y-%m-%d_%"
+start_profiler_server,"rofile',
+      datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S'))
+  gfile.MakeDirs(plugin_dir)
+  maybe_create_event_file(logdir)
+  with gfile.Open(os.path.join(plugin_dir, 'local.trace'), 'wb') as f:
+    f.write(result)
+
+
+@deprecated('2020-07-01', 'use `tf.profiler.experimental.server.start`.')
+def start_profiler_server(port):
+  """"""Start a profiler grpc server that listens to given port.
+
+  The profiler server will keep the program running even the training finishes.
+  Please shutdown the server with CTRL-C. It can be used in both eager mode and
+  graph mode. The service defined in
+  tenso"
+toco_convert,"ify `input_data_str` to encode sparse tensor with proper format.
+
+  Args:
+    input_data_str: Input data in serialized form (e.g. a TFLITE model).
+
+  Returns:
+    Sparsified model in serialized form (e.g. a TFLITE model).
+  """"""
+  return wrap_toco.wrapped_experimental_mlir_sparsify(input_data_str)
+
+
+def toco_convert_protos(model_flags_str,
+                        toco_flags_str,
+                        input_data_str,
+                        debug_info_str=None,
+                        enable_mlir_converter=False):
+  """"""Convert `input_data_str` according to model and toco parameters.
+
+  Unless "
+from_session,"aph_def`.
+
+    Raises:
+      ValueError: Invalid arguments.
+    """"""
+    super(TFLiteConverter,
+          self).__init__(graph_def, input_tensors, output_tensors,
+                         input_arrays_with_shape, output_arrays,
+                         experimental_debug_info_func)
+
+  @classmethod
+  def from_session(cls, sess, input_tensors, output_tensors):
+    """"""Creates a TFLiteConverter class from a TensorFlow Session.
+
+    Args:
+      sess: TensorFlow Session.
+      input_tensors: List of input tensors. Type and shape are computed using
+        `foo.shape` and `foo.dtype`.
+      output_ten"
+from_frozen_graph,"m this).
+
+    Returns:
+      TFLiteConverter class.
+    """"""
+    graph_def = _freeze_graph(sess, input_tensors, output_tensors)
+    return cls(
+        graph_def,
+        input_tensors,
+        output_tensors,
+        experimental_debug_info_func=_build_debug_info_func(sess.graph))
+
+  @classmethod
+  def from_frozen_graph(cls,
+                        graph_def_file,
+                        input_arrays,
+                        output_arrays,
+                        input_shapes=None):
+    """"""Creates a TFLiteConverter class from a file containing a frozen GraphDef.
+
+    Args:
+      graph_def_file"
+from_saved_model,"s function takes in a list of ConcreteFunction.""
+        if isinstance(func, _def_function.Function):
+          message += ("" To get the ConcreteFunction from a Function,""
+                      "" call get_concrete_function."")
+        raise ValueError(message)
+    return cls(funcs)
+
+  @classmethod
+  def from_saved_model(cls, saved_model_dir, signature_keys=None, tags=None):
+    """"""Creates a TFLiteConverter object from a SavedModel directory.
+
+    Args:
+      saved_model_dir: SavedModel directory to convert.
+      signature_keys: List of keys identifying SignatureDef containing inputs
+        an"
+from_keras_model_file,"ut_arrays, input_shapes,
+                                 output_arrays, tag_set, signature_key)
+
+    return cls(
+        graph_def=result[0],
+        input_tensors=result[1],
+        output_tensors=result[2],
+        experimental_debug_info_func=_build_debug_info_func(result[3]))
+
+  @classmethod
+  def from_keras_model_file(cls,
+                            model_file,
+                            input_arrays=None,
+                            input_shapes=None,
+                            output_arrays=None,
+                            custom_objects=None):
+    """"""Creates a TFLiteConverter clas"
+read_data_sets,"urllib.request.urlretrieve(source_url, filepath)
+    with gfile.GFile(filepath) as f:
+      size = f.size()
+    print('Successfully downloaded', filename, size, 'bytes.')
+  return filepath
+
+
+@deprecated(None, 'Please use alternatives such as:'
+            ' tensorflow_datasets.load(\'mnist\')')
+def read_data_sets(train_dir,
+                   fake_data=False,
+                   one_hot=False,
+                   dtype=dtypes.float32,
+                   reshape=True,
+                   validation_size=5000,
+                   seed=None,
+                   source_url=DEFAULT_SOURCE_URL):
+  if"
