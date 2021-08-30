@@ -6,6 +6,7 @@ import pandas as pd
 from FindDeprecated import FuncLister
 
 def count_loc(file_list):
+    """count the LOC of files"""
     total = 0
     for file in file_list:
         lines = open(file, encoding='utf-8').readlines()
@@ -72,7 +73,7 @@ class tensorflow_diff:
         #self.get_age()
 
     def newly_depre(self):
-
+        """get the apis newly deprecated in each TensorFlow version"""
         res = []
         for i in self.version:
             res.extend(self.res[i])
@@ -91,6 +92,7 @@ class tensorflow_diff:
         pd.DataFrame.from_dict(self.diff, orient='index').to_csv("diff.csv")
 
     def be_removed(self):
+        """get the removed APIs"""
         removed = collections.defaultdict(set)
         for i in range(len(self.res)-1):
             for api in self.res[self.version[i]]:
@@ -100,6 +102,7 @@ class tensorflow_diff:
         pd.DataFrame.from_dict(removed, orient='index').to_csv("removed_apis.csv")
 
     def get_age(self):
+        """get the number of versions API gets deprecated"""
         self.age_info = collections.defaultdict(list)
         self.age = collections.defaultdict(list)
         for i in range(1, len(self.version)):
